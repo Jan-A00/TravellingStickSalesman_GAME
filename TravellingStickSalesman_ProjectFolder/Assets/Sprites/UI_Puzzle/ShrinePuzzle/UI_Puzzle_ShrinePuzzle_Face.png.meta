@@ -1,0 +1,297 @@
+fileFormatVersion: 2
+guid: 5506fd8dc2fc99a41885b8cfcca0b423
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: UI_Puzzle_ShrinePuzzle_02_0
+    21300002: UI_Puzzle_ShrinePuzzle_02_1
+    21300004: UI_Puzzle_ShrinePuzzle_02_2
+    21300006: UI_Puzzle_ShrinePuzzle_02_3
+    21300008: UI_Puzzle_ShrinePuzzle_02_4
+    21300010: UI_Puzzle_ShrinePuzzle_02_5
+    21300012: UI_Puzzle_ShrinePuzzle_02_6
+    21300014: UI_Puzzle_ShrinePuzzle_02_7
+    21300016: UI_Puzzle_ShrinePuzzle_02_8
+    21300018: UI_Puzzle_ShrinePuzzle_Face_0
+    21300020: UI_Puzzle_ShrinePuzzle_Face_1
+    21300022: UI_Puzzle_ShrinePuzzle_Face_2
+    21300024: UI_Puzzle_ShrinePuzzle_Face_3
+    21300026: UI_Puzzle_ShrinePuzzle_Face_4
+    21300028: UI_Puzzle_ShrinePuzzle_Face_5
+    21300030: UI_Puzzle_ShrinePuzzle_Face_6
+    21300032: UI_Puzzle_ShrinePuzzle_Face_7
+    21300034: UI_Puzzle_ShrinePuzzle_Face_8
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UI_Puzzle_ShrinePuzzle_Face_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 339
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443f3de3db4b58e4f84d37a873036f76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Puzzle_ShrinePuzzle_Face_1
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 339
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 344072e5e52fc95408f7733d7f461b3b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Puzzle_ShrinePuzzle_Face_2
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 339
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701dda6c2d084aa46bd6ad4abeb8ce4b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Puzzle_ShrinePuzzle_Face_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 174
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822674098194b9f4091681fc63d711be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Puzzle_ShrinePuzzle_Face_4
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 174
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e4880bff935c94cbad9556bfeb9ec6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Puzzle_ShrinePuzzle_Face_5
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 174
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d06730e75bbea040aaa02e993a4a401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Puzzle_ShrinePuzzle_Face_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215d53343a9ebc349868e43b62d292de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Puzzle_ShrinePuzzle_Face_7
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 9
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123fc38b4c8d7824fa0ddc310a9d6fdb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Puzzle_ShrinePuzzle_Face_8
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 9
+        width: 165
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d167e8a9de36541aa1ad51351297aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: cac7f34387df10146afaba92497325fa
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

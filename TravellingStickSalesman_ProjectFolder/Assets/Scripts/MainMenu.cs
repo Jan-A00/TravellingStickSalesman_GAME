@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void NewGame ()
     {
-        Debug.Log("Welcome to the game.");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void QuitGame ()
