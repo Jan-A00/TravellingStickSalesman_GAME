@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -14,5 +15,10 @@ public class TutorialManager : MonoBehaviour
         {
             seaPuzzleButton.interactable = true;
         }
+    }
+
+    public void GoToSeaPuzzle()
+    {
+        SceneManager.LoadScene("SeaPuzzle");
     }
 }
