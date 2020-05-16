@@ -33,19 +33,19 @@ public class TutorialDialogueManager : MonoBehaviour
             continueButton.SetActive(true);
         }
 
-        if(textDisplay.text == sentences[4])
-        {
-            StartCoroutine(MapAppear());
-            continueButton.SetActive(false);
-        }
-
-        if(textDisplay.text == sentences[6])
+        if(textDisplay.text == sentences[5])
         {
             StartCoroutine(InventoryAppear());
             continueButton.SetActive(false);
         }
 
-        if(textDisplay.text == sentences[10])
+        if(textDisplay.text == sentences[9])
+        {
+            StartCoroutine(MapAppear());
+            continueButton.SetActive(false);
+        }
+
+        if(textDisplay.text == sentences[13])
         {
             EndDialogue();
         }

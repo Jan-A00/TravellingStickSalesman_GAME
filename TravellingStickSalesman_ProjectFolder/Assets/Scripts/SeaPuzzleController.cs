@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SeaPuzzleController : MonoBehaviour
 {
@@ -12,28 +13,40 @@ public class SeaPuzzleController : MonoBehaviour
     private Sprite emptyClamImage;
 
     public List<Sprite> pearls = new List<Sprite>();
-
     public List<Sprite> clamWithPearls = new List<Sprite>();
-    
     public List<Button> closedClam = new List<Button>();
+    public Button shrinePuzzleButton;
+
+    public SeaPuzzleInstructions instructions;
 
     private bool firstGuess, secondGuess;
+    private bool startPuzzle;
+
+    public bool winCon = false;
 
     private int countGuesses;
     private int countCorrectGuesses;
     private int gameGuesses;
-
     private int firstGuessIndex, secondGuessIndex;
 
     private string firstGuessPuzzle, secondGuessPuzzle;
 
-    void Start()
+    void Update()
     {
-        GetClosedClam();
-        AddListeners();
-        AddPearls();
-        Shuffle(clamWithPearls);
-        gameGuesses = clamWithPearls.Count / 2;
+        if(instructions.hasPlayerSeenInstructions == true && !startPuzzle)
+        {
+            GetClosedClam();
+            AddListeners();
+            AddPearls();
+            Shuffle(clamWithPearls);
+            gameGuesses = clamWithPearls.Count / 2;
+            startPuzzle = true;
+        }
+
+        if(instructions.textDisplay.text == instructions.sentences[21])
+        {
+            shrinePuzzleButton.interactable = true;
+        }
     }
     
     void GetClosedClam()
@@ -121,7 +134,6 @@ public class SeaPuzzleController : MonoBehaviour
 
             CheckIfTheGameIsFinished();
         }
-
         else
         {
             yield return new WaitForSeconds (0.5f);
@@ -141,7 +153,8 @@ public class SeaPuzzleController : MonoBehaviour
 
         if(countCorrectGuesses == gameGuesses)
         {
-            Debug.Log("Game Finished in " + countGuesses + " moves.");
+            //Debug.Log("Game Finished in " + countGuesses + " moves.");
+            winCon = true;
         }
     }
 
@@ -153,6 +166,14 @@ public class SeaPuzzleController : MonoBehaviour
             int randomIndex = Random.Range(i, list.Count);
             list[i] = list[randomIndex];
             list[randomIndex] = temp;
+        }
+    }
+
+    public void GoToShrinePuzzle()
+    {
+        if(instructions.goNext == true && instructions.index == 21)
+        {
+            SceneManager.LoadScene("ShrinePuzzle");
         }
     }
 }

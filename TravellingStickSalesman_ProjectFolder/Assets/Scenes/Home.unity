@@ -119,6 +119,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8649348000889659293, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
+      propertyPath: m_Name
+      value: Map UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649348000889659293, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2100825450295189977, guid: 1b237529a95761c41bdc6f19b1a74679,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -284,16 +294,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Interactable
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8649348000889659293, guid: 1b237529a95761c41bdc6f19b1a74679,
-        type: 3}
-      propertyPath: m_Name
-      value: Map UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 8649348000889659293, guid: 1b237529a95761c41bdc6f19b1a74679,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b237529a95761c41bdc6f19b1a74679, type: 3}
@@ -895,6 +895,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1467377993881682536, guid: 23245df38f34ecb44ab2cff20e2657e1,
+        type: 3}
+      propertyPath: m_Name
+      value: Inventory UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467377993881682536, guid: 23245df38f34ecb44ab2cff20e2657e1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1151742161251235231, guid: 23245df38f34ecb44ab2cff20e2657e1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -998,16 +1008,6 @@ PrefabInstance:
     - target: {fileID: 1151742161251235231, guid: 23245df38f34ecb44ab2cff20e2657e1,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1467377993881682536, guid: 23245df38f34ecb44ab2cff20e2657e1,
-        type: 3}
-      propertyPath: m_Name
-      value: Inventory UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1467377993881682536, guid: 23245df38f34ecb44ab2cff20e2657e1,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8174637167033302060, guid: 23245df38f34ecb44ab2cff20e2657e1,

@@ -10,7 +10,20 @@ public class AddClams : MonoBehaviour
     [SerializeField]
     private GameObject clam;
 
-    void Awake()
+    public SeaPuzzleInstructions instructions;
+
+    private bool startPuzzle;
+
+    void Update()
+    {
+        if(instructions.hasPlayerSeenInstructions == true && !startPuzzle)
+        {
+            StartPuzzle();
+            startPuzzle = true;
+        }
+    }
+
+    void StartPuzzle()
     {
         for(int i = 0; i < 8; i++)
         {

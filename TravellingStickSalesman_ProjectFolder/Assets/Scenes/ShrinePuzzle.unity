@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 54600621}
   - component: {fileID: 54600620}
   - component: {fileID: 54600619}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShrinePuzzle_UI_Text_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,6 +239,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8649348000889659293, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
+      propertyPath: m_Name
+      value: Map UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649348000889659293, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7182761779367258218, guid: 1b237529a95761c41bdc6f19b1a74679,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -349,15 +359,20 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8649348000889659293, guid: 1b237529a95761c41bdc6f19b1a74679,
+    - target: {fileID: 6256910089040787953, guid: 1b237529a95761c41bdc6f19b1a74679,
         type: 3}
-      propertyPath: m_Name
-      value: Map UI
+      propertyPath: m_Interactable
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8649348000889659293, guid: 1b237529a95761c41bdc6f19b1a74679,
+    - target: {fileID: 4426263704298249564, guid: 1b237529a95761c41bdc6f19b1a74679,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: m_AnchoredPosition.y
+      value: -31.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426263704298249564, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -257
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b237529a95761c41bdc6f19b1a74679, type: 3}
@@ -373,7 +388,7 @@ GameObject:
   - component: {fileID: 168785048}
   - component: {fileID: 168785047}
   - component: {fileID: 168785046}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShrinePuzzle_UI_Text_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +508,7 @@ GameObject:
   - component: {fileID: 188873277}
   - component: {fileID: 188873276}
   - component: {fileID: 188873275}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShrinePuzzle_UI_Text_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +628,7 @@ GameObject:
   - component: {fileID: 319289344}
   - component: {fileID: 319289343}
   - component: {fileID: 319289342}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShrinePuzzle_UI_Text_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +748,7 @@ GameObject:
   - component: {fileID: 335147903}
   - component: {fileID: 335147902}
   - component: {fileID: 335147904}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShrinePuzzle_UI_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -852,7 +867,7 @@ GameObject:
   - component: {fileID: 364549571}
   - component: {fileID: 364549570}
   - component: {fileID: 364549572}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShrinePuzzle_UI_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -959,12 +974,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6533333, y: 1.68}
   m_EdgeRadius: 0
---- !u!1 &430596902 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1467377993881682536, guid: 23245df38f34ecb44ab2cff20e2657e1,
-    type: 3}
-  m_PrefabInstance: {fileID: 691865770}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &453247556
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +986,7 @@ GameObject:
   - component: {fileID: 453247559}
   - component: {fileID: 453247558}
   - component: {fileID: 453247560}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShrinePuzzle_UI_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1178,7 +1187,7 @@ GameObject:
   - component: {fileID: 565728685}
   - component: {fileID: 565728684}
   - component: {fileID: 565728686}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShrinePuzzle_UI_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1297,7 +1306,7 @@ GameObject:
   - component: {fileID: 573198559}
   - component: {fileID: 573198558}
   - component: {fileID: 573198557}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShrinePuzzle_UI_Text_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1433,7 +1442,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1605742639}
   m_Father: {fileID: 1519150633}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1486,6 +1496,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1467377993881682536, guid: 23245df38f34ecb44ab2cff20e2657e1,
+        type: 3}
+      propertyPath: m_Name
+      value: Inventory UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467377993881682536, guid: 23245df38f34ecb44ab2cff20e2657e1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1151742161251235231, guid: 23245df38f34ecb44ab2cff20e2657e1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1591,16 +1611,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1467377993881682536, guid: 23245df38f34ecb44ab2cff20e2657e1,
-        type: 3}
-      propertyPath: m_Name
-      value: Inventory UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1467377993881682536, guid: 23245df38f34ecb44ab2cff20e2657e1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23245df38f34ecb44ab2cff20e2657e1, type: 3}
 --- !u!1 &816442464
@@ -1615,7 +1625,7 @@ GameObject:
   - component: {fileID: 816442467}
   - component: {fileID: 816442466}
   - component: {fileID: 816442468}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShrinePuzzle_UI_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1734,7 +1744,7 @@ GameObject:
   - component: {fileID: 836791228}
   - component: {fileID: 836791227}
   - component: {fileID: 836791229}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShrinePuzzle_UI_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1907,134 +1917,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &900916696
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 900916697}
-  - component: {fileID: 900916700}
-  - component: {fileID: 900916699}
-  - component: {fileID: 900916698}
-  m_Layer: 5
-  m_Name: Map Button
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &900916697
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900916696}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.8869824, y: 2.8869824, z: 2.8869824}
-  m_Children: []
-  m_Father: {fileID: 1519150633}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 41.13623, y: -41.13623}
-  m_SizeDelta: {x: 25, y: 25}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &900916698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900916696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 900916699}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1868452936}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &900916699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900916696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d11b350466bc30441b6318c81ff025af, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &900916700
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900916696}
-  m_CullTransparentMesh: 0
 --- !u!1 &1085007744
 GameObject:
   m_ObjectHideFlags: 0
@@ -2047,7 +1929,7 @@ GameObject:
   - component: {fileID: 1085007747}
   - component: {fileID: 1085007746}
   - component: {fileID: 1085007745}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShrinePuzzle_UI_Text_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2167,7 +2049,7 @@ GameObject:
   - component: {fileID: 1159636029}
   - component: {fileID: 1159636028}
   - component: {fileID: 1159636027}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShrinePuzzle_UI_Text_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2275,134 +2157,6 @@ Transform:
   m_Father: {fileID: 1605742639}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1505696306
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1505696307}
-  - component: {fileID: 1505696310}
-  - component: {fileID: 1505696309}
-  - component: {fileID: 1505696308}
-  m_Layer: 5
-  m_Name: Inventory Button
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1505696307
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505696306}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.8869824, y: 2.8869824, z: 2.8869824}
-  m_Children: []
-  m_Father: {fileID: 1519150633}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 119.07837, y: -41.13623}
-  m_SizeDelta: {x: 25, y: 25}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1505696308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505696306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1505696309}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 430596902}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1505696309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505696306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: fe0a42b313082e445be06e8c851edbad, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &1505696310
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505696306}
-  m_CullTransparentMesh: 0
 --- !u!1 &1519150629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,7 +2208,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
@@ -2494,10 +2248,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 590947894}
-  - {fileID: 1605742639}
   - {fileID: 1741626513}
-  - {fileID: 900916697}
-  - {fileID: 1505696307}
+  - {fileID: 2052072241}
+  - {fileID: 1750643613}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2518,7 +2271,7 @@ GameObject:
   - component: {fileID: 1572929864}
   - component: {fileID: 1572929863}
   - component: {fileID: 1572929865}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShrinePuzzle_UI_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2686,7 +2439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1605742639}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2701,8 +2454,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605742638}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 279.55304, y: -32.735764, z: -4676.5376}
-  m_LocalScale: {x: 51.96153, y: 51.96153, z: 51.96153}
+  m_LocalPosition: {x: 389.99994, y: -15, z: -43}
+  m_LocalScale: {x: 72, y: 72, z: 72}
   m_Children:
   - {fileID: 573198560}
   - {fileID: 54600622}
@@ -2711,8 +2464,8 @@ Transform:
   - {fileID: 188873278}
   - {fileID: 319289345}
   - {fileID: 1159636030}
-  m_Father: {fileID: 1519150633}
-  m_RootOrder: 1
+  m_Father: {fileID: 590947894}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1664577158
 GameObject:
@@ -2726,7 +2479,7 @@ GameObject:
   - component: {fileID: 1664577161}
   - component: {fileID: 1664577160}
   - component: {fileID: 1664577162}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShrinePuzzle_UI_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2842,7 +2595,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1741626513}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2870,8 +2623,136 @@ Transform:
   - {fileID: 364549569}
   - {fileID: 1753728623}
   m_Father: {fileID: 1519150633}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1750643612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1750643613}
+  - component: {fileID: 1750643616}
+  - component: {fileID: 1750643615}
+  - component: {fileID: 1750643614}
+  m_Layer: 5
+  m_Name: Inventory Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1750643613
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750643612}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4.000319, y: 4.000319, z: 4.000319}
+  m_Children: []
+  m_Father: {fileID: 1519150633}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 165, y: -56.99997}
+  m_SizeDelta: {x: 25, y: 25}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1750643614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750643612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1750643615}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1750643615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750643612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: fe0a42b313082e445be06e8c851edbad, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1750643616
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750643612}
+  m_CullTransparentMesh: 0
 --- !u!1 &1753728622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2884,7 +2765,7 @@ GameObject:
   - component: {fileID: 1753728625}
   - component: {fileID: 1753728624}
   - component: {fileID: 1753728626}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ShrinePuzzle_UI_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2991,9 +2872,131 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6533333, y: 1.68}
   m_EdgeRadius: 0
---- !u!1 &1868452936 stripped
+--- !u!1 &2052072240
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8649348000889659293, guid: 1b237529a95761c41bdc6f19b1a74679,
-    type: 3}
-  m_PrefabInstance: {fileID: 115301491}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2052072241}
+  - component: {fileID: 2052072244}
+  - component: {fileID: 2052072243}
+  - component: {fileID: 2052072242}
+  m_Layer: 5
+  m_Name: Map Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2052072241
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052072240}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4.0003195, y: 4.0003195, z: 4.0003195}
+  m_Children: []
+  m_Father: {fileID: 1519150633}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 57, y: -57}
+  m_SizeDelta: {x: 25, y: 25}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2052072242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052072240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 2052072243}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &2052072243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052072240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: d11b350466bc30441b6318c81ff025af, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &2052072244
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052072240}
+  m_CullTransparentMesh: 0

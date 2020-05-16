@@ -11,7 +11,7 @@ public class TutorialManager : MonoBehaviour
 
     void Update()
     {
-        if(dialogueManager.hasPlayerDoneTutorial == true)
+        if(dialogueManager.textDisplay.text == dialogueManager.sentences[9])
         {
             seaPuzzleButton.interactable = true;
         }
@@ -19,6 +19,9 @@ public class TutorialManager : MonoBehaviour
 
     public void GoToSeaPuzzle()
     {
-        SceneManager.LoadScene("SeaPuzzle");
+        if(dialogueManager.hasPlayerDoneTutorial == true)
+        {
+            SceneManager.LoadScene("SeaPuzzle");
+        }
     }
 }

@@ -3,7 +3,10 @@ guid: 51ff11d4638fbc045876f92c3479c872
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - puzzleField: {instanceID: 0}
+  - clam: {fileID: 4448771138328456845, guid: 73e845fa67b76984897ad1d92779c1de, type: 3}
+  - seaPuzzleInstructions: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
