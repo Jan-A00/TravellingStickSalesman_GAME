@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class SeaPuzzleInstructions : MonoBehaviour
+public class ShrinePuzzleInstructions : MonoBehaviour
 {
     public Text textDisplay;
     public string[] sentences;
@@ -13,7 +13,7 @@ public class SeaPuzzleInstructions : MonoBehaviour
     public Button mapButton;
     public GameObject continueButton;
     public GameObject dialogueBox;
-    public SeaPuzzleController controller;
+    public ShrinePuzzleController controller;
     public bool hasPlayerSeenInstructions = false;
     public bool hasPlayerAccessedMap = false;
     public bool goNext = false;
@@ -26,7 +26,7 @@ public class SeaPuzzleInstructions : MonoBehaviour
             StartCoroutine(Type());
         }
     }
-    
+
     void Update()
     {
         if(textDisplay.text == sentences[index])
@@ -34,28 +34,29 @@ public class SeaPuzzleInstructions : MonoBehaviour
             continueButton.SetActive(true);
         }
 
-        if(textDisplay.text == sentences[11])
+        if(textDisplay.text == sentences[6])
         {
             EndInstructions();
         }
 
-        if(textDisplay.text == sentences[11] && controller.winCon == true)
+        if(textDisplay.text == sentences[6] && controller.winCon == true)
         {
             StartCoroutine(WinPuzzle());
             WinText();
             continueButton.SetActive(false);
         }
 
-        if(textDisplay.text == sentences[17])
+        if(textDisplay.text == sentences[8])
         {
             StartCoroutine(MapAppear());
             continueButton.SetActive(false);
         }
 
-        if(textDisplay.text == sentences[21])
+        if(textDisplay.text == sentences[9] && hasPlayerAccessedMap == true)
         {
             EndDialogue();
         }
+
     }
 
     IEnumerator Type()
@@ -87,24 +88,14 @@ public class SeaPuzzleInstructions : MonoBehaviour
 
     public void EndDialogue()
     {
-        if(index == 21)
+        if(index == 9)
         {
             goNext = true;
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
             StopAllCoroutines();
         }
-    }
-
-    public void WinText()
-    {
-        if(index < sentences.Length - 1)
-        {
-            index++;
-            textDisplay.text = "";
-            StartCoroutine(Type());
-        }
-    }
+    }    
 
     public void NextSentence()
     {
@@ -123,6 +114,16 @@ public class SeaPuzzleInstructions : MonoBehaviour
         }
     }
     
+    public void WinText()
+    {
+        if(index < sentences.Length - 1)
+        {
+            index++;
+            textDisplay.text = "";
+            StartCoroutine(Type());
+        }
+    }
+
     public void NextSentenceAfterMap()
     {
         continueButton.SetActive(false);

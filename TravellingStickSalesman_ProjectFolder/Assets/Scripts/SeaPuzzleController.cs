@@ -171,7 +171,7 @@ public class SeaPuzzleController : MonoBehaviour
 
     public void GoToShrinePuzzle()
     {
-        if(instructions.goNext == true && instructions.index == 21)
+        if(instructions.goNext == true && instructions.textDisplay.text == instructions.sentences[21])
         {
             SceneManager.LoadScene("ShrinePuzzle");
         }

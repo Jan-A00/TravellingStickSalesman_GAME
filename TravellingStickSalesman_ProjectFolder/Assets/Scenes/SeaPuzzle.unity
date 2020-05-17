@@ -676,7 +676,6 @@ MonoBehaviour:
   - But I'm sure you'll be fine! The guardian there is very nice.
   - Right! I better get to makin' this necklace. Thanks for all your help!
   - 
-  index: 0
   typingSpeed: 0.04
   mapButton: {fileID: 309569223}
   continueButton: {fileID: 261151560}
