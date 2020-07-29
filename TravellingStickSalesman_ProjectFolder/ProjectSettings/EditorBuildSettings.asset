@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: a0c5b35d6e2cabd4a9a14a436510ed62
   - enabled: 1
-    path: Assets/Scenes/ShrinePuzzle.unity
-    guid: 751f04ba1d03e7f47a3ea31243fe5629
+    path: Assets/Scenes/Tutorial.unity
+    guid: 42aafb9a276d9694ca7130c35209c9f9
   - enabled: 1
     path: Assets/Scenes/SeaPuzzle.unity
     guid: a9c773f660d8f2047b85e676eae3a264
   - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
-    guid: 42aafb9a276d9694ca7130c35209c9f9
+    path: Assets/Scenes/ShrinePuzzle.unity
+    guid: 751f04ba1d03e7f47a3ea31243fe5629
   m_configObjects: {}
