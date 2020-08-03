@@ -8,10 +8,10 @@ public class TutorialAudioManager : MonoBehaviour
     public AudioSource[] lines;
     public int index;
     public GameObject continueButton;
-    public Button mapButton;
+    public Button seaPuzzleButton;
     public Button inventoryButton;
     public bool hasPlayerAccessedMap = false;
-    public bool hasPlayerAccessedInventory = false;
+    public bool hasPlayerGotStick = false;
     public bool hasPlayerDoneTutorial = false;
     
     void Start()
@@ -28,7 +28,7 @@ public class TutorialAudioManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.05f);
         lines[index].Play();
-        yield return new WaitForSeconds(2);
+        //yield return new WaitForSeconds(2);
         continueButton.SetActive(true);
     }
 
@@ -45,6 +45,11 @@ public class TutorialAudioManager : MonoBehaviour
         else
         {
             continueButton.SetActive(false);
+        }
+
+        if(index == 4)
+        {
+            seaPuzzleButton.interactable = true;
         }
     }
 }

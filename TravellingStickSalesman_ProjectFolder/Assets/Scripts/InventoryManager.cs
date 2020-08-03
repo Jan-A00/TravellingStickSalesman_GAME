@@ -17,7 +17,7 @@ public class InventoryManager : MonoBehaviour
 
     public void EquipStick()
     {
-        backButton.interactable = true;
+        //backButton.interactable = true;
         
         if(isStickEquipped == false)
         {

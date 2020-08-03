@@ -1,27 +1,63 @@
 fileFormatVersion: 2
 guid: 5506fd8dc2fc99a41885b8cfcca0b423
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: UI_Puzzle_ShrinePuzzle_02_0
-    21300002: UI_Puzzle_ShrinePuzzle_02_1
-    21300004: UI_Puzzle_ShrinePuzzle_02_2
-    21300006: UI_Puzzle_ShrinePuzzle_02_3
-    21300008: UI_Puzzle_ShrinePuzzle_02_4
-    21300010: UI_Puzzle_ShrinePuzzle_02_5
-    21300012: UI_Puzzle_ShrinePuzzle_02_6
-    21300014: UI_Puzzle_ShrinePuzzle_02_7
-    21300016: UI_Puzzle_ShrinePuzzle_02_8
-    21300018: UI_Puzzle_ShrinePuzzle_Face_0
-    21300020: UI_Puzzle_ShrinePuzzle_Face_1
-    21300022: UI_Puzzle_ShrinePuzzle_Face_2
-    21300024: UI_Puzzle_ShrinePuzzle_Face_3
-    21300026: UI_Puzzle_ShrinePuzzle_Face_4
-    21300028: UI_Puzzle_ShrinePuzzle_Face_5
-    21300030: UI_Puzzle_ShrinePuzzle_Face_6
-    21300032: UI_Puzzle_ShrinePuzzle_Face_7
-    21300034: UI_Puzzle_ShrinePuzzle_Face_8
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: UI_Puzzle_ShrinePuzzle_02_0
+  - first:
+      213: 21300002
+    second: UI_Puzzle_ShrinePuzzle_02_1
+  - first:
+      213: 21300004
+    second: UI_Puzzle_ShrinePuzzle_02_2
+  - first:
+      213: 21300006
+    second: UI_Puzzle_ShrinePuzzle_02_3
+  - first:
+      213: 21300008
+    second: UI_Puzzle_ShrinePuzzle_02_4
+  - first:
+      213: 21300010
+    second: UI_Puzzle_ShrinePuzzle_02_5
+  - first:
+      213: 21300012
+    second: UI_Puzzle_ShrinePuzzle_02_6
+  - first:
+      213: 21300014
+    second: UI_Puzzle_ShrinePuzzle_02_7
+  - first:
+      213: 21300016
+    second: UI_Puzzle_ShrinePuzzle_02_8
+  - first:
+      213: 21300018
+    second: UI_Puzzle_ShrinePuzzle_Face_0
+  - first:
+      213: 21300020
+    second: UI_Puzzle_ShrinePuzzle_Face_1
+  - first:
+      213: 21300022
+    second: UI_Puzzle_ShrinePuzzle_Face_2
+  - first:
+      213: 21300024
+    second: UI_Puzzle_ShrinePuzzle_Face_3
+  - first:
+      213: 21300026
+    second: UI_Puzzle_ShrinePuzzle_Face_4
+  - first:
+      213: 21300028
+    second: UI_Puzzle_ShrinePuzzle_Face_5
+  - first:
+      213: 21300030
+    second: UI_Puzzle_ShrinePuzzle_Face_6
+  - first:
+      213: 21300032
+    second: UI_Puzzle_ShrinePuzzle_Face_7
+  - first:
+      213: 21300034
+    second: UI_Puzzle_ShrinePuzzle_Face_8
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -75,8 +111,9 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -87,7 +124,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -98,6 +136,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -117,6 +156,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 443f3de3db4b58e4f84d37a873036f76
+      internalID: 21300018
       vertices: []
       indices: 
       edges: []
@@ -137,6 +177,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 344072e5e52fc95408f7733d7f461b3b
+      internalID: 21300020
       vertices: []
       indices: 
       edges: []
@@ -157,6 +198,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 701dda6c2d084aa46bd6ad4abeb8ce4b
+      internalID: 21300022
       vertices: []
       indices: 
       edges: []
@@ -177,6 +219,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 822674098194b9f4091681fc63d711be
+      internalID: 21300024
       vertices: []
       indices: 
       edges: []
@@ -197,6 +240,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 07e4880bff935c94cbad9556bfeb9ec6
+      internalID: 21300026
       vertices: []
       indices: 
       edges: []
@@ -217,6 +261,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 6d06730e75bbea040aaa02e993a4a401
+      internalID: 21300028
       vertices: []
       indices: 
       edges: []
@@ -237,6 +282,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 215d53343a9ebc349868e43b62d292de
+      internalID: 21300030
       vertices: []
       indices: 
       edges: []
@@ -257,6 +303,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 123fc38b4c8d7824fa0ddc310a9d6fdb
+      internalID: 21300032
       vertices: []
       indices: 
       edges: []
@@ -277,6 +324,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: d5d167e8a9de36541aa1ad51351297aa
+      internalID: 21300034
       vertices: []
       indices: 
       edges: []
@@ -285,10 +333,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: cac7f34387df10146afaba92497325fa
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
