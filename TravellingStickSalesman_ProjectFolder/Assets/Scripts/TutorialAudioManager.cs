@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TutorialAudioManager : MonoBehaviour
 {
@@ -10,8 +11,8 @@ public class TutorialAudioManager : MonoBehaviour
     public GameObject continueButton;
     public Button seaPuzzleButton;
     public Button inventoryButton;
-    public bool hasPlayerAccessedMap = false;
-    public bool hasPlayerGotStick = false;
+    //public bool hasPlayerAccessedMap = false;
+    //public bool hasPlayerGotStick = false;
     public bool hasPlayerDoneTutorial = false;
     
     void Start()
@@ -50,6 +51,19 @@ public class TutorialAudioManager : MonoBehaviour
         if(index == 4)
         {
             seaPuzzleButton.interactable = true;
+        }
+
+        if(index == 7)
+        {
+            hasPlayerDoneTutorial = true;
+        }
+    }
+
+    public void GoToSeaPuzzle()
+    {
+        if(hasPlayerDoneTutorial == true)
+        {
+            SceneManager.LoadScene("SeaPuzzle");
         }
     }
 }

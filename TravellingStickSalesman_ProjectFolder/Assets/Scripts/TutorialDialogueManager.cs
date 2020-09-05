@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//redundant script, kept just in case
+
 public class TutorialDialogueManager : MonoBehaviour
 {
     public Text textDisplay;

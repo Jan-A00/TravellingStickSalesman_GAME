@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//redundant script, kept just in case
+
 public class TutorialManager : MonoBehaviour
 {
     public TutorialDialogueManager dialogueManager;
