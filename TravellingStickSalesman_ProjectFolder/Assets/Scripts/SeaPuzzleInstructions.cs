@@ -46,11 +46,11 @@ public class SeaPuzzleInstructions : MonoBehaviour
             continueButton.SetActive(false);
         }
 
-        if(textDisplay.text == sentences[17])
+        /*if(textDisplay.text == sentences[17])
         {
             StartCoroutine(MapAppear());
             continueButton.SetActive(false);
-        }
+        }*/
 
         if(textDisplay.text == sentences[21])
         {
@@ -67,11 +67,11 @@ public class SeaPuzzleInstructions : MonoBehaviour
         }
     }
 
-    IEnumerator MapAppear()
+    /*IEnumerator MapAppear()
     {
         yield return new WaitForSeconds(0.25f);
         mapButton.interactable = true;
-    }
+    }*/
 
     IEnumerator WinPuzzle()
     {
@@ -123,7 +123,7 @@ public class SeaPuzzleInstructions : MonoBehaviour
         }
     }
     
-    public void NextSentenceAfterMap()
+    /*public void NextSentenceAfterMap()
     {
         continueButton.SetActive(false);
 
@@ -134,5 +134,5 @@ public class SeaPuzzleInstructions : MonoBehaviour
             StartCoroutine(Type());
             hasPlayerAccessedMap = true;
         }
-    }
+    }*/
 }

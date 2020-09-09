@@ -15,7 +15,6 @@ public class ShrinePuzzleInstructions : MonoBehaviour
     public GameObject dialogueBox;
     public ShrinePuzzleController controller;
     public bool hasPlayerSeenInstructions = false;
-    public bool hasPlayerAccessedMap = false;
     public bool goNext = false;
 
     void Start()
@@ -46,13 +45,7 @@ public class ShrinePuzzleInstructions : MonoBehaviour
             continueButton.SetActive(false);
         }
 
-        if(textDisplay.text == sentences[8])
-        {
-            StartCoroutine(MapAppear());
-            continueButton.SetActive(false);
-        }
-
-        if(textDisplay.text == sentences[9] && hasPlayerAccessedMap == true)
+        if(textDisplay.text == sentences[9])
         {
             EndDialogue();
         }
@@ -66,12 +59,6 @@ public class ShrinePuzzleInstructions : MonoBehaviour
             textDisplay.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
-    }
-
-    IEnumerator MapAppear()
-    {
-        yield return new WaitForSeconds(0.25f);
-        mapButton.interactable = true;
     }
 
     IEnumerator WinPuzzle()
@@ -121,19 +108,6 @@ public class ShrinePuzzleInstructions : MonoBehaviour
             index++;
             textDisplay.text = "";
             StartCoroutine(Type());
-        }
-    }
-
-    public void NextSentenceAfterMap()
-    {
-        continueButton.SetActive(false);
-
-        if(index < sentences.Length - 1 && hasPlayerAccessedMap == false)
-        {
-            index++;
-            textDisplay.text = "";
-            StartCoroutine(Type());
-            hasPlayerAccessedMap = true;
         }
     }
 }
