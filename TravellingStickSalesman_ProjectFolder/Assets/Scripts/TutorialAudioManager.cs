@@ -9,7 +9,7 @@ public class TutorialAudioManager : MonoBehaviour
     public AudioSource[] lines;
     public int index;
     public GameObject continueButton;
-    public Button seaPuzzleButton;
+    public GameObject seaPuzzleButton;
     public Button inventoryButton;
     //public bool hasPlayerAccessedMap = false;
     //public bool hasPlayerGotStick = false;
@@ -50,7 +50,7 @@ public class TutorialAudioManager : MonoBehaviour
 
         if(index == 4)
         {
-            seaPuzzleButton.interactable = true;
+            seaPuzzleButton.SetActive(true);
         }
 
         if(index == 7)

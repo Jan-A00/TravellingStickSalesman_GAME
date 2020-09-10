@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void NewGame()
     {
-        SceneManager.LoadScene("VoiceOverTest");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void QuitGame()

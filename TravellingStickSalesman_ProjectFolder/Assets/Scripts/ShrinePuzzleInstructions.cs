@@ -13,6 +13,7 @@ public class ShrinePuzzleInstructions : MonoBehaviour
     public Button mapButton;
     public GameObject continueButton;
     public GameObject dialogueBox;
+    public GameObject merchantCapital;
     public ShrinePuzzleController controller;
     public bool hasPlayerSeenInstructions = false;
     public bool goNext = false;
@@ -80,6 +81,7 @@ public class ShrinePuzzleInstructions : MonoBehaviour
             goNext = true;
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
+            merchantCapital.SetActive(true);
             StopAllCoroutines();
         }
     }    

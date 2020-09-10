@@ -27,7 +27,7 @@ public class ShrinePuzzleController : MonoBehaviour
             //Uncomment for face puzzle. Don't forget to input the images in the controller.
         {
             winCon = true;
-            Debug.Log("You Win!");
+            //Debug.Log("You Win!");
         }
         
     }

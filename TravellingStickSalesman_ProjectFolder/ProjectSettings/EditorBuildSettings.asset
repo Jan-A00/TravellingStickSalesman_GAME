@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: a0c5b35d6e2cabd4a9a14a436510ed62
   - enabled: 1
-    path: Assets/Scenes/VoiceOverTest.unity
-    guid: 5b15e32596c68ec4b92b06f43bed5c6c
+    path: Assets/Scenes/Tutorial.unity
+    guid: 377a30723156edf4bac8bc7500b23ab6
   - enabled: 1
     path: Assets/Scenes/SeaPuzzle.unity
     guid: a9c773f660d8f2047b85e676eae3a264

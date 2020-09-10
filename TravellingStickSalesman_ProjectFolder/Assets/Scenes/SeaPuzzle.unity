@@ -134,7 +134,7 @@ PrefabInstance:
     - target: {fileID: 798988542055986210, guid: 1b237529a95761c41bdc6f19b1a74679,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2100825450295189977, guid: 1b237529a95761c41bdc6f19b1a74679,
         type: 3}
@@ -187,6 +187,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 90eef17324ac7fa4b8be4300b8c52d5f,
         type: 3}
+    - target: {fileID: 5297402160930275736, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6256910089040787953, guid: 1b237529a95761c41bdc6f19b1a74679,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -195,7 +200,7 @@ PrefabInstance:
     - target: {fileID: 6256910089040787953, guid: 1b237529a95761c41bdc6f19b1a74679,
         type: 3}
       propertyPath: m_Interactable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6256910089040787953, guid: 1b237529a95761c41bdc6f19b1a74679,
         type: 3}
@@ -553,9 +558,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: c8c7d1fb3c944b34f89e42ee71a04565,
+    m_HighlightedSprite: {fileID: 21300000, guid: 5cbde64fc4a81ec4db7df59d02ffc71f,
       type: 3}
-    m_PressedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300000, guid: dc7afe0f20d1f554e9308967f2680fc8, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -601,7 +606,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2d2933a0637ad154abf32959fc4951f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee2ddfcabe2e06641b4d31dd79d7894b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -625,13 +630,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 195961074}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &685861633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 798988542055986210, guid: 1b237529a95761c41bdc6f19b1a74679,
+    type: 3}
+  m_PrefabInstance: {fileID: 195961074}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &720750171 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6256910089040787953, guid: 1b237529a95761c41bdc6f19b1a74679,
     type: 3}
   m_PrefabInstance: {fileID: 195961074}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 685861633}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -695,7 +706,7 @@ MonoBehaviour:
   - Right! I better get to makin' this necklace. Thanks for all your help!
   - 
   typingSpeed: 0.04
-  mapButton: {fileID: 309569223}
+  shrinePuzzle: {fileID: 685861633}
   continueButton: {fileID: 261151560}
   dialogueBox: {fileID: 261151558}
   controller: {fileID: 1722577390}
@@ -848,9 +859,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 8746592562364e64381e349c05e4a4a7,
+    m_HighlightedSprite: {fileID: 21300000, guid: 10e2c62d2ec680e4caa59fd134728347,
       type: 3}
-    m_PressedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300000, guid: 8bc8ddac9df6ccb42a490c33471b13f0, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -896,7 +907,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3ba56a891fea3964f953c7b1b3f4327c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6268d5ef0528a2c4ebf83dbae1a8738c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

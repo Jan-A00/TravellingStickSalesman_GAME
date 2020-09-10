@@ -10,7 +10,7 @@ public class SeaPuzzleInstructions : MonoBehaviour
     public string[] sentences;
     private int index;
     public float typingSpeed;
-    public Button mapButton;
+    public GameObject shrinePuzzle;
     public GameObject continueButton;
     public GameObject dialogueBox;
     public SeaPuzzleController controller;
@@ -46,11 +46,10 @@ public class SeaPuzzleInstructions : MonoBehaviour
             continueButton.SetActive(false);
         }
 
-        /*if(textDisplay.text == sentences[17])
+        if(textDisplay.text == sentences[17])
         {
-            StartCoroutine(MapAppear());
-            continueButton.SetActive(false);
-        }*/
+            shrinePuzzle.SetActive(true);
+        }
 
         if(textDisplay.text == sentences[21])
         {
@@ -66,12 +65,6 @@ public class SeaPuzzleInstructions : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
     }
-
-    /*IEnumerator MapAppear()
-    {
-        yield return new WaitForSeconds(0.25f);
-        mapButton.interactable = true;
-    }*/
 
     IEnumerator WinPuzzle()
     {
@@ -122,17 +115,4 @@ public class SeaPuzzleInstructions : MonoBehaviour
             continueButton.SetActive(false);
         }
     }
-    
-    /*public void NextSentenceAfterMap()
-    {
-        continueButton.SetActive(false);
-
-        if(index < sentences.Length - 1 && hasPlayerAccessedMap == false)
-        {
-            index++;
-            textDisplay.text = "";
-            StartCoroutine(Type());
-            hasPlayerAccessedMap = true;
-        }
-    }*/
 }
