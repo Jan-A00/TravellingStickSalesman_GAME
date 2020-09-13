@@ -8,14 +8,13 @@ public class SeaPuzzleInstructions : MonoBehaviour
 {
     public Text textDisplay;
     public string[] sentences;
-    private int index;
+    public int index;
     public float typingSpeed;
     public GameObject shrinePuzzle;
     public GameObject continueButton;
     public GameObject dialogueBox;
     public SeaPuzzleController controller;
     public bool hasPlayerSeenInstructions = false;
-    public bool hasPlayerAccessedMap = false;
     public bool goNext = false;
 
     void Start()
@@ -46,12 +45,12 @@ public class SeaPuzzleInstructions : MonoBehaviour
             continueButton.SetActive(false);
         }
 
-        if(textDisplay.text == sentences[17])
+        if(textDisplay.text == sentences[18])
         {
             shrinePuzzle.SetActive(true);
         }
 
-        if(textDisplay.text == sentences[21])
+        if(textDisplay.text == sentences[24])
         {
             EndDialogue();
         }
@@ -80,7 +79,7 @@ public class SeaPuzzleInstructions : MonoBehaviour
 
     public void EndDialogue()
     {
-        if(index == 21)
+        if(index == 24)
         {
             goNext = true;
             //Destroy(dialogueBox);
