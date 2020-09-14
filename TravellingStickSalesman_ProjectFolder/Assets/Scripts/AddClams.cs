@@ -16,7 +16,7 @@ public class AddClams : MonoBehaviour
 
     void Update()
     {
-        if(instructions.hasPlayerSeenInstructions == true && !startPuzzle)
+        if(/*instructions.hasPlayerSeenInstructions == true &&*/ !startPuzzle)
         {
             StartPuzzle();
             startPuzzle = true;
