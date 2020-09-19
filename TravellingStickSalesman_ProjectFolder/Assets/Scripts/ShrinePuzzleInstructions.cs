@@ -8,12 +8,15 @@ public class ShrinePuzzleInstructions : MonoBehaviour
 {
     public Text textDisplay;
     public string[] sentences;
-    private int index;
+    public AudioSource[] lines;
+    private int audioIndex;
+    private int textIndex;
     public float typingSpeed;
     public Button mapButton;
     public GameObject continueButton;
     public GameObject dialogueBox;
     public GameObject merchantCapital;
+    public GameObject kaede;
     public ShrinePuzzleController controller;
     public bool hasPlayerSeenInstructions = false;
     public bool goNext = false;
@@ -24,29 +27,30 @@ public class ShrinePuzzleInstructions : MonoBehaviour
         {
             dialogueBox.SetActive(true);
             StartCoroutine(Type());
+            StartCoroutine(Speak());
         }
     }
 
     void Update()
     {
-        if(textDisplay.text == sentences[index])
+        if(textDisplay.text == sentences[textIndex])
         {
             continueButton.SetActive(true);
         }
 
-        if(textDisplay.text == sentences[6])
+        if(textDisplay.text == sentences[13])
         {
             EndInstructions();
         }
 
-        if(textDisplay.text == sentences[6] && controller.winCon == true)
+        if(textDisplay.text == sentences[13] && controller.winCon == true)
         {
             StartCoroutine(WinPuzzle());
             WinText();
             continueButton.SetActive(false);
         }
 
-        if(textDisplay.text == sentences[9])
+        if(textDisplay.text == sentences[20])
         {
             EndDialogue();
         }
@@ -55,11 +59,19 @@ public class ShrinePuzzleInstructions : MonoBehaviour
 
     IEnumerator Type()
     {
-        foreach(char letter in sentences[index].ToCharArray())
+        foreach(char letter in sentences[textIndex].ToCharArray())
         {
             textDisplay.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+    }
+
+        IEnumerator Speak()
+    {
+        yield return new WaitForSeconds(0.05f);
+        lines[audioIndex].Play();
+        //yield return new WaitForSeconds(2);
+        continueButton.SetActive(true);
     }
 
     IEnumerator WinPuzzle()
@@ -76,12 +88,13 @@ public class ShrinePuzzleInstructions : MonoBehaviour
 
     public void EndDialogue()
     {
-        if(index == 9)
+        if(textIndex == 20)
         {
             goNext = true;
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
             merchantCapital.SetActive(true);
+            kaede.SetActive(false);
             StopAllCoroutines();
         }
     }    
@@ -90,12 +103,20 @@ public class ShrinePuzzleInstructions : MonoBehaviour
     {
         continueButton.SetActive(false);
 
-        if(index < sentences.Length - 1)
+        if(textIndex < sentences.Length - 1)
         {
-            index++;
+            textIndex++;
             textDisplay.text = "";
             StartCoroutine(Type());
         }
+
+        if(audioIndex < lines.Length - 1)
+        {
+            lines[audioIndex].Stop();
+            audioIndex++;
+            StartCoroutine(Speak());
+        }
+
         else
         {
             textDisplay.text = "";
@@ -105,9 +126,9 @@ public class ShrinePuzzleInstructions : MonoBehaviour
     
     public void WinText()
     {
-        if(index < sentences.Length - 1)
+        if(textIndex < sentences.Length - 1)
         {
-            index++;
+            textIndex++;
             textDisplay.text = "";
             StartCoroutine(Type());
         }
