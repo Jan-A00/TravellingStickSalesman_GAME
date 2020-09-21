@@ -9,8 +9,8 @@ public class ShrinePuzzleInstructions : MonoBehaviour
     public Text textDisplay;
     public string[] sentences;
     public AudioSource[] lines;
-    private int audioIndex;
-    private int textIndex;
+    public int audioIndex;
+    public int textIndex;
     public float typingSpeed;
     public Button mapButton;
     public GameObject continueButton;
@@ -38,23 +38,22 @@ public class ShrinePuzzleInstructions : MonoBehaviour
             continueButton.SetActive(true);
         }
 
-        if(textDisplay.text == sentences[13])
+        if(textDisplay.text == sentences[11])
         {
             EndInstructions();
         }
 
-        if(textDisplay.text == sentences[13] && controller.winCon == true)
+        if(textDisplay.text == sentences[11] && controller.winCon == true)
         {
-            StartCoroutine(WinPuzzle());
+            //StartCoroutine(WinPuzzle());
             WinText();
             continueButton.SetActive(false);
         }
 
-        if(textDisplay.text == sentences[20])
+        if(textDisplay.text == sentences[18])
         {
             EndDialogue();
         }
-
     }
 
     IEnumerator Type()
@@ -70,14 +69,8 @@ public class ShrinePuzzleInstructions : MonoBehaviour
     {
         yield return new WaitForSeconds(0.05f);
         lines[audioIndex].Play();
-        //yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         continueButton.SetActive(true);
-    }
-
-    IEnumerator WinPuzzle()
-    {
-        yield return new WaitForSeconds(0.04f);
-        dialogueBox.SetActive(true);
     }
 
     public void EndInstructions()
@@ -88,7 +81,7 @@ public class ShrinePuzzleInstructions : MonoBehaviour
 
     public void EndDialogue()
     {
-        if(textIndex == 20)
+        if(textIndex == 18)
         {
             goNext = true;
             //Destroy(dialogueBox);
@@ -129,8 +122,11 @@ public class ShrinePuzzleInstructions : MonoBehaviour
         if(textIndex < sentences.Length - 1)
         {
             textIndex++;
+            audioIndex++;
             textDisplay.text = "";
+            dialogueBox.SetActive(true);
             StartCoroutine(Type());
+            StartCoroutine(Speak());
         }
     }
 }
