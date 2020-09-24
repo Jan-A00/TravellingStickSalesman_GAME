@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-//redundant script, kept just in case
+using UnityEngine.SceneManagement;
 
 public class TutorialDialogueManager : MonoBehaviour
 {
     public Text textDisplay;
     public string[] sentences;
-    private int index;
+    public AudioSource[] lines;
+    private int textIndex;
+    private int audioIndex;
     public float typingSpeed;
+    public GameObject seaPuzzle;
     public GameObject continueButton;
     public GameObject dialogueBox;
-    public Button mapButton;
-    public Button inventoryButton;
-    public bool hasPlayerAccessedMap = false;
-    public bool hasPlayerAccessedInventory = false;
     public bool hasPlayerDoneTutorial = false;
 
     void Start()
@@ -25,71 +23,79 @@ public class TutorialDialogueManager : MonoBehaviour
         {
             dialogueBox.SetActive(true);
             StartCoroutine(Type());
+            StartCoroutine(Speak());
         }
     }
 
     void Update()
     {
-        if(textDisplay.text == sentences[index])
+        if(textDisplay.text == sentences[textIndex])
         {
             continueButton.SetActive(true);
         }
 
         if(textDisplay.text == sentences[5])
         {
-            StartCoroutine(InventoryAppear());
-            continueButton.SetActive(false);
+            //continueButton.SetActive(false);
         }
 
-        if(textDisplay.text == sentences[9])
+        if(textDisplay.text == sentences[15])
         {
-            StartCoroutine(MapAppear());
-            continueButton.SetActive(false);
+            seaPuzzle.SetActive(true);
         }
 
-        if(textDisplay.text == sentences[13])
+        if(textDisplay.text == sentences[20])
         {
             EndDialogue();
         }
     }
 
-    IEnumerator MapAppear()
-    {
-        yield return new WaitForSeconds(0.25f);
-        mapButton.interactable = true;
-    }
-
-    IEnumerator InventoryAppear()
-    {
-        yield return new WaitForSeconds(0.25f);
-        inventoryButton.interactable = true;
-    }
-
     IEnumerator Type()
     {
-        foreach(char letter in sentences[index].ToCharArray())
+        foreach(char letter in sentences[textIndex].ToCharArray())
         {
             textDisplay.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
     }
 
+    IEnumerator Speak()
+    {
+        yield return new WaitForSeconds(0.05f);
+        lines[audioIndex].Play();
+        yield return new WaitForSeconds(1);
+        continueButton.SetActive(true);
+    }
+
     public void EndDialogue()
     {
-        dialogueBox.SetActive(false);
-        hasPlayerDoneTutorial = true;
+        if(textIndex == 20)
+        {
+            hasPlayerDoneTutorial = true;
+            //Destroy(dialogueBox);
+            dialogueBox.SetActive(false);
+            StopAllCoroutines();
+        }
     }
 
     public void NextSentence()
     {
         continueButton.SetActive(false);
 
-        if(index < sentences.Length - 1)
+        if(textIndex < sentences.Length - 1)
         {
-            index++;
+            textIndex++;
             textDisplay.text = "";
             StartCoroutine(Type());
         }
+
+        if(audioIndex < lines.Length - 1)
+        {
+            lines[audioIndex].Stop();
+            audioIndex++;
+            StartCoroutine(Speak());
+        }
+
         else
         {
             textDisplay.text = "";
@@ -97,29 +103,11 @@ public class TutorialDialogueManager : MonoBehaviour
         }
     }
 
-    public void NextSentenceAfterMap()
+    public void GoToSeaPuzzle()
     {
-        continueButton.SetActive(false);
-
-        if(index < sentences.Length - 1 && hasPlayerAccessedMap == false)
+        if(hasPlayerDoneTutorial == true)
         {
-            index++;
-            textDisplay.text = "";
-            StartCoroutine(Type());
-            hasPlayerAccessedMap = true;
-        }
-    }
-
-    public void NextSentenceAfterInventory()
-    {
-        continueButton.SetActive(false);
-
-        if(index < sentences.Length - 1 && hasPlayerAccessedInventory == false)
-        {
-            index++;
-            textDisplay.text = "";
-            StartCoroutine(Type());
-            hasPlayerAccessedInventory = true;
+            SceneManager.LoadScene("SeaPuzzle");
         }
     }
 }

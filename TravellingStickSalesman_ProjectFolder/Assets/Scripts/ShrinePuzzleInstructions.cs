@@ -9,14 +9,11 @@ public class ShrinePuzzleInstructions : MonoBehaviour
     public Text textDisplay;
     public string[] sentences;
     public AudioSource[] lines;
-    public int audioIndex;
-    public int textIndex;
+    private int audioIndex;
+    private int textIndex;
     public float typingSpeed;
-    public Button mapButton;
     public GameObject continueButton;
     public GameObject dialogueBox;
-    public GameObject merchantCapital;
-    public GameObject kaede;
     public ShrinePuzzleController controller;
     public bool hasPlayerSeenInstructions = false;
     public bool goNext = false;
@@ -45,7 +42,6 @@ public class ShrinePuzzleInstructions : MonoBehaviour
 
         if(textDisplay.text == sentences[11] && controller.winCon == true)
         {
-            //StartCoroutine(WinPuzzle());
             WinText();
             continueButton.SetActive(false);
         }
@@ -65,7 +61,7 @@ public class ShrinePuzzleInstructions : MonoBehaviour
         }
     }
 
-        IEnumerator Speak()
+    IEnumerator Speak()
     {
         yield return new WaitForSeconds(0.05f);
         lines[audioIndex].Play();
@@ -86,9 +82,8 @@ public class ShrinePuzzleInstructions : MonoBehaviour
             goNext = true;
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
-            merchantCapital.SetActive(true);
-            kaede.SetActive(false);
             StopAllCoroutines();
+            SceneManager.LoadScene("MerchantCapital");
         }
     }    
 

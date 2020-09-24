@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShrinePuzzle.unity
     guid: 751f04ba1d03e7f47a3ea31243fe5629
+  - enabled: 1
+    path: Assets/Scenes/MerchantCapital.unity
+    guid: 4489b5d1818ec344ea733c855706f094
   m_configObjects: {}

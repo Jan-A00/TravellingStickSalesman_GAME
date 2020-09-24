@@ -8,7 +8,9 @@ public class SeaPuzzleInstructions : MonoBehaviour
 {
     public Text textDisplay;
     public string[] sentences;
-    public int index;
+    public AudioSource[] lines;
+    private int audioIndex;
+    private int textIndex;
     public float typingSpeed;
     public GameObject shrinePuzzle;
     public GameObject continueButton;
@@ -23,34 +25,34 @@ public class SeaPuzzleInstructions : MonoBehaviour
         {
             dialogueBox.SetActive(true);
             StartCoroutine(Type());
+            StartCoroutine(Speak());
         }
     }
     
     void Update()
     {
-        if(textDisplay.text == sentences[index])
+        if(textDisplay.text == sentences[textIndex])
         {
             continueButton.SetActive(true);
         }
 
-        if(textDisplay.text == sentences[11])
+        if(textDisplay.text == sentences[9])
         {
             EndInstructions();
         }
 
-        if(textDisplay.text == sentences[11] && controller.winCon == true)
+        if(textDisplay.text == sentences[9] && controller.winCon == true)
         {
-            StartCoroutine(WinPuzzle());
             WinText();
             continueButton.SetActive(false);
         }
 
-        if(textDisplay.text == sentences[18])
+        if(textDisplay.text == sentences[15])
         {
             shrinePuzzle.SetActive(true);
         }
 
-        if(textDisplay.text == sentences[24])
+        if(textDisplay.text == sentences[21])
         {
             EndDialogue();
         }
@@ -58,17 +60,19 @@ public class SeaPuzzleInstructions : MonoBehaviour
 
     IEnumerator Type()
     {
-        foreach(char letter in sentences[index].ToCharArray())
+        foreach(char letter in sentences[textIndex].ToCharArray())
         {
             textDisplay.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
     }
 
-    IEnumerator WinPuzzle()
+    IEnumerator Speak()
     {
-        yield return new WaitForSeconds(0.04f);
-        dialogueBox.SetActive(true);
+        yield return new WaitForSeconds(0.05f);
+        lines[audioIndex].Play();
+        yield return new WaitForSeconds(1);
+        continueButton.SetActive(true);
     }
 
     public void EndInstructions()
@@ -79,7 +83,7 @@ public class SeaPuzzleInstructions : MonoBehaviour
 
     public void EndDialogue()
     {
-        if(index == 24)
+        if(textIndex == 21)
         {
             goNext = true;
             //Destroy(dialogueBox);
@@ -88,30 +92,41 @@ public class SeaPuzzleInstructions : MonoBehaviour
         }
     }
 
-    public void WinText()
-    {
-        if(index < sentences.Length - 1)
-        {
-            index++;
-            textDisplay.text = "";
-            StartCoroutine(Type());
-        }
-    }
-
     public void NextSentence()
     {
         continueButton.SetActive(false);
 
-        if(index < sentences.Length - 1)
+        if(textIndex < sentences.Length - 1)
         {
-            index++;
+            textIndex++;
             textDisplay.text = "";
             StartCoroutine(Type());
         }
+
+        if(audioIndex < lines.Length - 1)
+        {
+            lines[audioIndex].Stop();
+            audioIndex++;
+            StartCoroutine(Speak());
+        }
+
         else
         {
             textDisplay.text = "";
             continueButton.SetActive(false);
+        }
+    }
+
+        public void WinText()
+    {
+        if(textIndex < sentences.Length - 1)
+        {
+            textIndex++;
+            audioIndex++;
+            textDisplay.text = "";
+            dialogueBox.SetActive(true);
+            StartCoroutine(Type());
+            StartCoroutine(Speak());
         }
     }
 }
