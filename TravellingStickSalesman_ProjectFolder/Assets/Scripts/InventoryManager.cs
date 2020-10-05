@@ -5,31 +5,53 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    public bool isStickEquipped;
-    public Button placeholderStick;
-    public Button backButton;
-    public GameObject equipText;
-
+    public Transform inventoryUIRoot;
+    public Stick[] allSticks;
+    public InventoryStick stickPrefab;
+    private InventoryStick[] inventory;
+    private int activeStickIndex = 0;
+    private Stick activeStick;
+    public int[] startingSticks;
     void Start()
     {
-        isStickEquipped = false;
+        CreateInventory();
     }
 
-    public void EquipStick()
+    void Update()
     {
-        //backButton.interactable = true;
         
-        if(isStickEquipped == false)
+    }
+
+    void CreateInventory()
+    {
+        int index = 0;
+        foreach (int id in startingSticks)
         {
-            isStickEquipped = true;
-            equipText.SetActive(true);
-            //Debug.Log("Equipped Stick");
+            InventoryStick newStick = Instantiate(stickPrefab);
+            newStick.Init(index, this, allSticks[id]);
+            newStick.transform.SetParent(inventoryUIRoot);
+            index++;
         }
-        else
+    }
+
+    public void SetActiveStick(int index, Stick stick)
+    {
+        //Note: unity handles highlighting thanks to Button component (thanks button!)
+        //unhilight old stick
+        
+        //highlight new stick
+        Debug.Log("Stick in slot " + index + " is now active (" + stick.name + ")");
+        //set active index
+        activeStickIndex = index;
+        activeStick = stick;
+    }
+
+    public Stick GetActiveStick()
+    {
+        if (activeStick == null)
         {
-            isStickEquipped = false;
-            equipText.SetActive(false);
-            //Debug.Log("Unequipped Stick");
+            Debug.LogError("The active stick was null");
         }
+        return activeStick;
     }
 }

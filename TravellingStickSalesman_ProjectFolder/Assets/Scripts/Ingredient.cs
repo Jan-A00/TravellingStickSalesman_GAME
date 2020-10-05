@@ -4,11 +4,11 @@ using UnityEngine;
 
 public enum Ingredient_Type
 {
-    ORANGE = 0, //important to start from 0
-    PEACH = 1, 
-    WATERMELON = 2, 
-    CHERRY = 3, 
-    PEAR = 4
+    GREENGEL = 0, //important to start from 0
+    HERB = 1, 
+    MUSHROOM = 2, 
+    PINKGEL = 3, 
+    ROSEMARY = 4
 }
 
 public class Ingredient : MonoBehaviour
