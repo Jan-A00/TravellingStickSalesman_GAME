@@ -8,11 +8,15 @@ public class PotionPuzzleRecipe : MonoBehaviour
     public Text txtCurrentIngredients;
     public Text txtCorrectIngredients;
     public Text feedbackTextDisplay;
-    public string incorrectText;
     public string emptyText;
+    public string incorrectText;
+
+    public string notEnoughText;
+    public string tooManyText;
+    public string winText;
     public float typingSpeed;
     public GameObject feedbackContinueButton;
-    public GameObject dialogueBox;
+    public GameObject feedbackDialogueBox;
     public BoxCollider2D cauldronCol;
     public Ingredient_Type[] allPossibleIngredientTypes;
     public Ingredient_Type[] correctIngredients;
@@ -72,7 +76,7 @@ public class PotionPuzzleRecipe : MonoBehaviour
 
     void OnMouseDown()
     {
-        CheckRecipe();
+        CheckAndDoStuff();
         currentIngredients.Clear();
         txtCurrentIngredients.text = IngredientsToString( currentIngredients.ToArray() );
     }
@@ -97,38 +101,135 @@ public class PotionPuzzleRecipe : MonoBehaviour
         }
     }
     
+    IEnumerator EmptyCauldron()
+    {
+        foreach(char letter in emptyText.ToCharArray())
+        {
+            feedbackTextDisplay.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+    }
+
+    IEnumerator NotEnough()
+    {
+        foreach(char letter in notEnoughText.ToCharArray())
+        {
+            feedbackTextDisplay.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+    }
+
+    IEnumerator TooMany()
+    {
+        foreach(char letter in tooManyText.ToCharArray())
+        {
+            feedbackTextDisplay.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+    }
+
+    IEnumerator Win()
+    {
+        foreach(char letter in winText.ToCharArray())
+        {
+            feedbackTextDisplay.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+    }
+
+
     public void Dismiss()
     {
         feedbackTextDisplay.text = "";
         cauldronCol.enabled = true;
-        dialogueBox.SetActive(false);
+        feedbackDialogueBox.SetActive(false);
+        StopAllCoroutines();
     }
     
+    public bool NoIngredients() { if ( currentIngredients.Count == 0 ) { Debug.Log("No Ingredients"); return true; } else { return false; } }
+    public bool NotEnoughIngredients() { if ( currentIngredients.Count < correctIngredients.Length ) { Debug.Log("Not Enough"); return true; } else { return false; } }
+    public bool EnoughIngredients() { if (currentIngredients.Count == correctIngredients.Length) { Debug.Log("Enough Ingredients"); return true; } else { return false; } }
+    public bool TooManyIngredients() { if (currentIngredients.Count > correctIngredients.Length) { Debug.Log("Too Many Ingredients"); return true; } else { return false; } }
+
+    public bool CheckAndDoStuff()
+    {
+        // ▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
+        // Check for incorrect conditions first.
+        // ▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
+        if (NoIngredients()) 
+        {
+            /* Calls and Coroutines can go here. */
+            cauldronCol.enabled = false;
+            feedbackDialogueBox.SetActive(true);
+            StartCoroutine(EmptyCauldron());
+            return false;
+        }
+        if (NotEnoughIngredients()) 
+        {
+            /* Calls and Coroutines can go here. */
+            cauldronCol.enabled = false;
+            feedbackDialogueBox.SetActive(true);
+            StartCoroutine(NotEnough());
+            return false;
+        }
+        if (TooManyIngredients()) 
+        {
+            /* Calls and Coroutines can go here. */
+            cauldronCol.enabled = false;
+            feedbackDialogueBox.SetActive(true);
+            StartCoroutine(TooMany());
+            return false;
+        }
+        // △△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△
+
+        // ▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
+        // Now check for correct conditions.
+        // ▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽▽
+        if (EnoughIngredients()) 
+        {
+            /* Calls and Coroutines can go here. */
+
+            if (CheckRecipe()) {
+                // We have the correct ingedients!
+                
+                /* Calls and Coroutines can go here. */
+                cauldronCol.enabled = false;
+                feedbackDialogueBox.SetActive(true);
+                StartCoroutine(Win());
+                return true;
+            }
+            else {
+                /* We have the correct number of ingredients, 
+                but they are the wrong kind. */
+
+                /* Calls and Coroutines can go here. */
+                cauldronCol.enabled = false;
+                feedbackDialogueBox.SetActive(true);
+                StartCoroutine(WrongIngredients());
+                Debug.Log("meh");        
+                return false;
+            }
+        }  
+        // △△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△△
+        // If all else false, we just return false.
+        return false;
+        
+    }
+
+    //For each thing in the current ingredients, check if it matches in the
+    //correct ingredients. Once you get n matches, where n is the length of the
+    //correct ingredients list, you have a correct recipe, as long as you 
+    //have no more ingredients left (i.e. extra ingredients are bad)
+
     public bool CheckRecipe()
     {
+        /*
+        This function, when called, returns one of the following:
+            true  <- if they have matched the ingredients.
+            false <- if they have not yet matched the correct ingredients.
+        */
         int matches = 0;
         List<int> alreadyMatchedPlaces = new List<int>();
-
-        if (correctIngredients.Length != currentIngredients.Count && currentIngredients.Count != 0)
-        {
-            //haha try again m8
-            cauldronCol.enabled = false;
-            dialogueBox.SetActive(true);
-            Debug.Log("meh");
-            StartCoroutine(WrongIngredients());
-        }
-
-        if (correctIngredients.Length == currentIngredients.Count )
-        {
-            //win condition basically. main dialogue should resume after this
-            Debug.Log("yay");
-        }
-
-        if (currentIngredients.Count == 0)
-        {
-            //cauldron is empty!
-            Debug.Log("empty");
-        }
 
         for (int place = 0; place < currentIngredients.Count; place++)
         {
@@ -152,6 +253,9 @@ public class PotionPuzzleRecipe : MonoBehaviour
                 }
             }
         }
+        /* This performs the final comparison between the 
+        number of correct matches and the total number of 
+        ingredients they must match and returns true or false. */
         return (matches == correctIngredients.Length);
     }
 
