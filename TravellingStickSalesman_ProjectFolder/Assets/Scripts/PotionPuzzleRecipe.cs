@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Recipe : MonoBehaviour
+public class PotionPuzzleRecipe : MonoBehaviour
 {
     public Text txtCurrentIngredients;
     public Text txtCorrectIngredients;
-    public Text textDisplay;
-    public string sentences;
+    public Text feedbackTextDisplay;
+    public string incorrectText;
+    public string emptyText;
     public float typingSpeed;
+    public GameObject feedbackContinueButton;
+    public GameObject dialogueBox;
+    public BoxCollider2D cauldronCol;
     public Ingredient_Type[] allPossibleIngredientTypes;
     public Ingredient_Type[] correctIngredients;
     public List<Ingredient_Type> currentIngredients;
@@ -84,13 +88,20 @@ public class Recipe : MonoBehaviour
     //correct ingredients list, you have a correct recipe, as long as you 
     //have no more ingredients left (i.e. extra ingredients are bad)
     
-    IEnumerator Type()
+    IEnumerator WrongIngredients()
     {
-        foreach(char letter in sentences.ToCharArray())
+        foreach(char letter in incorrectText.ToCharArray())
         {
-            textDisplay.text += letter;
+            feedbackTextDisplay.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+    }
+    
+    public void Dismiss()
+    {
+        feedbackTextDisplay.text = "";
+        cauldronCol.enabled = true;
+        dialogueBox.SetActive(false);
     }
     
     public bool CheckRecipe()
@@ -101,14 +112,15 @@ public class Recipe : MonoBehaviour
         if (correctIngredients.Length != currentIngredients.Count && currentIngredients.Count != 0)
         {
             //haha try again m8
-            //need to clearout the box somehow
+            cauldronCol.enabled = false;
+            dialogueBox.SetActive(true);
             Debug.Log("meh");
-            StartCoroutine(Type());
+            StartCoroutine(WrongIngredients());
         }
 
-        if (correctIngredients.Length == currentIngredients.Count)
+        if (correctIngredients.Length == currentIngredients.Count )
         {
-            //win condition basically. main dialogue resumes after this
+            //win condition basically. main dialogue should resume after this
             Debug.Log("yay");
         }
 
