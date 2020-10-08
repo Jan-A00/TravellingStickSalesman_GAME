@@ -12,9 +12,9 @@ public class TutorialDialogueManager : MonoBehaviour
     private int textIndex;
     private int audioIndex;
     public float typingSpeed;
-    public GameObject seaPuzzle;
     public GameObject continueButton;
     public GameObject dialogueBox;
+    public GameObject seaPuzzle;
     public bool hasPlayerDoneTutorial = false;
 
     void Start()
@@ -32,11 +32,6 @@ public class TutorialDialogueManager : MonoBehaviour
         if(textDisplay.text == sentences[textIndex])
         {
             continueButton.SetActive(true);
-        }
-
-        if(textDisplay.text == sentences[5])
-        {
-            //continueButton.SetActive(false);
         }
 
         if(textDisplay.text == sentences[15])

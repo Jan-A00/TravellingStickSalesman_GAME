@@ -7,6 +7,9 @@ public class Recipe : MonoBehaviour
 {
     public Text txtCurrentIngredients;
     public Text txtCorrectIngredients;
+    public Text textDisplay;
+    public string sentences;
+    public float typingSpeed;
     public Ingredient_Type[] allPossibleIngredientTypes;
     public Ingredient_Type[] correctIngredients;
     public List<Ingredient_Type> currentIngredients;
@@ -14,7 +17,7 @@ public class Recipe : MonoBehaviour
     public bool allowDuplicates = false;
     public bool randomRecipe = false;
     public int randomRecipeMinIngredients = 1;
-    public int randomRecipeMaxIngredients = 3;
+    public int randomRecipeMaxIngredients = 5;
     // Start is called before the first frame update
     void Awake()
     {
@@ -65,7 +68,7 @@ public class Recipe : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log(CheckRecipe());
+        CheckRecipe();
         currentIngredients.Clear();
         txtCurrentIngredients.text = IngredientsToString( currentIngredients.ToArray() );
     }
@@ -80,14 +83,39 @@ public class Recipe : MonoBehaviour
     //correct ingredients. Once you get n matches, where n is the length of the
     //correct ingredients list, you have a correct recipe, as long as you 
     //have no more ingredients left (i.e. extra ingredients are bad)
+    
+    IEnumerator Type()
+    {
+        foreach(char letter in sentences.ToCharArray())
+        {
+            textDisplay.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+    }
+    
     public bool CheckRecipe()
     {
         int matches = 0;
         List<int> alreadyMatchedPlaces = new List<int>();
 
-        if (correctIngredients.Length != currentIngredients.Count)
+        if (correctIngredients.Length != currentIngredients.Count && currentIngredients.Count != 0)
         {
-            return false;
+            //haha try again m8
+            //need to clearout the box somehow
+            Debug.Log("meh");
+            StartCoroutine(Type());
+        }
+
+        if (correctIngredients.Length == currentIngredients.Count)
+        {
+            //win condition basically. main dialogue resumes after this
+            Debug.Log("yay");
+        }
+
+        if (currentIngredients.Count == 0)
+        {
+            //cauldron is empty!
+            Debug.Log("empty");
         }
 
         for (int place = 0; place < currentIngredients.Count; place++)

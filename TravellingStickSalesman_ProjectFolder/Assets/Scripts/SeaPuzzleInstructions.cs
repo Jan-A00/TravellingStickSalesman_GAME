@@ -95,6 +95,7 @@ public class SeaPuzzleInstructions : MonoBehaviour
     public void NextSentence()
     {
         continueButton.SetActive(false);
+        StopAllCoroutines();
 
         if(textIndex < sentences.Length - 1)
         {
