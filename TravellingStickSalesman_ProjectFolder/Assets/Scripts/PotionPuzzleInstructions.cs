@@ -32,7 +32,7 @@ public class PotionPuzzleInstructions : MonoBehaviour
         {
             dialogueBox.SetActive(true);
             StartCoroutine(Type());
-            //StartCoroutine(Speak());
+            StartCoroutine(Speak());
         }
     }
 
@@ -77,6 +77,14 @@ public class PotionPuzzleInstructions : MonoBehaviour
         }
     }
 
+    IEnumerator Speak()
+    {
+        yield return new WaitForSeconds(0.05f);
+        lines[audioIndex].Play();
+        yield return new WaitForSeconds(1);
+        continueButton.SetActive(true);
+    }
+
     public void EndInstructions()
     {
         dialogueBox.SetActive(false);
@@ -106,12 +114,12 @@ public class PotionPuzzleInstructions : MonoBehaviour
             StartCoroutine(Type());
         }
 
-        /*if(audioIndex < lines.Length - 1)
+        if(audioIndex < lines.Length - 1)
         {
             lines[audioIndex].Stop();
             audioIndex++;
             StartCoroutine(Speak());
-        }*/
+        }
 
         else
         {
@@ -130,11 +138,11 @@ public class PotionPuzzleInstructions : MonoBehaviour
         if(textIndex < sentences.Length - 1)
         {
             textIndex++;
-            //audioIndex++;
+            audioIndex++;
             textDisplay.text = "";
             dialogueBox.SetActive(true);
             StartCoroutine(Type());
-            //StartCoroutine(Speak());
+            StartCoroutine(Speak());
         }
     }
 }
