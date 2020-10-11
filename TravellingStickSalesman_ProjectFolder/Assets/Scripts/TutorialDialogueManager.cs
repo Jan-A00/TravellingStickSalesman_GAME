@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class TutorialDialogueManager : MonoBehaviour
 {
+    public GameObject seaPuzzle;
+    public bool hasPlayerDoneTutorial = false;
+
+    [Header("Dialogue")]
     public Text textDisplay;
     public string[] sentences;
     public AudioSource[] lines;
@@ -14,8 +18,6 @@ public class TutorialDialogueManager : MonoBehaviour
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject dialogueBox;
-    public GameObject seaPuzzle;
-    public bool hasPlayerDoneTutorial = false;
 
     void Start()
     {

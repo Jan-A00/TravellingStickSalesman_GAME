@@ -15,7 +15,7 @@ public class Ingredient : MonoBehaviour
 {
     public Ingredient_Type iType; //which ingredient is this?
     public Sprite[] ingredientImage;
-    public PotionPuzzleRecipe recipe;
+    public PotionPuzzleController controller;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +37,7 @@ public class Ingredient : MonoBehaviour
 
     void AddIngredientToRecipe()
     {
-        recipe.AddIngredient(iType);
+        controller.AddIngredient(iType);
     }
 
     

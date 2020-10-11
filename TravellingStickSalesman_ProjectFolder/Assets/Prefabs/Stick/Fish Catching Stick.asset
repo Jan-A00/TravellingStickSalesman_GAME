@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Fish Catching Stick
   m_EditorClassIdentifier: 
   name: Fish Catching Stick
-  description: A stick for catching fish.
+  description: Baz's husband was looking for one of these!
   stickArt: {fileID: 21300000, guid: f5eccc25d2d111f4a8fd102bff0a4885, type: 3}
+  selectedStickArt: {fileID: 0}
+  highlightedStickArt: {fileID: 0}
+  character: 2

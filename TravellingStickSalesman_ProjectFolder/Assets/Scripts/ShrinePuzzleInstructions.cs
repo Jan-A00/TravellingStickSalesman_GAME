@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class ShrinePuzzleInstructions : MonoBehaviour
 {
+    public ShrinePuzzleController controller;
+    public bool hasPlayerSeenInstructions = false;
+    public bool goNext = false;
+
+    [Header("Dialogue")]
     public Text textDisplay;
     public string[] sentences;
     public AudioSource[] lines;
@@ -14,9 +19,6 @@ public class ShrinePuzzleInstructions : MonoBehaviour
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject dialogueBox;
-    public ShrinePuzzleController controller;
-    public bool hasPlayerSeenInstructions = false;
-    public bool goNext = false;
 
     void Start()
     {

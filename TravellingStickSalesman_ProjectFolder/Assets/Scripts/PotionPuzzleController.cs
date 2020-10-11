@@ -3,20 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PotionPuzzleRecipe : MonoBehaviour
+public class PotionPuzzleController : MonoBehaviour
 {
     public Text txtCurrentIngredients;
     public Text txtCorrectIngredients;
-    public Text feedbackTextDisplay;
-    public string emptyText;
-    public string incorrectText;
-
-    public string notEnoughText;
-    public string tooManyText;
-    public string winText;
-    public float typingSpeed;
-    public GameObject feedbackContinueButton;
-    public GameObject feedbackDialogueBox;
     public BoxCollider2D cauldronCol;
     public Ingredient_Type[] allPossibleIngredientTypes;
     public Ingredient_Type[] correctIngredients;
@@ -26,6 +16,19 @@ public class PotionPuzzleRecipe : MonoBehaviour
     public bool randomRecipe = false;
     public int randomRecipeMinIngredients = 1;
     public int randomRecipeMaxIngredients = 5;
+    public bool winCon = false;
+    
+    [Header("Feedback")]
+    public Text feedbackTextDisplay;
+    public AudioSource[] feedbackLines;
+    public string emptyText;
+    public string incorrectText;
+    public string notEnoughText;
+    public string tooManyText;
+    public float typingSpeed;
+    public GameObject feedbackContinueButton;
+    public GameObject feedbackDialogueBox;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -94,6 +97,8 @@ public class PotionPuzzleRecipe : MonoBehaviour
     
     IEnumerator WrongIngredients()
     {
+        yield return new WaitForSeconds(0.01f);
+        feedbackContinueButton.SetActive(true);
         foreach(char letter in incorrectText.ToCharArray())
         {
             feedbackTextDisplay.text += letter;
@@ -103,6 +108,8 @@ public class PotionPuzzleRecipe : MonoBehaviour
     
     IEnumerator EmptyCauldron()
     {
+        yield return new WaitForSeconds(0.01f);
+        feedbackContinueButton.SetActive(true);
         foreach(char letter in emptyText.ToCharArray())
         {
             feedbackTextDisplay.text += letter;
@@ -112,6 +119,8 @@ public class PotionPuzzleRecipe : MonoBehaviour
 
     IEnumerator NotEnough()
     {
+        yield return new WaitForSeconds(0.01f);
+        feedbackContinueButton.SetActive(true);
         foreach(char letter in notEnoughText.ToCharArray())
         {
             feedbackTextDisplay.text += letter;
@@ -121,6 +130,8 @@ public class PotionPuzzleRecipe : MonoBehaviour
 
     IEnumerator TooMany()
     {
+        yield return new WaitForSeconds(0.01f);
+        feedbackContinueButton.SetActive(true);
         foreach(char letter in tooManyText.ToCharArray())
         {
             feedbackTextDisplay.text += letter;
@@ -128,21 +139,15 @@ public class PotionPuzzleRecipe : MonoBehaviour
         }
     }
 
-    IEnumerator Win()
-    {
-        foreach(char letter in winText.ToCharArray())
-        {
-            feedbackTextDisplay.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
-        }
-    }
-
-
     public void Dismiss()
     {
-        feedbackTextDisplay.text = "";
         cauldronCol.enabled = true;
+        feedbackTextDisplay.text = "";
         feedbackDialogueBox.SetActive(false);
+        feedbackContinueButton.SetActive(false);
+        feedbackLines[1].Stop();
+        feedbackLines[2].Stop();
+        feedbackLines[3].Stop();
         StopAllCoroutines();
     }
     
@@ -159,6 +164,7 @@ public class PotionPuzzleRecipe : MonoBehaviour
         if (NoIngredients()) 
         {
             /* Calls and Coroutines can go here. */
+            feedbackLines[2].Play();
             cauldronCol.enabled = false;
             feedbackDialogueBox.SetActive(true);
             StartCoroutine(EmptyCauldron());
@@ -167,6 +173,7 @@ public class PotionPuzzleRecipe : MonoBehaviour
         if (NotEnoughIngredients()) 
         {
             /* Calls and Coroutines can go here. */
+            feedbackLines[3].Play();
             cauldronCol.enabled = false;
             feedbackDialogueBox.SetActive(true);
             StartCoroutine(NotEnough());
@@ -193,9 +200,9 @@ public class PotionPuzzleRecipe : MonoBehaviour
                 // We have the correct ingedients!
                 
                 /* Calls and Coroutines can go here. */
-                cauldronCol.enabled = false;
-                feedbackDialogueBox.SetActive(true);
-                StartCoroutine(Win());
+                //cauldronCol.enabled = false;
+                winCon = true;
+                Debug.Log("WIN!!");
                 return true;
             }
             else {
@@ -203,10 +210,10 @@ public class PotionPuzzleRecipe : MonoBehaviour
                 but they are the wrong kind. */
 
                 /* Calls and Coroutines can go here. */
+                feedbackLines[1].Play();
                 cauldronCol.enabled = false;
                 feedbackDialogueBox.SetActive(true);
-                StartCoroutine(WrongIngredients());
-                Debug.Log("meh");        
+                StartCoroutine(WrongIngredients());      
                 return false;
             }
         }  

@@ -8,10 +8,12 @@ public class InventoryManager : MonoBehaviour
     public Transform inventoryUIRoot;
     public Stick[] allSticks;
     public InventoryStick stickPrefab;
+    [SerializeField]
     private InventoryStick[] inventory;
     private int activeStickIndex = 0;
-    private Stick activeStick;
+    public Stick activeStick;
     public int[] startingSticks;
+
     void Start()
     {
         CreateInventory();
@@ -46,12 +48,24 @@ public class InventoryManager : MonoBehaviour
         activeStick = stick;
     }
 
-    public Stick GetActiveStick()
+    public void SellStick()
+    {
+        if (activeStick != null)
+        {
+            Debug.Log("You have sold " + activeStick);
+        }
+        else
+        {
+            Debug.LogError("The active stick was null");
+        }
+    }
+
+    /*public Stick GetActiveStick()
     {
         if (activeStick == null)
         {
             Debug.LogError("The active stick was null");
         }
         return activeStick;
-    }
+    }*/
 }

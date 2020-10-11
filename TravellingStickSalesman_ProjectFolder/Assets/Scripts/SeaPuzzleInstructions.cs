@@ -6,18 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class SeaPuzzleInstructions : MonoBehaviour
 {
+    public GameObject shrinePuzzle;
+    public SeaPuzzleController controller;
+    public bool hasPlayerSeenInstructions = false;
+    public bool goNext = false;
+
+    [Header("Dialogue")]
     public Text textDisplay;
     public string[] sentences;
     public AudioSource[] lines;
     private int audioIndex;
     private int textIndex;
     public float typingSpeed;
-    public GameObject shrinePuzzle;
     public GameObject continueButton;
     public GameObject dialogueBox;
-    public SeaPuzzleController controller;
-    public bool hasPlayerSeenInstructions = false;
-    public bool goNext = false;
 
     void Start()
     {
@@ -118,7 +120,7 @@ public class SeaPuzzleInstructions : MonoBehaviour
         }
     }
 
-        public void WinText()
+    public void WinText()
     {
         if(textIndex < sentences.Length - 1)
         {

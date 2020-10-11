@@ -22,10 +22,10 @@ public class InventoryStick : MonoBehaviour
         
     }
 
-    public void Init(int id, InventoryManager imanager, Stick stickData)
+    public void Init(int id, InventoryManager iManager, Stick stickData)
     {
         index = id;
-        manager = imanager;
+        manager = iManager;
         stick = stickData;
         stickArtImage.sprite = stick.stickArt;
     }
@@ -34,10 +34,5 @@ public class InventoryStick : MonoBehaviour
     {
         manager.SetActiveStick(this.index, stick);
         //perform sprite swap for active slot.
-    }
-
-    public void Highlight(bool shouldHighlight)
-    {
-
     }
 }
