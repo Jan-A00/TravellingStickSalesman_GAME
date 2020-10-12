@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class InventoryStick : MonoBehaviour
 {
     Stick stick;
+    Button button;
     InventoryManager manager;
     public Image stickArtImage;
     int index;
@@ -13,7 +14,16 @@ public class InventoryStick : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*stickArtImage = GetComponent<Image>();
+        button = GetComponent<Button>();
+
+        button.transition = Selectable.Transition.SpriteSwap;
+        button.targetGraphic = stickArtImage;
+
+        stickArtImage.sprite = stick.stickArt;
+        button.spriteState = stick.stickSpriteState;*/
         
+        //uncomment when we have graphics
     }
 
     // Update is called once per frame

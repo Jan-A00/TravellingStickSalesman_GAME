@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum Character
 {
@@ -18,8 +19,8 @@ public class Stick : ScriptableObject
 {
      public string name;
      public string description;
-     public Sprite stickArt;
-     public Sprite selectedStickArt;
-     public Sprite highlightedStickArt;
      public Character character;
+     public Sprite stickArt;
+     public SpriteState stickSpriteState;
+     
 }

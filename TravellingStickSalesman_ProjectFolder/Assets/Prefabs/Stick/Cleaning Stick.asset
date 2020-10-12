@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Cleaning Stick
   description: A stick used to sweep up leaves.
-  stickArt: {fileID: 21300000, guid: 262bf4e4a19caa043bd821f2da5b0212, type: 3}
-  selectedStickArt: {fileID: 0}
-  highlightedStickArt: {fileID: 0}
   character: 3
+  stickArt: {fileID: 21300000, guid: 262bf4e4a19caa043bd821f2da5b0212, type: 3}
+  stickSpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}

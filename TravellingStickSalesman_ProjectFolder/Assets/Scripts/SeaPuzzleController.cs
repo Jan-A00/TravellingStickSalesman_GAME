@@ -43,10 +43,10 @@ public class SeaPuzzleController : MonoBehaviour
             startPuzzle = true;
         }
 
-        if(instructions.textDisplay.text == instructions.sentences[21])
+        /*if(instructions.textDisplay.text == instructions.sentences[21])
         {
             shrinePuzzleButton.interactable = true;
-        }
+        }*/
     }
     
     void GetClosedClam()

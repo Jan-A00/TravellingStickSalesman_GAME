@@ -42,7 +42,7 @@ public class InventoryManager : MonoBehaviour
         //unhilight old stick
         
         //highlight new stick
-        Debug.Log("Stick in slot " + index + " is now active (" + stick.name + ")");
+        Debug.Log("Stick in slot " + index + " is now active (" + stick.name + ": " + stick.description + ")");
         //set active index
         activeStickIndex = index;
         activeStick = stick;

@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Miniature Digging Stick
   m_EditorClassIdentifier: 
   name: Miniature Digging Stick
-  description: A stick used for digging up shrooms.
-  stickArt: {fileID: 21300000, guid: 9cf0906413e717148b2183953889aae1, type: 3}
-  selectedStickArt: {fileID: 0}
-  highlightedStickArt: {fileID: 0}
+  description: A stick used to dig up shrooms.
   character: 6
+  stickArt: {fileID: 21300000, guid: 9cf0906413e717148b2183953889aae1, type: 3}
+  stickSpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
