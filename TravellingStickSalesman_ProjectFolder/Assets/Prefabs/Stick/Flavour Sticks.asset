@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Flavour Sticks
   description: Put these in your stew for extra flavour.
-  stickArt: {fileID: 21300000, guid: b43bf59dc6ac27d46a727874e6c8201d, type: 3}
-  selectedStickArt: {fileID: 0}
-  highlightedStickArt: {fileID: 0}
   character: 4
+  stickArt: {fileID: 21300000, guid: 5af88cccd912a2d43803b816dddada09, type: 3}
+  stickSpriteState:
+    m_HighlightedSprite: {fileID: 21300000, guid: 5dd06cf9674e00344925bd02af639d15,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 5dd06cf9674e00344925bd02af639d15, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 5dd06cf9674e00344925bd02af639d15, type: 3}
+    m_DisabledSprite: {fileID: 0}

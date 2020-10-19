@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Liquid Mixing Stick
   description: A stick used for stirring liquids.
-  stickArt: {fileID: 21300000, guid: 069dbaba4f183314b84b4379ea5c283c, type: 3}
-  selectedStickArt: {fileID: 0}
-  highlightedStickArt: {fileID: 0}
   character: 4
+  stickArt: {fileID: 21300000, guid: 685b67848b14e8840a2a218379c0ca3f, type: 3}
+  stickSpriteState:
+    m_HighlightedSprite: {fileID: 21300000, guid: bbde3b909231b734496fb9b15aa19fff,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: bbde3b909231b734496fb9b15aa19fff, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: bbde3b909231b734496fb9b15aa19fff, type: 3}
+    m_DisabledSprite: {fileID: 0}

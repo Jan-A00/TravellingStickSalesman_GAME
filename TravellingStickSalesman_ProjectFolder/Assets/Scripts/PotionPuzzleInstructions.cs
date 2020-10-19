@@ -20,6 +20,7 @@ public class PotionPuzzleInstructions : MonoBehaviour
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject dialogueBox;
+    //public GameObject feedbackDialogueBox;
 
     void Start()
     {
@@ -130,6 +131,7 @@ public class PotionPuzzleInstructions : MonoBehaviour
         if(textDisplay.text == sentences[14])
         {
             colliders[5].enabled = true;
+            //feedbackDialogueBox.SetActive(false);
         }
     }
 

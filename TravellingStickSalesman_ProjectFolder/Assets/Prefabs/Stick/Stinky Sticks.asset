@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Stinky Sticks
   description: Gives off a funky scent.
-  stickArt: {fileID: 21300000, guid: f824108ca429a114d8ad6f766ac167bc, type: 3}
-  selectedStickArt: {fileID: 0}
-  highlightedStickArt: {fileID: 0}
   character: 3
+  stickArt: {fileID: 21300000, guid: 2ebc7e84877cf9b4c8df10c59357d7c0, type: 3}
+  stickSpriteState:
+    m_HighlightedSprite: {fileID: 21300000, guid: 5885e3bfc528b3a43ab9d90346bac52b,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 5885e3bfc528b3a43ab9d90346bac52b, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 5885e3bfc528b3a43ab9d90346bac52b, type: 3}
+    m_DisabledSprite: {fileID: 0}

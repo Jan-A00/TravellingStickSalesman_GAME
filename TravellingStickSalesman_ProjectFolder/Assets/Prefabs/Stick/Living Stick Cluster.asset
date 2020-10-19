@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Living Stick Cluster
   description: An endless supply of sticks!
-  stickArt: {fileID: 21300000, guid: 518ae03a636ad394e9aba21c2717c2e6, type: 3}
-  selectedStickArt: {fileID: 0}
-  highlightedStickArt: {fileID: 0}
   character: 7
+  stickArt: {fileID: 21300000, guid: caf90e823a9a6924f9183bb208852a1e, type: 3}
+  stickSpriteState:
+    m_HighlightedSprite: {fileID: 21300000, guid: 3078360c1067e6343bf7171f8855eadf,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 3078360c1067e6343bf7171f8855eadf, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 3078360c1067e6343bf7171f8855eadf, type: 3}
+    m_DisabledSprite: {fileID: 0}

@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Bag of Infant Sticks
   description: All sticks must be born from somewhere...
-  stickArt: {fileID: 21300000, guid: 2a4e6366cadfdef4295c0eb2335566f5, type: 3}
-  selectedStickArt: {fileID: 0}
-  highlightedStickArt: {fileID: 0}
   character: 7
+  stickArt: {fileID: 21300000, guid: 6daef17b646264c459ba014b9fd5f5ec, type: 3}
+  stickSpriteState:
+    m_HighlightedSprite: {fileID: 21300000, guid: 8dda466e6c726e1408b933ab0787acaa,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 8dda466e6c726e1408b933ab0787acaa, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 8dda466e6c726e1408b933ab0787acaa, type: 3}
+    m_DisabledSprite: {fileID: 0}
