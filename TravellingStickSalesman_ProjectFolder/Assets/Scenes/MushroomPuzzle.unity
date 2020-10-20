@@ -2188,7 +2188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258719412}
   m_LocalRotation: {x: -0, y: -0, z: 0.0055565317, w: 0.9999846}
-  m_LocalPosition: {x: -2.75, y: 2.79, z: 1}
+  m_LocalPosition: {x: -2.75, y: 2.96, z: 1}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 1465690800}
@@ -3599,14 +3599,11 @@ MonoBehaviour:
   txtCorrectItems: {fileID: 2019822101}
   correctNotes: 
   mushroomsInScene: []
-  mushroomsInOrder: []
   currentMushrooms: 
-  orderMatters: 1
   allowDuplicates: 0
   randomNotes: 1
   randomMinNotes: 8
   randomMaxNotes: 8
   playSequenceAtStart: 1
-  highlightMushroomsDuringPlayback: 1
   initialPlaybackDelay: 1
   delayBetweenNotesDuringPlayback: 0.5
