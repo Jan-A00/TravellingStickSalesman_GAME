@@ -22,8 +22,6 @@ public class InventoryStick : MonoBehaviour
 
         stickArtImage.sprite = stick.stickArt;
         button.spriteState = stick.stickSpriteState;
-        
-        //uncomment when we have graphics
     }
 
     // Update is called once per frame

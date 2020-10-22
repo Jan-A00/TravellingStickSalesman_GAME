@@ -9,24 +9,25 @@ public class PotionPuzzleInstructions : MonoBehaviour
     public PotionPuzzleController controller;
     public bool hasPlayerSeenInstructions = false;
     public bool goNext = false;
-    public BoxCollider2D[] colliders;
+    public Button[] button;
+    public BoxCollider2D cauldron;
 
     [Header("Dialogue")]
     public Text textDisplay;
     public string[] sentences;
     public AudioSource[] lines;
-    private int audioIndex;
-    private int textIndex;
+    private int audioIndex; //set this to 13 for debug purposes
+    private int textIndex; //set this to 13 for debug purposes
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject dialogueBox;
-    //public GameObject feedbackDialogueBox;
 
     void Start()
     {
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
-            colliders[i].enabled = false;
+            button[i].enabled = false;
+            cauldron.enabled = false;
         }
 
         if(hasPlayerSeenInstructions == false)
@@ -49,7 +50,7 @@ public class PotionPuzzleInstructions : MonoBehaviour
             EndInstructions();
             for (int i = 0; i < 5; i++)
             {
-                colliders[i].enabled = true;
+                button[i].enabled = true;
             }
         }
 
@@ -57,9 +58,10 @@ public class PotionPuzzleInstructions : MonoBehaviour
         {
             WinText();
             continueButton.SetActive(false);
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 5; i++)
             {
-                colliders[i].enabled = false;
+                button[i].enabled = false;
+                cauldron.enabled = false;
             }
         }
 
@@ -130,7 +132,7 @@ public class PotionPuzzleInstructions : MonoBehaviour
 
         if(textDisplay.text == sentences[14])
         {
-            colliders[5].enabled = true;
+            cauldron.enabled = true;
             //feedbackDialogueBox.SetActive(false);
         }
     }

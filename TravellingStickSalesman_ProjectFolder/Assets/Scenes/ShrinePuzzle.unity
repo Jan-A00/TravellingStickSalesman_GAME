@@ -719,7 +719,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bf306ef73ef7d334895ee5475131e0a0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c300e1f1a27c23b45bcfa50926eddb7d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1626,6 +1626,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1354859440073219916, guid: cded68fcb731250459f775463b598d29,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4198109124798425590, guid: cded68fcb731250459f775463b598d29,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2375,7 +2380,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ff8b7d6f25526b548977d861c93bb29e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1b309ce7505a1844aa48b22e556d5500, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3317,6 +3322,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b9b40d46bb6ef34294e0b08aea5abab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 1593277762}
+  hasPlayerSeenInstructions: 0
+  goNext: 0
   textDisplay: {fileID: 603617057}
   sentences:
   - Greetings, traveler. Welcome to my shrine. You may rest here for as long as you
@@ -3368,9 +3376,6 @@ MonoBehaviour:
   typingSpeed: 0.01
   continueButton: {fileID: 88578539}
   dialogueBox: {fileID: 21212232}
-  controller: {fileID: 1593277762}
-  hasPlayerSeenInstructions: 0
-  goNext: 0
 --- !u!4 &1192975600
 Transform:
   m_ObjectHideFlags: 0
@@ -3571,7 +3576,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 078d778c0e739214db5c8dd6a31b4868, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ce3aa32241fe3e0429e68d2810fd5f3d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3684,7 +3689,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4871e7970e212bc46841f97e3db6cf66, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5dcb9532ee2d06846bf28ed22bc7b7ab, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4674,7 +4679,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 16c3ddf20df72f643ba98a580404ed01, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e0fab2a142886f745bc1103cd2079417, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum Ingredient_Type
 {
@@ -13,13 +14,16 @@ public enum Ingredient_Type
 
 public class Ingredient : MonoBehaviour
 {
+    public Image image;
     public Ingredient_Type iType; //which ingredient is this?
     public Sprite[] ingredientImage;
     public PotionPuzzleController controller;
+
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<SpriteRenderer>().sprite = ingredientImage[(int)iType];
+        image = GetComponent<Image>();
+        image.sprite = ingredientImage[(int)iType];
     }
 
     // Update is called once per frame
@@ -28,14 +32,7 @@ public class Ingredient : MonoBehaviour
         
     }
 
-    void OnMouseDown()
-    {
-        //Debug.Log("Clicked " + iType);
-        AddIngredientToRecipe();
-
-    }
-
-    void AddIngredientToRecipe()
+    public void AddIngredientToRecipe()
     {
         controller.AddIngredient(iType);
     }

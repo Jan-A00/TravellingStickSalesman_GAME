@@ -16,7 +16,7 @@ public class PotionPuzzleController : MonoBehaviour
     public bool randomRecipe = false;
     public int randomRecipeMinIngredients = 1;
     public int randomRecipeMaxIngredients = 5;
-    public bool winCon = false;
+    public bool winCon = true;
     
     [Header("Feedback")]
     public Text feedbackTextDisplay;
