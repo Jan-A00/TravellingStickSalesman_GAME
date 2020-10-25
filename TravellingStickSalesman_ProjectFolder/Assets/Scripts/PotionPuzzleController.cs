@@ -145,6 +145,7 @@ public class PotionPuzzleController : MonoBehaviour
         feedbackTextDisplay.text = "";
         feedbackDialogueBox.SetActive(false);
         feedbackContinueButton.SetActive(false);
+        feedbackLines[0].Stop();
         feedbackLines[1].Stop();
         feedbackLines[2].Stop();
         feedbackLines[3].Stop();
@@ -182,6 +183,7 @@ public class PotionPuzzleController : MonoBehaviour
         if (TooManyIngredients()) 
         {
             /* Calls and Coroutines can go here. */
+            feedbackLines[0].Play();
             cauldronCol.enabled = false;
             feedbackDialogueBox.SetActive(true);
             StartCoroutine(TooMany());

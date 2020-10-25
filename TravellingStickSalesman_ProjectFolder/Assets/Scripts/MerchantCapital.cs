@@ -2,35 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
-public class ShrinePuzzleInstructions : MonoBehaviour
+public class MerchantCapital : MonoBehaviour
 {
-    public ShrinePuzzleController controller;
-    public GameObject merchantCapital;
-    public bool hasPlayerSeenInstructions = false;
-    public bool goNext = false;
-
+    //if there are other things for this scene put them here
+    
     [Header("Dialogue")]
     public Text textDisplay;
     public string[] sentences;
     public AudioSource[] lines;
-    private int audioIndex;
     private int textIndex;
+    private int audioIndex;
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject dialogueBox;
-
+    // Start is called before the first frame update
     void Start()
     {
-        if(hasPlayerSeenInstructions == false)
-        {
-            dialogueBox.SetActive(true);
-            StartCoroutine(Type());
-            StartCoroutine(Speak());
-        }
+        dialogueBox.SetActive(true);
+        StartCoroutine(Type());
+        StartCoroutine(Speak());
     }
 
+    // Update is called once per frame
     void Update()
     {
         if(textDisplay.text == sentences[textIndex])
@@ -38,18 +32,7 @@ public class ShrinePuzzleInstructions : MonoBehaviour
             continueButton.SetActive(true);
         }
 
-        if(textDisplay.text == sentences[11])
-        {
-            EndInstructions();
-        }
-
-        if(textDisplay.text == sentences[11] && controller.winCon == true)
-        {
-            WinText();
-            continueButton.SetActive(false);
-        }
-
-        if(textDisplay.text == sentences[18])
+        if(textDisplay.text == sentences[12])
         {
             EndDialogue();
         }
@@ -72,23 +55,15 @@ public class ShrinePuzzleInstructions : MonoBehaviour
         continueButton.SetActive(true);
     }
 
-    public void EndInstructions()
-    {
-        dialogueBox.SetActive(false);
-        hasPlayerSeenInstructions = true;
-    }
-
     public void EndDialogue()
     {
-        if(textIndex == 18)
+        if(textIndex == 12)
         {
-            goNext = true;
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
             StopAllCoroutines();
-            merchantCapital.SetActive(true);
         }
-    }    
+    }
 
     public void NextSentence()
     {
@@ -114,23 +89,5 @@ public class ShrinePuzzleInstructions : MonoBehaviour
             textDisplay.text = "";
             continueButton.SetActive(false);
         }
-    }
-    
-    public void WinText()
-    {
-        if(textIndex < sentences.Length - 1)
-        {
-            textIndex++;
-            audioIndex++;
-            textDisplay.text = "";
-            dialogueBox.SetActive(true);
-            StartCoroutine(Type());
-            StartCoroutine(Speak());
-        }
-    }
-
-    public void GoToMerchantCapital()
-    {
-        SceneManager.LoadScene("MerchantCapital");
     }
 }

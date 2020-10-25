@@ -577,6 +577,11 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5335492999261671749, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6256910089040787953, guid: 1b237529a95761c41bdc6f19b1a74679,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1697,6 +1702,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6873460f9a201e44ac01ad2c4a5cf91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shrinePuzzle: {fileID: 685861633}
+  controller: {fileID: 1722577390}
+  hasPlayerSeenInstructions: 0
+  goNext: 0
   textDisplay: {fileID: 261151561}
   sentences:
   - Oi! Oi there! Have you got a moment?
@@ -1756,12 +1765,8 @@ MonoBehaviour:
   - {fileID: 1062267539}
   - {fileID: 1306632208}
   typingSpeed: 0.01
-  shrinePuzzle: {fileID: 685861633}
   continueButton: {fileID: 261151560}
   dialogueBox: {fileID: 261151558}
-  controller: {fileID: 1722577390}
-  hasPlayerSeenInstructions: 0
-  goNext: 0
 --- !u!4 &730521124
 Transform:
   m_ObjectHideFlags: 0

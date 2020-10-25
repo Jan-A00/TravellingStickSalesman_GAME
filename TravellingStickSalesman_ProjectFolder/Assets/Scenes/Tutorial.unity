@@ -1691,6 +1691,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cea6411aa590524488d828b23f9994b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seaPuzzle: {fileID: 15517444}
+  hasPlayerDoneTutorial: 0
   textDisplay: {fileID: 1808933755}
   sentences:
   - "Well, my dear student, it looks like a \u2018congratulations\u2019 is in order."
@@ -1751,8 +1753,6 @@ MonoBehaviour:
   typingSpeed: 0.01
   continueButton: {fileID: 1380722730}
   dialogueBox: {fileID: 1004363632}
-  seaPuzzle: {fileID: 15517444}
-  hasPlayerDoneTutorial: 0
 --- !u!4 &731852799
 Transform:
   m_ObjectHideFlags: 0
@@ -2683,6 +2683,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4184944316837495201, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335492999261671749, guid: 1b237529a95761c41bdc6f19b1a74679,
         type: 3}
       propertyPath: m_IsActive
       value: 0
