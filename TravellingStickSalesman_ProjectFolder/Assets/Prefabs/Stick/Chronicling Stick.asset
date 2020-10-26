@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Chronicling Stick
   description: Can be used to write important things.
   character: 7
+  stickValue: 0
   stickArt: {fileID: 21300000, guid: 3e18ae0886ce5234fa510aad71acaee4, type: 3}
   stickSpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 4178ba9d8997ac147bc56c715c009e1a,
