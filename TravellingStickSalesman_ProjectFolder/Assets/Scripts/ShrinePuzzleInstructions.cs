@@ -23,6 +23,7 @@ public class ShrinePuzzleInstructions : MonoBehaviour
 
     void Start()
     {
+        StickGameManager.Instance.SetTrader(Character.Kaede);
         if(hasPlayerSeenInstructions == false)
         {
             dialogueBox.SetActive(true);

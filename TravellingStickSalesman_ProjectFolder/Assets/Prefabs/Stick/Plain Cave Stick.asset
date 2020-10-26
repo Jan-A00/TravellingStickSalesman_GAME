@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Plain Cave Stick
   description: They grow from the cave floors.
   character: 6
+  stickValue: 2
   stickArt: {fileID: 21300000, guid: 87ad1ee19c3c10749846e7d1c4d4e182, type: 3}
   stickSpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: c8ddab25790295b47a84155192b04388,

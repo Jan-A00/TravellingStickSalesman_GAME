@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Bag of Infant Sticks
   description: All sticks must be born from somewhere...
   character: 7
+  stickValue: 1
   stickArt: {fileID: 21300000, guid: 6daef17b646264c459ba014b9fd5f5ec, type: 3}
   stickSpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 8dda466e6c726e1408b933ab0787acaa,

@@ -16,14 +16,15 @@ public class PotionPuzzleInstructions : MonoBehaviour
     public Text textDisplay;
     public string[] sentences;
     public AudioSource[] lines;
-    private int audioIndex; //set this to 13 for debug purposes
-    private int textIndex; //set this to 13 for debug purposes
+    private int audioIndex = 13; //set this to 13 to skip instructions for debug purposes
+    private int textIndex = 13; //set this to 13 to skip instructions for debug purposes
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject dialogueBox;
 
     void Start()
     {
+        StickGameManager.Instance.SetTrader(Character.Quercus);
         for (int i = 0; i < 5; i++)
         {
             button[i].enabled = false;
@@ -36,6 +37,7 @@ public class PotionPuzzleInstructions : MonoBehaviour
             StartCoroutine(Type());
             StartCoroutine(Speak());
         }
+        
     }
 
     void Update()

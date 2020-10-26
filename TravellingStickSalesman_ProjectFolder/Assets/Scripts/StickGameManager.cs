@@ -6,6 +6,9 @@ public class StickGameManager : MonoBehaviour
 {
     private static StickGameManager _instance;
 
+    [SerializeField]
+    Character currentTrader;
+
     void Awake()
     {
         if (_instance != null)
@@ -14,6 +17,7 @@ public class StickGameManager : MonoBehaviour
         }
         else
         {
+            _instance = this;
             //Init this object, load inventory from disk, etc.
             DontDestroyOnLoad(gameObject); //Tell unity not to destroy when changing scenes
         }
@@ -34,5 +38,14 @@ public class StickGameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SetTrader(Character c)
+    {
+        currentTrader = c;
+    }
+    public Character GetTrader()
+    {
+        return currentTrader;
     }
 }

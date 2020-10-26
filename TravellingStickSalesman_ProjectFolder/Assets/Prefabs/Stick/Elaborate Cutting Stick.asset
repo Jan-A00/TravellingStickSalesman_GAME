@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Elaborate Cutting Stick
   description: It's very, very sharp.
   character: 3
+  stickValue: 1
   stickArt: {fileID: 21300000, guid: 87417b257c21a1b48a7d8a02a1fd95cd, type: 3}
   stickSpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: a2cf7335fe982ba49a33c8a5c4453517,

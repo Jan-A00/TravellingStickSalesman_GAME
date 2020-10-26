@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Strangely Glowing Walking Stick
   description: Just a regular walking stick that glows.
   character: 4
+  stickValue: 1
   stickArt: {fileID: 21300000, guid: eb77db0a31b59044a995d570c9d7338f, type: 3}
   stickSpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 29477384cb42b4e4fa1a30738a9b68d8,

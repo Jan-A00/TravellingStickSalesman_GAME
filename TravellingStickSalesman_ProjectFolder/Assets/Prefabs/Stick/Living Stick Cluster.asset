@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Living Stick Cluster
   description: An endless supply of sticks!
   character: 7
+  stickValue: 2
   stickArt: {fileID: 21300000, guid: caf90e823a9a6924f9183bb208852a1e, type: 3}
   stickSpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 3078360c1067e6343bf7171f8855eadf,

@@ -14,12 +14,20 @@ public enum Character
      BasilAndSybil = 7
 }
 
+public enum StickValue
+{
+     StartingStick = 0,
+     PlusStick = 1,
+     MinusStick = 2
+}
+
 [CreateAssetMenu(fileName = "New Stick", menuName = "Stick")]
 public class Stick : ScriptableObject
 {
      public string name;
      public string description;
      public Character character;
+     public StickValue stickValue;
      public Sprite stickArt;
      public SpriteState stickSpriteState;
      

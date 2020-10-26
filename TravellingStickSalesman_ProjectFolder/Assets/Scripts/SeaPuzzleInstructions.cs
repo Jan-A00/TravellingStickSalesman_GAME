@@ -23,6 +23,7 @@ public class SeaPuzzleInstructions : MonoBehaviour
 
     void Start()
     {
+        StickGameManager.Instance.SetTrader(Character.Baz);
         if(hasPlayerSeenInstructions == false)
         {
             dialogueBox.SetActive(true);

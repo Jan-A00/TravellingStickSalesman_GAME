@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Flavour Sticks
   description: Put these in your stew for extra flavour.
   character: 4
+  stickValue: 2
   stickArt: {fileID: 21300000, guid: 5af88cccd912a2d43803b816dddada09, type: 3}
   stickSpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 5dd06cf9674e00344925bd02af639d15,

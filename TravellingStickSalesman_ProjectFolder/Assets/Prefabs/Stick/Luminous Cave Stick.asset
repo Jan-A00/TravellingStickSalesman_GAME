@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Luminous Cave Stick
   description: Glows in the dark.
   character: 6
+  stickValue: 1
   stickArt: {fileID: 21300000, guid: 1fce1677a4a899c479bf9d2a387e5d64, type: 3}
   stickSpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: fc7c9b6d7510d8e46ad3c33b4830680b,

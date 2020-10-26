@@ -15,6 +15,7 @@ MonoBehaviour:
   name: 'Ocean Grass Stick '
   description: A common food source for ocean life.
   character: 2
+  stickValue: 2
   stickArt: {fileID: 21300000, guid: 2018df4f564259b4483892b02647a483, type: 3}
   stickSpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: ed5f71fb16294644e982ac9246f2353a,

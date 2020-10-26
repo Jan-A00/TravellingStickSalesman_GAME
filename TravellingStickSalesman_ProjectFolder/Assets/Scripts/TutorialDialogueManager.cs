@@ -7,20 +7,26 @@ using UnityEngine.SceneManagement;
 public class TutorialDialogueManager : MonoBehaviour
 {
     public GameObject seaPuzzle;
+    public GameObject popUp;
+    public Button invBtn;
+    public Button mapBtn;
     public bool hasPlayerDoneTutorial = false;
+    Animator popUpAnim;
 
     [Header("Dialogue")]
     public Text textDisplay;
     public string[] sentences;
     public AudioSource[] lines;
-    private int textIndex;
-    private int audioIndex;
+    private int textIndex = 5;
+    private int audioIndex = 5;
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject dialogueBox;
 
     void Start()
     {
+        StickGameManager.Instance.SetTrader(Character.Genevieve);
+        popUpAnim = popUp.GetComponent<Animator>();
         if(hasPlayerDoneTutorial == false)
         {
             dialogueBox.SetActive(true);
@@ -36,14 +42,32 @@ public class TutorialDialogueManager : MonoBehaviour
             continueButton.SetActive(true);
         }
 
-        if(textDisplay.text == sentences[15])
+        if(textDisplay.text == sentences[6])
         {
-            seaPuzzle.SetActive(true);
+            continueButton.SetActive(false);
         }
 
-        if(textDisplay.text == sentences[20])
+        if(textDisplay.text == sentences[16])
+        {
+            dialogueBox.SetActive(false);
+            popUp.SetActive(true);
+            if(popUpAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+            {
+                //Debug.Log("animation finish");
+                NextSentence();
+                seaPuzzle.SetActive(true);
+                dialogueBox.SetActive(true);
+            }
+            else
+            {
+                //Debug.Log("playing");
+            }
+        }
+
+        if(textDisplay.text == sentences[21])
         {
             EndDialogue();
+            mapBtn.interactable = true;
         }
     }
 
@@ -62,11 +86,15 @@ public class TutorialDialogueManager : MonoBehaviour
         lines[audioIndex].Play();
         yield return new WaitForSeconds(1);
         continueButton.SetActive(true);
+        if(audioIndex == 6)
+        {
+            continueButton.SetActive(false);
+        }
     }
 
     public void EndDialogue()
     {
-        if(textIndex == 20)
+        if(textIndex == 21)
         {
             hasPlayerDoneTutorial = true;
             //Destroy(dialogueBox);
