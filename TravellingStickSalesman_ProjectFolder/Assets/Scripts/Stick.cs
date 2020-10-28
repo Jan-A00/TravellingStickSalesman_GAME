@@ -16,7 +16,7 @@ public enum Character
 
 public enum StickValue
 {
-     StartingStick = 0,
+     TrueStick = 0,
      PlusStick = 1,
      MinusStick = 2
 }

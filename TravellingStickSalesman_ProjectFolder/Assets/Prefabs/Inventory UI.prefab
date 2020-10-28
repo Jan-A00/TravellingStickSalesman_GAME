@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -120,6 +121,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 379410538155305699}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: SellStick
         m_Mode: 1
         m_Arguments:
@@ -149,7 +151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &772403325659724432
 RectTransform:
   m_ObjectHideFlags: 0
@@ -253,11 +255,23 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8c7c541c774c3ee4ba7146f5f0737893, type: 2}
   - {fileID: 11400000, guid: 39009244076bc2349b60c5ebd9c11a23, type: 2}
   - {fileID: 11400000, guid: 08bda978f806bfa4397c179321290891, type: 2}
+  - {fileID: 11400000, guid: 44de43794d5e59c4e93e9cdc8dd4fb9f, type: 2}
+  - {fileID: 11400000, guid: e51420801759d40409c9478bb894da03, type: 2}
+  - {fileID: 11400000, guid: 2d21338fb2165a04caa8b0419c41e78e, type: 2}
+  - {fileID: 11400000, guid: 3d0f0b4f1cc37694b96f6d3c40e23e89, type: 2}
+  - {fileID: 11400000, guid: 76b82a0a4377ca54babcb8026713665e, type: 2}
+  - {fileID: 11400000, guid: 7e4645b5db34760479eaecf049e39fbd, type: 2}
+  - {fileID: 11400000, guid: 165240cd2dd47e24ba8a703606799c4c, type: 2}
+  - {fileID: 11400000, guid: 9da8bfcca62c8de4a82869c03b421346, type: 2}
+  - {fileID: 11400000, guid: cc680e5283c0cd04793d88c8c6489796, type: 2}
+  - {fileID: 11400000, guid: a047be6ea3df55741a9eee4d85eb1c1a, type: 2}
   stickPrefab: {fileID: -2259030230896365486, guid: fb1d7cda6fa1d5c4391ee5a9e8373d68,
     type: 3}
   inventory: []
   activeStick: {fileID: 0}
-  startingSticks: 0100000002000000030000000400000005000000
+  startingSticks: 0900000008000000030000000400000005000000
+  tradeButton: {fileID: 4771616843006941871}
+  hasTraded: 0
 --- !u!1 &7199124477558020872
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +332,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -399,6 +414,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -457,7 +473,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1233638152413138279}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4771616843006941871}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -528,6 +557,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

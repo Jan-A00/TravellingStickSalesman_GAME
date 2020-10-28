@@ -8,6 +8,7 @@ public class InventoryManager : MonoBehaviour
     public Transform inventoryUIRoot;
     public GameObject invUI;
     public Stick[] allSticks;
+    //public int[] allSticksID;
     public InventoryStick stickPrefab;
     [SerializeField]
     private InventoryStick[] inventory;
@@ -15,6 +16,7 @@ public class InventoryManager : MonoBehaviour
     public Stick activeStick;
     public int[] startingSticks;
     public Button tradeButton;
+    public bool hasTraded = false;
 
     void Start()
     {
@@ -23,7 +25,7 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     void CreateInventory()
@@ -65,17 +67,15 @@ public class InventoryManager : MonoBehaviour
         {    
             tradeButton.interactable = false;
         }
-        else if (activeStick.character == c)
+        if (activeStick.stickValue == StickValue.PlusStick || activeStick.stickValue == StickValue.MinusStick || hasTraded == true)
         {
-            if (activeStick.stickValue == StickValue.PlusStick ||
-                activeStick.stickValue == StickValue.MinusStick)
-                {
-                    //you cant trade with them.
-                    tradeButton.interactable = false;
-                }
+            //you cant trade with them.
+            tradeButton.interactable = false;
         }
         else
+        {
             tradeButton.interactable = true;
+        }
     }
 
     public void SellStick()
@@ -83,7 +83,6 @@ public class InventoryManager : MonoBehaviour
         if (activeStick != null)
         {
             Debug.Log("You have sold " + activeStick + " at index " + activeStickIndex);
-            //invUI.SetActive(false); //the idea is to get the ui to disappear and for the dialogue to start
             //Get ID of Plus or Minus stick for this character.
             
             int tradeStickID = GetIDOfResultantTradedStick(StickGameManager.Instance.GetTrader(), activeStick);
@@ -94,7 +93,10 @@ public class InventoryManager : MonoBehaviour
             newStick.Init(activeStickIndex, this, allSticks[tradeStickID]);
             newStick.transform.SetParent(inventoryUIRoot);
             newStick.transform.SetSiblingIndex(activeStickIndex);
-            
+            hasTraded = true;
+            tradeButton.interactable = false;
+
+            //invUI.SetActive(false); //the idea is to get the ui to disappear and for the dialogue to start
         }
         else
         {
@@ -108,7 +110,30 @@ public class InventoryManager : MonoBehaviour
         Stick plusStick;
         Stick minusStick;
         Stick trueStick;
-        //Step 1: Go through all sticks in allSticks:
+        int plusStickID;
+        int minusStickID;
+        // what am i doing pls help 
+
+        foreach (Stick ss in allSticks)
+        {
+            if(s.character == c)
+            {
+                if (s.stickValue == StickValue.TrueStick)
+                {
+                    Debug.Log("true");
+                }
+                else if (s.stickValue == StickValue.PlusStick)
+                {
+                    Debug.Log("plus");
+                }
+                else if (s.stickValue == StickValue.MinusStick)
+                {
+                    Debug.Log("minus");
+                }
+            }
+        }
+
+        //Step 1: Go through all sticks in allSticks: ✔✔
         //  if stick has character == c,
         //      if stick.stickValue == plusstick, set plusStick to that stick
         //      if stick.stickValue == minusstick, set minusStick to that stick
@@ -119,9 +144,7 @@ public class InventoryManager : MonoBehaviour
         //  else
         //      return the id of minusStick;
         
-         
-        
-        return 3;
+        return 9;
     }
 
     public Stick GetActiveStick()
