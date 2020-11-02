@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PotionPuzzleInstructions : MonoBehaviour
 {
     public PotionPuzzleController controller;
+    public GameObject merchantCapital;
     public bool hasPlayerSeenInstructions = false;
     public bool goNext = false;
     public Button[] button;
@@ -16,8 +17,8 @@ public class PotionPuzzleInstructions : MonoBehaviour
     public Text textDisplay;
     public string[] sentences;
     public AudioSource[] lines;
-    private int audioIndex = 13; //set this to 13 to skip instructions for debug purposes
-    private int textIndex = 13; //set this to 13 to skip instructions for debug purposes
+    private int audioIndex; //set this to 13 to skip instructions for debug purposes
+    private int textIndex; //set this to 13 to skip instructions for debug purposes
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject dialogueBox;
@@ -65,6 +66,11 @@ public class PotionPuzzleInstructions : MonoBehaviour
                 button[i].enabled = false;
                 cauldron.enabled = false;
             }
+        }
+
+        if(textDisplay.text == sentences[18])
+        {
+            merchantCapital.SetActive(true);
         }
 
         if(textDisplay.text == sentences[20])
@@ -150,5 +156,10 @@ public class PotionPuzzleInstructions : MonoBehaviour
             StartCoroutine(Type());
             StartCoroutine(Speak());
         }
+    }
+
+    public void GoToMerchantCapital()
+    {
+        SceneManager.LoadScene("MerchantCapital");
     }
 }

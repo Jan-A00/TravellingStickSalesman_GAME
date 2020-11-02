@@ -8,6 +8,7 @@ public class ShrinePuzzleInstructions : MonoBehaviour
 {
     public ShrinePuzzleController controller;
     public GameObject merchantCapital;
+    public GameObject potionPuzzle; // DEBUG AND TESTING ONLY
     public bool hasPlayerSeenInstructions = false;
     public bool goNext = false;
 
@@ -87,7 +88,8 @@ public class ShrinePuzzleInstructions : MonoBehaviour
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
             StopAllCoroutines();
-            merchantCapital.SetActive(true);
+            //merchantCapital.SetActive(true);
+            potionPuzzle.SetActive(true); // DEBUG AND TESTING ONLY
         }
     }    
 
@@ -133,5 +135,10 @@ public class ShrinePuzzleInstructions : MonoBehaviour
     public void GoToMerchantCapital()
     {
         SceneManager.LoadScene("MerchantCapital");
+    }
+
+    public void GoToPotionPuzzle()
+    {
+        SceneManager.LoadScene("PotionPuzzle"); // DEBUG AND TESTING ONLY
     }
 }

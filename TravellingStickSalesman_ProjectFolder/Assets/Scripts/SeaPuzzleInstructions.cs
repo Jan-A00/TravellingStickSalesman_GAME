@@ -15,8 +15,8 @@ public class SeaPuzzleInstructions : MonoBehaviour
     public Text textDisplay;
     public string[] sentences;
     public AudioSource[] lines;
-    private int audioIndex;
-    private int textIndex;
+    private int audioIndex; // set to 8 to skip dialogue
+    private int textIndex; //set to 8 to skip dialogue
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject dialogueBox;

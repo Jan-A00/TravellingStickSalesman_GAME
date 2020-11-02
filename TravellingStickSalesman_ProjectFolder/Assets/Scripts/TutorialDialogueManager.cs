@@ -17,8 +17,8 @@ public class TutorialDialogueManager : MonoBehaviour
     public Text textDisplay;
     public string[] sentences;
     public AudioSource[] lines;
-    private int textIndex = 5;
-    private int audioIndex = 5;
+    private int textIndex;
+    private int audioIndex;
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject dialogueBox;
@@ -44,7 +44,7 @@ public class TutorialDialogueManager : MonoBehaviour
 
         if(textDisplay.text == sentences[6])
         {
-            continueButton.SetActive(false);
+            //continueButton.SetActive(false);
         }
 
         if(textDisplay.text == sentences[16])
