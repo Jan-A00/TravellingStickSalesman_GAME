@@ -8,6 +8,7 @@ public class TutorialDialogueManager : MonoBehaviour
 {
     public GameObject seaPuzzle;
     public GameObject popUp;
+    public GameObject invArrow;
     public Button invBtn;
     public Button mapBtn;
     public bool hasPlayerDoneTutorial = false;
@@ -17,14 +18,15 @@ public class TutorialDialogueManager : MonoBehaviour
     public Text textDisplay;
     public string[] sentences;
     public AudioSource[] lines;
-    private int textIndex;
-    private int audioIndex;
+    private int textIndex = 5;
+    private int audioIndex = 5;
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject dialogueBox;
 
     void Start()
     {
+        invBtn.interactable = false;
         StickGameManager.Instance.SetTrader(Character.Genevieve);
         popUpAnim = popUp.GetComponent<Animator>();
         if(hasPlayerDoneTutorial == false)
@@ -44,7 +46,16 @@ public class TutorialDialogueManager : MonoBehaviour
 
         if(textDisplay.text == sentences[6])
         {
-            //continueButton.SetActive(false);
+            continueButton.SetActive(false);
+            invBtn.interactable = true;
+            invArrow.SetActive(true);
+        }
+
+        if(textDisplay.text == sentences[7])
+        {
+            continueButton.SetActive(true);
+            invBtn.interactable = true;
+            invArrow.SetActive(false);
         }
 
         if(textDisplay.text == sentences[16])
@@ -126,6 +137,16 @@ public class TutorialDialogueManager : MonoBehaviour
         {
             textDisplay.text = "";
             continueButton.SetActive(false);
+        }
+    }
+
+    public void AfterInventory()
+    {
+        if(textDisplay.text == sentences[6] && hasPlayerDoneTutorial == false)
+        {
+            Debug.Log("Okie");
+            textIndex++;
+            audioIndex++;
         }
     }
 
