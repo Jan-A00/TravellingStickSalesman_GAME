@@ -8,6 +8,8 @@ TagManager:
   - PuzzleCard
   - Musical-Mushroom
   - Musical-Rune
+  - InventoryButton
+  - Inventory
   layers:
   - Default
   - TransparentFX

@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ShrinePuzzle.unity
     guid: 751f04ba1d03e7f47a3ea31243fe5629
   - enabled: 1
+    path: Assets/Scenes/MushroomPuzzle.unity
+    guid: 9d2503a43e939134abbd557a55b3430a
+  - enabled: 1
     path: Assets/Scenes/PotionPuzzle.unity
     guid: 1275049f0c1b74f42a94e3dbe2ac3cfd
   - enabled: 1

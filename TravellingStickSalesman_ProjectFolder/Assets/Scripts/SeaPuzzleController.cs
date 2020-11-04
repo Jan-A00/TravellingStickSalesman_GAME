@@ -15,7 +15,6 @@ public class SeaPuzzleController : MonoBehaviour
     public List<Sprite> pearls = new List<Sprite>();
     public List<Sprite> clamWithPearls = new List<Sprite>();
     public List<Button> closedClam = new List<Button>();
-    public Button shrinePuzzleButton;
 
     public SeaPuzzleInstructions instructions;
 
@@ -42,11 +41,6 @@ public class SeaPuzzleController : MonoBehaviour
             gameGuesses = clamWithPearls.Count / 2;
             startPuzzle = true;
         }
-
-        /*if(instructions.textDisplay.text == instructions.sentences[21])
-        {
-            shrinePuzzleButton.interactable = true;
-        }*/
     }
     
     void GetClosedClam()
@@ -166,14 +160,6 @@ public class SeaPuzzleController : MonoBehaviour
             int randomIndex = Random.Range(i, list.Count);
             list[i] = list[randomIndex];
             list[randomIndex] = temp;
-        }
-    }
-
-    public void GoToShrinePuzzle()
-    {
-        if(instructions.goNext == true && instructions.textDisplay.text == instructions.sentences[21])
-        {
-            SceneManager.LoadScene("ShrinePuzzle");
         }
     }
 }

@@ -6,23 +6,29 @@ using UnityEngine.SceneManagement;
 
 public class SeaPuzzleInstructions : MonoBehaviour
 {
-    public GameObject shrinePuzzle;
     public SeaPuzzleController controller;
     public bool hasPlayerSeenInstructions = false;
-    public bool goNext = false;
-
+    public GameObject popUp;
+    public Button invBtn;
+    public Button mapBtn;
+    Animator popUpAnim;
+    
     [Header("Dialogue")]
     public Text textDisplay;
     public string[] sentences;
     public AudioSource[] lines;
-    private int audioIndex; // set to 8 to skip dialogue
-    private int textIndex; //set to 8 to skip dialogue
+    public int audioIndex; // set to 8 to skip dialogue
+    public int textIndex; //set to 8 to skip dialogue
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject dialogueBox;
 
     void Start()
     {
+        invBtn = GameObject.FindGameObjectWithTag("InventoryButton").GetComponent<Button>();
+        mapBtn.interactable = false;
+        invBtn.interactable = false;
+        popUpAnim = popUp.GetComponent<Animator>();
         StickGameManager.Instance.SetTrader(Character.Baz);
         if(hasPlayerSeenInstructions == false)
         {
@@ -50,12 +56,19 @@ public class SeaPuzzleInstructions : MonoBehaviour
             continueButton.SetActive(false);
         }
 
-        if(textDisplay.text == sentences[15])
+        if(textDisplay.text == sentences[16]) 
         {
-            shrinePuzzle.SetActive(true);
+            dialogueBox.SetActive(false);
+            popUp.SetActive(true);
+            if(popUpAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+            {
+                //Debug.Log("animation finish");
+                NextSentence();
+                dialogueBox.SetActive(true);
+            }
         }
 
-        if(textDisplay.text == sentences[21])
+        if(textDisplay.text == sentences[22])
         {
             EndDialogue();
         }
@@ -86,12 +99,18 @@ public class SeaPuzzleInstructions : MonoBehaviour
 
     public void EndDialogue()
     {
-        if(textIndex == 21)
+        if(textIndex == 22)
         {
-            goNext = true;
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
+            textIndex++;
+            audioIndex++;
             StopAllCoroutines();
+        }
+        if (textIndex == 23)
+        {
+            mapBtn.interactable = true;
+            invBtn.interactable = true;
         }
     }
 
@@ -132,5 +151,11 @@ public class SeaPuzzleInstructions : MonoBehaviour
             StartCoroutine(Type());
             StartCoroutine(Speak());
         }
+    }
+
+    public void GoToShrinePuzzle()
+    {
+        invBtn.interactable = false;
+        SceneManager.LoadScene("ShrinePuzzle");
     }
 }

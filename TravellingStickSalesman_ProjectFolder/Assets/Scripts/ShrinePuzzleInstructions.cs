@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 public class ShrinePuzzleInstructions : MonoBehaviour
 {
     public ShrinePuzzleController controller;
-    public GameObject merchantCapital;
-    public GameObject potionPuzzle; // DEBUG AND TESTING ONLY
     public bool hasPlayerSeenInstructions = false;
-    public bool goNext = false;
+    public GameObject popUp;
+    public Button invBtn;
+    public Button mapBtn;
+    Animator popUpAnim;
 
     [Header("Dialogue")]
     public Text textDisplay;
@@ -24,6 +25,10 @@ public class ShrinePuzzleInstructions : MonoBehaviour
 
     void Start()
     {
+        invBtn = GameObject.FindGameObjectWithTag("InventoryButton").GetComponent<Button>();
+        mapBtn.interactable = false;
+        invBtn.interactable = false;
+        popUpAnim = popUp.GetComponent<Animator>();
         StickGameManager.Instance.SetTrader(Character.Kaede);
         if(hasPlayerSeenInstructions == false)
         {
@@ -53,7 +58,13 @@ public class ShrinePuzzleInstructions : MonoBehaviour
 
         if(textDisplay.text == sentences[18])
         {
-            EndDialogue();
+            popUp.SetActive(true);
+            dialogueBox.SetActive(false);
+            if(popUpAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+            {
+                //Debug.Log("animation finish");
+                EndDialogue();
+            }
         }
     }
 
@@ -84,12 +95,13 @@ public class ShrinePuzzleInstructions : MonoBehaviour
     {
         if(textIndex == 18)
         {
-            goNext = true;
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
+            mapBtn.interactable = true;
+            invBtn.interactable = true;
+            textIndex++;
+            audioIndex++;
             StopAllCoroutines();
-            //merchantCapital.SetActive(true);
-            potionPuzzle.SetActive(true); // DEBUG AND TESTING ONLY
         }
     }    
 
@@ -132,13 +144,15 @@ public class ShrinePuzzleInstructions : MonoBehaviour
         }
     }
 
-    public void GoToMerchantCapital()
-    {
-        SceneManager.LoadScene("MerchantCapital");
-    }
-
     public void GoToPotionPuzzle()
     {
+        //invBtn.interactable = false;
         SceneManager.LoadScene("PotionPuzzle"); // DEBUG AND TESTING ONLY
+    }
+
+    public void GoToMushroomPuzzle()
+    {
+        //invBtn.interactable = false;
+        SceneManager.LoadScene("MushroomPuzzle"); // DEBUG AND TESTING ONLY
     }
 }

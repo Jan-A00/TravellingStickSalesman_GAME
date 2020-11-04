@@ -9,7 +9,6 @@ public class PotionPuzzleInstructions : MonoBehaviour
     public PotionPuzzleController controller;
     public GameObject merchantCapital;
     public bool hasPlayerSeenInstructions = false;
-    public bool goNext = false;
     public Button[] button;
     public BoxCollider2D cauldron;
 
@@ -106,7 +105,6 @@ public class PotionPuzzleInstructions : MonoBehaviour
     {
         if(textIndex == 20)
         {
-            goNext = true;
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
             StopAllCoroutines();

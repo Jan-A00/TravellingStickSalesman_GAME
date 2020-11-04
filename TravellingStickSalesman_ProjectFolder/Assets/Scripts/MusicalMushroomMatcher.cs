@@ -184,7 +184,7 @@ public class MusicalMushroomMatcher : MonoBehaviour
                 Debug.Log("Waiting for next note.");
                 return CheckResult.IncompleteButCorrectSoFar;
             } else {
-                Debug.Log("Incorrect note before reeaching end of sequence, reseting.");
+                Debug.Log("Incorrect note before reaching end of sequence, reseting.");
                 return CheckResult.IncompleteAndIncorrect;
             }
         } else {

@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class TutorialDialogueManager : MonoBehaviour
 {
-    public GameObject seaPuzzle;
     public GameObject popUp;
     public GameObject invArrow;
+    public InventoryManager invMngr;
     public Button invBtn;
     public Button mapBtn;
+    public Button backBtn;
     public bool hasPlayerDoneTutorial = false;
     Animator popUpAnim;
 
@@ -18,17 +19,19 @@ public class TutorialDialogueManager : MonoBehaviour
     public Text textDisplay;
     public string[] sentences;
     public AudioSource[] lines;
-    private int textIndex = 5;
-    private int audioIndex = 5;
+    private int textIndex;
+    private int audioIndex;
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject dialogueBox;
 
     void Start()
     {
+        invMngr.hasTraded = true;
+        mapBtn.interactable = false;
         invBtn.interactable = false;
-        StickGameManager.Instance.SetTrader(Character.Genevieve);
         popUpAnim = popUp.GetComponent<Animator>();
+        StickGameManager.Instance.SetTrader(Character.Genevieve);
         if(hasPlayerDoneTutorial == false)
         {
             dialogueBox.SetActive(true);
@@ -49,13 +52,14 @@ public class TutorialDialogueManager : MonoBehaviour
             continueButton.SetActive(false);
             invBtn.interactable = true;
             invArrow.SetActive(true);
+            backBtn.onClick.AddListener(() => AfterInventory());
+            invBtn.onClick.AddListener(() => HideDialogueBox());
         }
 
         if(textDisplay.text == sentences[7])
         {
             continueButton.SetActive(true);
-            invBtn.interactable = true;
-            invArrow.SetActive(false);
+            invBtn.interactable = false;
         }
 
         if(textDisplay.text == sentences[16])
@@ -66,19 +70,13 @@ public class TutorialDialogueManager : MonoBehaviour
             {
                 //Debug.Log("animation finish");
                 NextSentence();
-                seaPuzzle.SetActive(true);
                 dialogueBox.SetActive(true);
-            }
-            else
-            {
-                //Debug.Log("playing");
             }
         }
 
         if(textDisplay.text == sentences[21])
         {
             EndDialogue();
-            mapBtn.interactable = true;
         }
     }
 
@@ -110,6 +108,11 @@ public class TutorialDialogueManager : MonoBehaviour
             hasPlayerDoneTutorial = true;
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
+            mapBtn.interactable = true;
+            invBtn.interactable = true;
+            invMngr.hasTraded = false;
+            textIndex++;
+            audioIndex++;
             StopAllCoroutines();
         }
     }
@@ -140,21 +143,33 @@ public class TutorialDialogueManager : MonoBehaviour
         }
     }
 
+    public void HideDialogueBox()
+    {
+        dialogueBox.SetActive(false);
+    }
+
     public void AfterInventory()
     {
-        if(textDisplay.text == sentences[6] && hasPlayerDoneTutorial == false)
+        Character c = StickGameManager.Instance.GetTrader();
+        if(textDisplay.text == sentences[6] && c == Character.Genevieve)
         {
-            Debug.Log("Okie");
+            dialogueBox.SetActive(true);
+
+            textDisplay.text = "";
             textIndex++;
+            StartCoroutine(Type());
+
+            lines[audioIndex].Stop();
             audioIndex++;
+            StartCoroutine(Speak());
+
+            invArrow.SetActive(false);
         }
     }
 
     public void GoToSeaPuzzle()
     {
-        if(hasPlayerDoneTutorial == true)
-        {
-            SceneManager.LoadScene("SeaPuzzle");
-        }
+        invBtn.interactable = false;
+        SceneManager.LoadScene("SeaPuzzle");
     }
 }

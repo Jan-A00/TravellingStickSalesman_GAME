@@ -269,7 +269,7 @@ MonoBehaviour:
     type: 3}
   inventory: []
   activeStick: {fileID: 0}
-  startingSticks: 0900000008000000030000000400000005000000
+  startingSticks: 0100000002000000030000000400000005000000
   tradeButton: {fileID: 4771616843006941871}
   hasTraded: 0
 --- !u!1 &7199124477558020872
