@@ -3722,7 +3722,8 @@ MonoBehaviour:
   randomNotes: 1
   randomMinNotes: 8
   randomMaxNotes: 8
-  playSequenceAtStart: 1
+  playSequenceAtStart: 0
+  playSequenceAtEnd: 1
   initialPlaybackDelay: 1
   delayBetweenNotesDuringPlayback: 0.5
 --- !u!114 &1979221383174770395
@@ -3853,7 +3854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -262.5}
+  m_AnchoredPosition: {x: 0, y: -262.49997}
   m_SizeDelta: {x: -210, y: -555}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4624537028059923125

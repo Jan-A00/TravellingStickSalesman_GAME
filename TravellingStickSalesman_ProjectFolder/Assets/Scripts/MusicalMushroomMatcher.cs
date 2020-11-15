@@ -29,7 +29,8 @@ public class MusicalMushroomMatcher : MonoBehaviour
     public bool randomNotes = true;
     public int randomMinNotes = 8;
     public int randomMaxNotes = 8;
-    public bool playSequenceAtStart = true;
+    public bool playSequenceAtStart = false;
+    public bool playSequenceAtEnd = true;
     public double initialPlaybackDelay = 2f;
     public double delayBetweenNotesDuringPlayback = 1.0f;
 
@@ -55,7 +56,7 @@ public class MusicalMushroomMatcher : MonoBehaviour
         }
 
         SetupRunes();
-        PlayNoteSequence();
+        if (playSequenceAtStart) { PlayNoteSequence(); }
         StartCoroutine(PostNotePlaybackEvent((float) ApproximateFinish));
     }
     
@@ -67,22 +68,19 @@ public class MusicalMushroomMatcher : MonoBehaviour
 
     private void PlayNoteSequence()
     {
-        if (playSequenceAtStart)
+        mushroomsInScene = GameObject.FindGameObjectsWithTag("Musical-Mushroom");
+        int noteIndex = 0;
+        foreach (Notes notes in correctNotes)
         {
-            mushroomsInScene = GameObject.FindGameObjectsWithTag("Musical-Mushroom");
-            int noteIndex = 0;
-            foreach (Notes notes in correctNotes)
+            foreach (GameObject mushroom in mushroomsInScene)
             {
-                foreach (GameObject mushroom in mushroomsInScene)
-                {
-                    if (mushroom.GetComponent<MusicalMushroom>().note != notes) continue;
-                    var startDelay = initialPlaybackDelay + (delayBetweenNotesDuringPlayback * noteIndex);
-                    Debug.Log("Setting playback delay");
-                    Debug.Log(startDelay);
-                    mushroom.GetComponent<MusicalMushroom>().PlayAndGlowWithDelay((float) startDelay); 
-                }
-                noteIndex++;
+                if (mushroom.GetComponent<MusicalMushroom>().note != notes) continue;
+                var startDelay = initialPlaybackDelay + (delayBetweenNotesDuringPlayback * noteIndex);
+                Debug.Log("Setting playback delay");
+                Debug.Log(startDelay);
+                mushroom.GetComponent<MusicalMushroom>().PlayAndGlowWithDelay((float) startDelay); 
             }
+            noteIndex++;
         }
     }
 
@@ -234,6 +232,7 @@ public class MusicalMushroomMatcher : MonoBehaviour
 
     public void PuzzleComplete()
     {
+        if (playSequenceAtEnd) { PlayNoteSequence(); }
         Debug.Log("Puzzle Complete!");
         // TODO: Put what is supposed to happen when you get it right into this method. 
     }
