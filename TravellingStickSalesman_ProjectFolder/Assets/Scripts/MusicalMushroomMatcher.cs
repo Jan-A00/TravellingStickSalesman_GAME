@@ -148,7 +148,6 @@ public class MusicalMushroomMatcher : MonoBehaviour
 
     public void SoftReset()
     {
-        // TODO: Need to work out how to reset the puzzle without reloading the scene and randomizing everything again.
         ResetPlayerNoteInput();
         txtCurrentItems.text = "Reset!";
         foreach (MusicalWallRune rune in settings.runeSequence)
@@ -230,11 +229,22 @@ public class MusicalMushroomMatcher : MonoBehaviour
         return mushroom_str;
     }
 
+    public void DisablePuzzle()
+    {
+        settings.puzzleEnabled = false;
+    }
+
+    public void EnablePuzzle()
+    {
+        settings.puzzleEnabled = true;
+    }
+    
     public void PuzzleComplete()
     {
         if (playSequenceAtEnd) { PlayNoteSequence(); }
         Debug.Log("Puzzle Complete!");
         // TODO: Put what is supposed to happen when you get it right into this method. 
     }
+    
     
 }

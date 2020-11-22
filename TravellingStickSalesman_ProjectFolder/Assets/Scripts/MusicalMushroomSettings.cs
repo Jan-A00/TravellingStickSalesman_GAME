@@ -13,6 +13,7 @@ public class MusicalMushroomSettings : MonoBehaviour
     public Sprite[] wallRunes;
     public Sprite[] highlightedWallRunes;
     public MusicalWallRune[] runeSequence;
+    public bool puzzleEnabled = false;
     public readonly Notes[] noteArray = new Notes[8]
     {
         Notes.C1,

@@ -48,7 +48,7 @@ public class MusicalMushroom : MonoBehaviour
 
     void OnMouseDown()
     {
-        //Debug.Log("Clicked " + iType);
+        if (!settings.puzzleEnabled) return;
         PlayAndGlow();
         matcher.AddNote(note);
         checkResult = matcher.SequentialChecker();
