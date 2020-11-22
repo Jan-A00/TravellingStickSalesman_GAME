@@ -6,7 +6,6 @@ public class ShrinePuzzleClicker : MonoBehaviour
 {
     public ShrinePuzzleController controller;
     public ShrinePuzzleInstructions instructions;
-    public GameObject puzzleText;
     private bool startPuzzle;
 
     void Start()

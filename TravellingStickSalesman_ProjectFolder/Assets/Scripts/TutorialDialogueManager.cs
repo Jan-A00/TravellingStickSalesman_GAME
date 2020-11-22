@@ -47,7 +47,7 @@ public class TutorialDialogueManager : MonoBehaviour
             continueButton.SetActive(true);
         }
 
-        if(textDisplay.text == sentences[6])
+        if(textDisplay.text == sentences[4])
         {
             continueButton.SetActive(false);
             invBtn.interactable = true;
@@ -56,13 +56,13 @@ public class TutorialDialogueManager : MonoBehaviour
             invBtn.onClick.AddListener(() => HideDialogueBox());
         }
 
-        if(textDisplay.text == sentences[7])
+        if(textDisplay.text == sentences[5])
         {
             continueButton.SetActive(true);
             invBtn.interactable = false;
         }
 
-        if(textDisplay.text == sentences[16])
+        if(textDisplay.text == sentences[14])
         {
             dialogueBox.SetActive(false);
             popUp.SetActive(true);
@@ -74,7 +74,7 @@ public class TutorialDialogueManager : MonoBehaviour
             }
         }
 
-        if(textDisplay.text == sentences[21])
+        if(textDisplay.text == sentences[18])
         {
             EndDialogue();
         }
@@ -95,7 +95,7 @@ public class TutorialDialogueManager : MonoBehaviour
         lines[audioIndex].Play();
         yield return new WaitForSeconds(1);
         continueButton.SetActive(true);
-        if(audioIndex == 6)
+        if(audioIndex == 4)
         {
             continueButton.SetActive(false);
         }
@@ -103,7 +103,7 @@ public class TutorialDialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        if(textIndex == 21)
+        if(textIndex == 18)
         {
             hasPlayerDoneTutorial = true;
             //Destroy(dialogueBox);
@@ -151,7 +151,7 @@ public class TutorialDialogueManager : MonoBehaviour
     public void AfterInventory()
     {
         Character c = StickGameManager.Instance.GetTrader();
-        if(textDisplay.text == sentences[6] && c == Character.Genevieve)
+        if(textDisplay.text == sentences[4] && c == Character.Genevieve)
         {
             dialogueBox.SetActive(true);
 

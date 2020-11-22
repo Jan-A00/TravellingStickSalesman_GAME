@@ -7,8 +7,12 @@ using UnityEngine.SceneManagement;
 public class PotionPuzzleInstructions : MonoBehaviour
 {
     public PotionPuzzleController controller;
-    public GameObject merchantCapital;
     public bool hasPlayerSeenInstructions = false;
+    public GameObject popUp;
+    public Button invBtn;
+    public Button mapBtn;
+    Animator popUpAnim;
+
     public Button[] button;
     public BoxCollider2D cauldron;
 
@@ -24,6 +28,10 @@ public class PotionPuzzleInstructions : MonoBehaviour
 
     void Start()
     {
+        invBtn = GameObject.FindGameObjectWithTag("InventoryButton").GetComponent<Button>();
+        mapBtn.interactable = false;
+        invBtn.interactable = false;
+        popUpAnim = popUp.GetComponent<Animator>();
         StickGameManager.Instance.SetTrader(Character.Quercus);
         for (int i = 0; i < 5; i++)
         {
@@ -47,7 +55,7 @@ public class PotionPuzzleInstructions : MonoBehaviour
             continueButton.SetActive(true);
         }
 
-        if(textDisplay.text == sentences[14])
+        if(textDisplay.text == sentences[14] && !controller.feedbackDialogueBox.activeInHierarchy)
         {
             EndInstructions();
             for (int i = 0; i < 5; i++)
@@ -67,12 +75,19 @@ public class PotionPuzzleInstructions : MonoBehaviour
             }
         }
 
-        if(textDisplay.text == sentences[18])
+        if(textDisplay.text == sentences[19])
         {
-            merchantCapital.SetActive(true);
+            popUp.SetActive(true);
+            dialogueBox.SetActive(false);
+            if(popUpAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+            {
+                //Debug.Log("animation finish");
+                NextSentence();
+                dialogueBox.SetActive(true);
+            }
         }
 
-        if(textDisplay.text == sentences[20])
+        if(textDisplay.text == sentences[21])
         {
             EndDialogue();
         }
@@ -103,11 +118,18 @@ public class PotionPuzzleInstructions : MonoBehaviour
 
     public void EndDialogue()
     {
-        if(textIndex == 20)
+        if(textIndex == 21)
         {
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
+            textIndex++;
+            audioIndex++;
             StopAllCoroutines();
+        }
+        if (textIndex == 22)
+        {
+            mapBtn.interactable = true;
+            invBtn.interactable = true;
         }
     }
 

@@ -8,6 +8,7 @@ public class PotionPuzzleController : MonoBehaviour
     public Text txtCurrentIngredients;
     public Text txtCorrectIngredients;
     public BoxCollider2D cauldronCol;
+    public Button[] button;
     public Ingredient_Type[] allPossibleIngredientTypes;
     public Ingredient_Type[] correctIngredients;
     public List<Ingredient_Type> currentIngredients;
@@ -145,6 +146,10 @@ public class PotionPuzzleController : MonoBehaviour
         feedbackTextDisplay.text = "";
         feedbackDialogueBox.SetActive(false);
         feedbackContinueButton.SetActive(false);
+        for (int i = 0; i < 5; i++)
+        {
+            button[i].enabled = true;
+        }
         feedbackLines[0].Stop();
         feedbackLines[1].Stop();
         feedbackLines[2].Stop();
@@ -168,6 +173,10 @@ public class PotionPuzzleController : MonoBehaviour
             feedbackLines[2].Play();
             cauldronCol.enabled = false;
             feedbackDialogueBox.SetActive(true);
+            for (int i = 0; i < 5; i++)
+            {
+                button[i].enabled = false;
+            }
             StartCoroutine(EmptyCauldron());
             return false;
         }
@@ -177,6 +186,10 @@ public class PotionPuzzleController : MonoBehaviour
             feedbackLines[3].Play();
             cauldronCol.enabled = false;
             feedbackDialogueBox.SetActive(true);
+            for (int i = 0; i < 5; i++)
+            {
+                button[i].enabled = false;
+            }
             StartCoroutine(NotEnough());
             return false;
         }
@@ -186,6 +199,10 @@ public class PotionPuzzleController : MonoBehaviour
             feedbackLines[0].Play();
             cauldronCol.enabled = false;
             feedbackDialogueBox.SetActive(true);
+            for (int i = 0; i < 5; i++)
+            {
+                button[i].enabled = false;
+            }
             StartCoroutine(TooMany());
             return false;
         }
@@ -205,6 +222,7 @@ public class PotionPuzzleController : MonoBehaviour
                 //cauldronCol.enabled = false;
                 winCon = true;
                 Debug.Log("WIN!!");
+                GameObject.FindGameObjectWithTag("Inventory-OpenButton").GetComponent<Button>().interactable = true;
                 return true;
             }
             else {
@@ -215,6 +233,10 @@ public class PotionPuzzleController : MonoBehaviour
                 feedbackLines[1].Play();
                 cauldronCol.enabled = false;
                 feedbackDialogueBox.SetActive(true);
+                for (int i = 0; i < 5; i++)
+                {
+                    button[i].enabled = false;
+                }
                 StartCoroutine(WrongIngredients());      
                 return false;
             }

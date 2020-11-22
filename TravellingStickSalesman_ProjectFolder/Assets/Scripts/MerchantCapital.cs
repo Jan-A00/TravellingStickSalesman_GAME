@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class MerchantCapital : MonoBehaviour
 {
     //if there are other things for this scene put them here
-    
+    public GameObject invBtn;
+
     [Header("Dialogue")]
     public Text textDisplay;
     public string[] sentences;
@@ -17,8 +18,11 @@ public class MerchantCapital : MonoBehaviour
     public GameObject continueButton;
     public GameObject dialogueBox;
     // Start is called before the first frame update
+
     void Start()
     {
+        invBtn = GameObject.FindGameObjectWithTag("InventoryButton");
+        invBtn.SetActive(false);
         dialogueBox.SetActive(true);
         StartCoroutine(Type());
         StartCoroutine(Speak());

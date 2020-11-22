@@ -25,7 +25,7 @@ public class ShrinePuzzleInstructions : MonoBehaviour
 
     void Start()
     {
-        invBtn = GameObject.FindGameObjectWithTag("InventoryButton").GetComponent<Button>();
+        invBtn = GameObject.FindGameObjectWithTag("Inventory-OpenButton").GetComponent<Button>();
         mapBtn.interactable = false;
         invBtn.interactable = false;
         popUpAnim = popUp.GetComponent<Animator>();
@@ -144,15 +144,15 @@ public class ShrinePuzzleInstructions : MonoBehaviour
         }
     }
 
-    public void GoToPotionPuzzle()
+    /*public void GoToPotionPuzzle()
     {
-        //invBtn.interactable = false;
-        SceneManager.LoadScene("PotionPuzzle"); // DEBUG AND TESTING ONLY
-    }
+        invBtn.interactable = false;
+        SceneManager.LoadScene("PotionPuzzle");
+    }*/
 
     public void GoToMushroomPuzzle()
     {
-        //invBtn.interactable = false;
-        SceneManager.LoadScene("MushroomPuzzle"); // DEBUG AND TESTING ONLY
+        invBtn.interactable = false;
+        SceneManager.LoadScene("MushroomPuzzle");
     }
 }

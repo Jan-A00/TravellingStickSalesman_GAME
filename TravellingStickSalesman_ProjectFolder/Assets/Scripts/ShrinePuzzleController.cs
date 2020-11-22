@@ -21,9 +21,9 @@ public class ShrinePuzzleController : MonoBehaviour
             images[3].rotation.z == 0 &&
             images[4].rotation.z == 0 &&
             images[5].rotation.z == 0 &&
-            images[6].rotation.z == 0) /*&&
+            images[6].rotation.z == 0 &&
             images[7].rotation.z == 0 &&
-            images[8].rotation.z == 0)*/
+            images[8].rotation.z == 0)
             //Uncomment for face puzzle. Don't forget to input the images in the controller.
         {
             winCon = true;

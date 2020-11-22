@@ -31,6 +31,7 @@ public class MusicalMushroomMatcher : MonoBehaviour
     public int randomMaxNotes = 8;
     public bool playSequenceAtStart = false;
     public bool playSequenceAtEnd = true;
+    public bool winCon = false;
     public double initialPlaybackDelay = 2f;
     public double delayBetweenNotesDuringPlayback = 1.0f;
 
@@ -243,6 +244,8 @@ public class MusicalMushroomMatcher : MonoBehaviour
     {
         if (playSequenceAtEnd) { PlayNoteSequence(); }
         Debug.Log("Puzzle Complete!");
+        winCon = true;
+        GameObject.FindGameObjectWithTag("Inventory-OpenButton").GetComponent<Button>().interactable = true;
         // TODO: Put what is supposed to happen when you get it right into this method. 
     }
     
