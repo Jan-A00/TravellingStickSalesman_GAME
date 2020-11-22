@@ -243,6 +243,7 @@ public class MusicalMushroomMatcher : MonoBehaviour
     {
         if (playSequenceAtEnd) { PlayNoteSequence(); }
         Debug.Log("Puzzle Complete!");
+        GameObject.FindGameObjectWithTag("Inventory-OpenButton").GetComponent<Button>().interactable = true;
         // TODO: Put what is supposed to happen when you get it right into this method. 
     }
     

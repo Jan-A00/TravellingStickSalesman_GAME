@@ -1,0 +1,29 @@
+﻿{
+  "array": [
+    {
+      "name": "Tutorial",
+      "nonPlayerCharacter": "Genevieve",
+      "scene": "Tutorial"
+    },
+    {
+      "name": "Mermaid Cove",
+      "nonPlayerCharacter": "Baz",
+      "scene": "SeaPuzzle"
+    },
+    {
+      "name": "Forest Shrine",
+      "nonPlayerCharacter": "Kaede",
+      "scene": "ShrinePuzzle"
+    },
+    {
+      "name": "Mushroom Cave",
+      "nonPlayerCharacter": "Beardface",
+      "scene": "MushroomPuzzle"
+    },
+    {
+      "name": "The Bubbling Cauldron",
+      "nonPlayerCharacter": "Quercus",
+      "scene": "PotionPuzzle"
+    }
+  ]
+}

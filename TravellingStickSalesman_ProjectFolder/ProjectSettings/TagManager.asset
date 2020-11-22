@@ -10,6 +10,11 @@ TagManager:
   - Musical-Rune
   - InventoryButton
   - Inventory
+  - Inventory-UserInterface
+  - Inventory-OpenButton
+  - InventoryUserInterface
+  - Inventory-CloseButton
+  - MainMenu-ContinueButton
   layers:
   - Default
   - TransparentFX

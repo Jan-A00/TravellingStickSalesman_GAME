@@ -1,0 +1,109 @@
+﻿{
+  "array": [
+    {
+      "name": "Baggy of Infant Stick Mothers",
+      "description": "All sticks must be born from somewhere...",
+      "startingStick": false,
+      "spritePathForNormalMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick5+Seedbag_01ALT.png",
+      "spritePathForHighlightedMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick5+Seedbag_02.png"
+    },
+    {
+      "name": "Bunch of Flavour Sticks",
+      "description": "Put these in your stew for extra flavour.",
+      "startingStick": false,
+      "spritePathForNormalMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick3-BouquetGarni_01ALT.png",
+      "spritePathForHighlightedMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick3-BouquetGarni_02.png"
+    },
+    {
+      "name": "Cave Growing Stick",
+      "description": "They grow from the cave floors.",
+      "startingStick": false,
+      "spritePathForNormalMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick4-Stalagmite_01ALT.png",
+      "spritePathForHighlightedMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick4-Stalagmite_02.png"
+    },
+    {
+      "name": "Chronicling Stick",
+      "description": "Can be used to write important things.",
+      "startingStick": true,
+      "spritePathForNormalMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick5QuillAndInk_01ALT.png",
+      "spritePathForHighlightedMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick5QuillAndInk_02.png"
+    },
+    {
+      "name": "Cleaning Stick",
+      "description": "A stick used to sweep up leaves.",
+      "startingStick": true,
+      "spritePathForNormalMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick2Broom_01ALT.png",
+      "spritePathForHighlightedMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick2Broom_02.png"
+    },
+    {
+      "name": "Elaborate Cutting Stick",
+      "description": "It's very, very sharp.",
+      "startingStick": false,
+      "spritePathForNormalMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick1+Katana_01ALT.png",
+      "spritePathForHighlightedMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick1+Katana_02.png"
+    },
+    {
+      "name": "Fish Catching Stick",
+      "description": "Baz's husband was looking for one of these!",
+      "startingStick": true,
+      "spritePathForNormalMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick1FishingRod_01ALT.png",
+      "spritePathForHighlightedMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick1FishingRod_02.png"
+    },
+    {
+      "name": "Liquid Stirring Stick",
+      "description": "A stick used for stirring liquids.",
+      "startingStick": true,
+      "spritePathForNormalMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick3WoodenSpoon_01ALT.png",
+      "spritePathForHighlightedMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick3WoodenSpoon_02.png"
+    },
+    {
+      "name": "Living Stick Cluster",
+      "description": "An endless supply of sticks!",
+      "startingStick": false,
+      "spritePathForNormalMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick5-Shrub_01ALT.png",
+      "spritePathForHighlightedMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick5-Shrub_02.png"
+    },
+    {
+      "name": "Looking Stick",
+      "description": "Can be used to look at far away things.",
+      "startingStick": false,
+      "spritePathForNormalMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick1+Spyglass_01ALT.png",
+      "spritePathForHighlightedMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick1+Spyglass_02.png"
+    },
+    {
+      "name": "Luminous Cave Stick",
+      "description": "Glows in the dark.",
+      "startingStick": false,
+      "spritePathForNormalMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick1+CrystalShard_01ALT.png",
+      "spritePathForHighlightedMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick1+CrystalShard_02.png"
+    },
+    {
+      "name": "Miniature Digging Stick",
+      "description": "A stick used to dig up shrooms.",
+      "startingStick": true,
+      "spritePathForNormalMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick4GradenTrowel_01ALT.png",
+      "spritePathForHighlightedMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick4GradenTrowel_02.png"
+    },
+    {
+      "name": "Ocean Growing Stick",
+      "description": "A common food source for ocean life.",
+      "startingStick": false,
+      "spritePathForNormalMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick1-Seaweed_01ALT.png",
+      "spritePathForHighlightedMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick1-Seaweed_02.png"
+    },
+    {
+      "name": "Strangely Glowing Walking Stick",
+      "description": "Just a regular walking stick that glows.",
+      "startingStick": false,
+      "spritePathForNormalMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick1+WizardStaff_01ALT.png",
+      "spritePathForHighlightedMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick1+WizardStaff_02.png"
+    },
+    {
+      "name": "Stinky Sticks",
+      "description": "Gives off a funky scent.",
+      "startingStick": false,
+      "spritePathForNormalMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick2-Incense_01ALT.png",
+      "spritePathForHighlightedMode": "Assets/Sprites/UI_Sticks/resized/OVERWORLD_InventoryUIStick2-Incense_02.png"
+    }
+  ]
+}

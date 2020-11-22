@@ -1,0 +1,34 @@
+﻿{
+  "array": [
+    {
+      "name": "Baz",
+      "oneTrueStickWants": "Fish Catching Stick",
+      "oneTrueStickGives": "Looking Stick",
+      "otherStickGives": "Ocean Growing Stick"
+    },
+    {
+      "name": "Kaede",
+      "oneTrueStickWants": "Cleaning Stick",
+      "oneTrueStickGives": "Elaborate Cutting Stick",
+      "otherStickGives": "Stinky Sticks"
+    },
+    {
+      "name": "Beardface",
+      "oneTrueStickWants": "Miniature Digging Stick",
+      "oneTrueStickGives": "Luminous Cave Stick",
+      "otherStickGives": "Cave Growing Stick"
+    },
+    {
+      "name": "Quercus",
+      "oneTrueStickWants": "Liquid Stirring Stick",
+      "oneTrueStickGives": "Strangely Glowing Walking Stick",
+      "otherStickGives": "Bunch of Flavour Sticks"
+    },
+    {
+      "name": "Fairies",
+      "oneTrueStickWants": "Chronicling Stick",
+      "oneTrueStickGives": "Baggy of Infant Stick Mothers",
+      "otherStickGives": "Living Stick Cluster"
+    }
+  ]
+}
