@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -142,6 +143,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -184,9 +186,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 8bc8ddac9df6ccb42a490c33471b13f0,
+    m_HighlightedSprite: {fileID: 21300000, guid: 10e2c62d2ec680e4caa59fd134728347,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 10e2c62d2ec680e4caa59fd134728347, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 8bc8ddac9df6ccb42a490c33471b13f0, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -201,6 +203,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5057038358206031238}
+        m_TargetAssemblyTypeName: 
         m_MethodName: OpenInventoryUserInterface
         m_Mode: 1
         m_Arguments:
@@ -235,4 +238,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b749a72c9f4130add3132221c1a2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowedToOpenInventory: 0

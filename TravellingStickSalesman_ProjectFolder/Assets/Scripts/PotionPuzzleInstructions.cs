@@ -28,7 +28,7 @@ public class PotionPuzzleInstructions : MonoBehaviour
 
     void Start()
     {
-        invBtn = GameObject.FindGameObjectWithTag("InventoryButton").GetComponent<Button>();
+        invBtn = GameObject.FindGameObjectWithTag("Inventory-OpenButton").GetComponent<Button>();
         mapBtn.interactable = false;
         invBtn.interactable = false;
         popUpAnim = popUp.GetComponent<Animator>();

@@ -21,7 +21,7 @@ public class MerchantCapital : MonoBehaviour
 
     void Start()
     {
-        invBtn = GameObject.FindGameObjectWithTag("InventoryButton");
+        invBtn = GameObject.FindGameObjectWithTag("Inventory-OpenButton");
         invBtn.SetActive(false);
         dialogueBox.SetActive(true);
         StartCoroutine(Type());
