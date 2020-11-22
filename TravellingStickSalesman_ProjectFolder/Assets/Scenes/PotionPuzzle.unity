@@ -2585,6 +2585,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7182761779367258218, guid: 1b237529a95761c41bdc6f19b1a74679,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182761779367258218, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -2767,13 +2772,14 @@ RectTransform:
   m_Children:
   - {fileID: 956248440}
   - {fileID: 398862294}
+  - {fileID: 235542834}
   - {fileID: 2019822100}
   - {fileID: 1835281028}
   - {fileID: 316317489}
+  - {fileID: 1611830576}
   - {fileID: 1269513485}
   - {fileID: 1211992298}
   - {fileID: 885531349}
-  - {fileID: 235542834}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4678,7 +4684,8 @@ MonoBehaviour:
   - {fileID: 1532791401}
   - {fileID: 18533218}
   emptyText: "Hey, that\u2019s empty!"
-  incorrectText: "Hmm\u2026 Something isn\u2019t right. Let\u2019s try another combination.  "
+  incorrectText: "Hmm\u2026 Something isn\u2019t right. Let\u2019s try another combination.
+    \ "
   notEnoughText: "Ah\u2026 Something\u2019s missing here. We may need more ingredients\u2026"
   tooManyText: Oh! That might actually be too many. You mind taking a few back?
   typingSpeed: 0.01
@@ -5519,12 +5526,12 @@ MonoBehaviour:
   - Say, I have an idea. Do you think you could give me a hand with this recipe?
   - "Oh... Once the potion\u2019s all fixed up I\u2019m sure I\u2019ll be able to
     give you directions!"
-  - "And I know we\u2019ll be able to figure this out in no time with the two of
-    us working together. It\u2019s the perfect plan!"
-  - Right, right. I have five ingredients to work with here, and I remember what
-    the potion looked like.
-  - "And don\u2019t worry about the order or anything; it\u2019s all about using
-    the right stuff. So, all we have to do is figure out which ones to use!"
+  - "And I know we\u2019ll be able to figure this out in no time with the two of us
+    working together. It\u2019s the perfect plan!"
+  - Right, right. I have five ingredients to work with here, and I remember what the
+    potion looked like.
+  - "And don\u2019t worry about the order or anything; it\u2019s all about using the
+    right stuff. So, all we have to do is figure out which ones to use!"
   - "Let\u2019s try some combinations and see how it looks, okay? I\u2019ll let you
     know if it looks familiar"
   - 
@@ -5536,8 +5543,8 @@ MonoBehaviour:
   - 'Well, with all that sorted, my head feels a lot clearer! Here, let me show you
     the way. '
   - ' '
-  - "There! All set. So, ah, safe travels! Oh, but you\u2019re welcome to take a
-    look around if you want! No trouble at all!"
+  - "There! All set. So, ah, safe travels! Oh, but you\u2019re welcome to take a look
+    around if you want! No trouble at all!"
   - 
   - 
   lines:
