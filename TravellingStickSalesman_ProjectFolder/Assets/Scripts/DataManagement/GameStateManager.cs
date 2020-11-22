@@ -5,10 +5,10 @@ using System.Linq;
 using DataManagement.ConfigTypes;
 using DataManagement.StateTypes;
 using Toolbox;
-using UnityEditor;
 using UnityEngine.SceneManagement;
-#if UNITY_EDITOR
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
 #endif
 
 namespace DataManagement
