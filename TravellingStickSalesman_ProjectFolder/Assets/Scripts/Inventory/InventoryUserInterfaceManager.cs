@@ -32,7 +32,7 @@ namespace Inventory
             // otherwise it wont be available when we want to enable it again later.
             inventoryOpenButton = GameObject.FindWithTag("Inventory-OpenButton");
             // Disable the Open Inventory button.
-            inventoryOpenButton.SetActive(false);
+            inventoryOpenButton.GetComponent<Button>().interactable = false;
             // Enable the gameObject that this is attached to, the inventory/trading user interface.
             gameObject.SetActive(true);
             // Build the current Inventory Buttons.
@@ -42,7 +42,7 @@ namespace Inventory
         public void HideInventoryScreen()
         {
             // Enable the Open Inventory button.
-            inventoryOpenButton.SetActive(true);
+            inventoryOpenButton.GetComponent<Button>().interactable = true;
             // Purge the old inventory icons so they arent here next time.
             ClearInventoryIcons();
             // Disable the inventory trading interface.
