@@ -2662,6 +2662,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 333738404}
+    - target: {fileID: 5137439209281312168, guid: cdb7ca72b570e7d46bfb5c085f170f14,
+        type: 3}
+      propertyPath: m_PlaneDistance
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 5137439209281312168, guid: cdb7ca72b570e7d46bfb5c085f170f14,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 351555116904658948, guid: cdb7ca72b570e7d46bfb5c085f170f14, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cdb7ca72b570e7d46bfb5c085f170f14, type: 3}
@@ -2853,6 +2863,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071770162310297112, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 333738404}
+    - target: {fileID: 8071770162310297112, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
+      propertyPath: m_PlaneDistance
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071770162310297112, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8441058445783257510, guid: 1b237529a95761c41bdc6f19b1a74679,
         type: 3}

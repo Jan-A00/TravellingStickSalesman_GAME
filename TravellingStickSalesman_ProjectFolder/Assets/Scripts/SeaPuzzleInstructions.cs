@@ -68,7 +68,7 @@ public class SeaPuzzleInstructions : MonoBehaviour
             }
         }
 
-        if(textDisplay.text == sentences[22])
+        if(textDisplay.text == sentences[21])
         {
             EndDialogue();
         }
@@ -99,7 +99,7 @@ public class SeaPuzzleInstructions : MonoBehaviour
 
     public void EndDialogue()
     {
-        if(textIndex == 22)
+        if(textIndex == 21)
         {
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
@@ -107,7 +107,7 @@ public class SeaPuzzleInstructions : MonoBehaviour
             audioIndex++;
             StopAllCoroutines();
         }
-        if (textIndex == 23)
+        if (textIndex == 22)
         {
             mapBtn.interactable = true;
             invBtn.interactable = true;

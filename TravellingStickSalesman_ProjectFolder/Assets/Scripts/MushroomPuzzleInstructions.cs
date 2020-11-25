@@ -70,7 +70,7 @@ public class MushroomPuzzleInstructions : MonoBehaviour
             }
         }
 
-        if(textDisplay.text == sentences[20])
+        if(textDisplay.text == sentences[19])
         {
             EndDialogue();
         }
@@ -101,7 +101,7 @@ public class MushroomPuzzleInstructions : MonoBehaviour
 
     public void EndDialogue()
     {
-        if(textIndex == 20)
+        if(textIndex == 19)
         {
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
@@ -109,7 +109,7 @@ public class MushroomPuzzleInstructions : MonoBehaviour
             audioIndex++;
             StopAllCoroutines();
         }
-        if (textIndex == 21)
+        if (textIndex == 20)
         {
             mapBtn.interactable = true;
             invBtn.interactable = true;
