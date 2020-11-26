@@ -15,6 +15,7 @@ namespace DataManagement
         private readonly string stickConfigurationFilePath =
             Path.Combine(Application.streamingAssetsPath, StickConfigurationFileName);
 
+        public static StickConfigManager Instance => Lazy.Value;
         private static readonly Lazy<StickConfigManager> Lazy = new Lazy<StickConfigManager>(
             () => new StickConfigManager()
         );
@@ -26,6 +27,7 @@ namespace DataManagement
 
         public StickConfigManager()
         {
+            Sprite[] spriteArrayFromResourcesDotLoadAll = Resources.LoadAll<Sprite>("");
             using (StreamReader reader = new StreamReader(File.OpenRead(stickConfigurationFilePath)))
             {
                 string jsonString = reader.ReadToEnd();
@@ -36,7 +38,7 @@ namespace DataManagement
                 foreach (StickConfig stickConfig in levelConfigs)
                 {
                     Debug.Log($"Processing Stick Config {stickConfig.name}");
-                    stickConfig.LoadSprites();
+                    stickConfig.LoadSprites(spriteArrayFromResourcesDotLoadAll);
                     stickData.Add(stickConfig);
                 }
             }
@@ -46,5 +48,7 @@ namespace DataManagement
                 Debug.Log($"Stick: \"{name}\", has had its configuration loaded.");   
             }
         }
+        
+        
     }
 }

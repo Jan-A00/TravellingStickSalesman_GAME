@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 using Toolbox;
 
@@ -22,17 +23,14 @@ namespace DataManagement.ConfigTypes
             this.startingStick = startingStick;
         }
 
-        public void LoadSprites()
+        public void LoadSprites(Sprite[] spriteArrayFromResourcesDotLoadAll)
         {
-            if (File.Exists(spritePathForNormalMode))
-            {
-                spriteForNormal = ImageToSprite.LoadNewSprite(spritePathForNormalMode);
-            }
-
-            if (File.Exists(spritePathForHighlightedMode))
-            {
-                spriteForHighlighted = ImageToSprite.LoadNewSprite(spritePathForHighlightedMode);
-            }
+            string spriteNameForNormal = Path.GetFileNameWithoutExtension(spritePathForNormalMode);
+            string spriteNameForHighlighted = Path.GetFileNameWithoutExtension(spritePathForHighlightedMode);
+            spriteForNormal = spriteArrayFromResourcesDotLoadAll.Single(sprite =>
+                sprite.name == spriteNameForNormal); 
+            spriteForHighlighted = spriteArrayFromResourcesDotLoadAll.Single(sprite =>
+                sprite.name == spriteNameForHighlighted);
         }
 
         public bool Equals(StickConfig other)

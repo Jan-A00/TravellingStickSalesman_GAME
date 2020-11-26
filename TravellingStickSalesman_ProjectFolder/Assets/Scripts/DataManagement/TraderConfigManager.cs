@@ -23,8 +23,13 @@ namespace DataManagement
 
         private readonly HashSet<TraderConfig> traderConfigurationData = new HashSet<TraderConfig>();
 
-        public IEnumerable<TraderConfig> Configurations => traderConfigurationData.ToArray();
-        public IEnumerable<string> TraderNames => traderConfigurationData.Select(x => x.name);
+        public static IEnumerable<TraderConfig> Configurations => Instance.traderConfigurationData.ToArray();
+        public static IEnumerable<string> TraderNames => Instance.traderConfigurationData.Select(x => x.name);
+        public static IEnumerable<string> OneTrueStickTradeResult() =>
+            Instance.traderConfigurationData.Select(trader => trader.oneTrueStickGives);
+        public static string OneTrueStickForTrader(string traderName) => Instance.traderConfigurationData.Where(trader => trader.name == traderName).Select(trader => trader.oneTrueStickWants).First();
+        public static string StickGivenForOneTrueStick(string traderName) => Instance.traderConfigurationData.Where(trader => trader.name == traderName).Select(trader => trader.oneTrueStickGives).First();
+        public static string StickGivenForOtherStick(string traderName) => Instance.traderConfigurationData.Where(trader => trader.name == traderName).Select(trader => trader.otherStickGives).First();
 
         public TraderConfigManager()
         {
@@ -48,9 +53,15 @@ namespace DataManagement
             }
         }
 
-        public string OneTrueStickForTrader(string traderName) => traderConfigurationData.Where(trader => trader.name == traderName).Select(trader => trader.oneTrueStickWants).First();
-        public string StickGivenForOneTrueStick(string traderName) => traderConfigurationData.Where(trader => trader.name == traderName).Select(trader => trader.oneTrueStickGives).First();
-        public string StickGivenForOtherStick(string traderName) => traderConfigurationData.Where(trader => trader.name == traderName).Select(trader => trader.otherStickGives).First();
+
+        public string StickGivenByTrader(string traderName, string stickWeAreGiving)
+        {
+            string traderOneTrueStickName = OneTrueStickForTrader(traderName);
+            string traderOneTrueStickReward = StickGivenForOneTrueStick(traderName);
+            string traderOtherStickReward = StickGivenForOtherStick(traderName);
+            string stickTraderWillGive = traderOneTrueStickName == stickWeAreGiving ? traderOneTrueStickReward : traderOtherStickReward;
+            return stickTraderWillGive;
+        }
 
     }
 

@@ -135,7 +135,7 @@ namespace DataManagement
         private bool traderStateInitialized;
         private readonly Lazy<TraderConfigManager> traderConfigManager = new Lazy<TraderConfigManager>();
         
-        private IEnumerable<string> TraderNames => traderConfigManager.Value.TraderNames;
+        private IEnumerable<string> TraderNames => TraderConfigManager.TraderNames;
         
         #region State File Management Methods
         
@@ -190,7 +190,7 @@ namespace DataManagement
         
         private bool ValidTrader(string traderName)
         {
-            return gameDataInitialized && traderConfigManager.Value.TraderNames.Contains(traderName);
+            return gameDataInitialized && TraderConfigManager.TraderNames.Contains(traderName);
         }
         
         public void MarkCurrentTraderAsDone()
@@ -275,7 +275,7 @@ namespace DataManagement
         public IEnumerable<string> ValidStickNames() =>
             stickConfigManager.Value.Sticks.Select(stick => stick.name).ToArray();
       
-        public IEnumerable<string> CurrentInventoryStickNames() => 
+        public string[] CurrentInventoryStickNames() => 
             CurrentInventoryStickInventoryItems().Select(stick => stick.stickName).ToArray();
         
         #endregion
@@ -350,14 +350,41 @@ namespace DataManagement
                 CurrentInventoryStickNames().Any(stickName => stickName == stickConfig.name)).ToArray();
         }
 
-        public void GiveStickToTrader(string stickName)
+        public string StickTraderWillGive(string stickName)
         {
             string traderName = levelConfigManager.Value.LevelTraderName();
-            string traderOneTrueStickName = traderConfigManager.Value.OneTrueStickForTrader(traderName);
-            string traderOneTrueStickReward = traderConfigManager.Value.StickGivenForOneTrueStick(traderName);
-            string traderOtherStickReward = traderConfigManager.Value.StickGivenForOtherStick(traderName);
+            string traderOneTrueStickName = TraderConfigManager.OneTrueStickForTrader(traderName);
+            string traderOneTrueStickReward = TraderConfigManager.StickGivenForOneTrueStick(traderName);
+            string traderOtherStickReward = TraderConfigManager.StickGivenForOtherStick(traderName);
             string stickTraderWillGive = traderOneTrueStickName == stickName ? traderOneTrueStickReward : traderOtherStickReward;
+            return stickTraderWillGive;
+        }
+
+        public void GiveStickToTrader(string stickName)
+        {
+            string stickTraderWillGive = StickTraderWillGive(stickName);
             TradeStickForStick(stickName, stickTraderWillGive);
+        }
+
+        public Sprite GetSpriteForNewStickPopup(string stickName)
+        {
+            string stickTraderWillGive = StickTraderWillGive(stickName);
+            Sprite newStickPopUpSprite = StickConfigManager.Instance.Sticks
+                .Where(config => config.name == stickTraderWillGive).Select(config => config.spriteForNormal).First();
+            return newStickPopUpSprite;
+        }
+
+        public EndingType CurrentGameEndingType()
+        {
+            IEnumerable<string> startingSticks = StickConfigs.Where(config => config.startingStick).Select(config => config.name).ToArray();
+            IEnumerable<string> oneTrueStickTradeResults = TraderConfigManager.OneTrueStickTradeResult();
+            string[] currentSticks = CurrentInventoryStickNames();
+            
+            IEnumerable<string> sticksLeftFromStartOfGame = currentSticks.Intersect(startingSticks);
+            IEnumerable<string> sticksObtainedInExchangeForOneTrueStick =
+                currentSticks.Intersect(oneTrueStickTradeResults);
+            if (sticksObtainedInExchangeForOneTrueStick.ToArray().Length >= 4) return EndingType.ThirdEnding;
+            return sticksLeftFromStartOfGame.ToArray().Length < 5 ? EndingType.SecondEnding : EndingType.FirstEnding;
         }
     }
 }

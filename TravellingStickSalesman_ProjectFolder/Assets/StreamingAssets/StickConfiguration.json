@@ -4,106 +4,106 @@
       "name": "Fish Catching Stick",
       "description": "Baz's husband was looking for one of these!",
       "startingStick": true,
-      "spritePathForNormalMode": "InventoryIcons_FishingRod_01.png",
-      "spritePathForHighlightedMode": "InventoryIcons_FishingRod_Highlighted_01.png"
+      "spritePathForNormalMode": "InventoryIcon_FishingRod_01.png",
+      "spritePathForHighlightedMode": "InventoryIcon_FishingRod_Highlighted_01.png"
     },
     {
       "name": "Looking Stick",
       "description": "Can be used to look at far away things.",
       "startingStick": false,
-      "spritePathForNormalMode": "InventoryIcons_Spyglass_01.png",
-      "spritePathForHighlightedMode": "InventoryIcons_Spyglass_Highlighted_01.png"
+      "spritePathForNormalMode": "InventoryIcon_Spyglass_01.png",
+      "spritePathForHighlightedMode": "InventoryIcon_Spyglass_Highlighted_01.png"
     },
     {
       "name": "Ocean Growing Stick",
       "description": "A common food source for ocean life.",
       "startingStick": false,
-      "spritePathForNormalMode": "InventoryIcons_Seaweed_01.png",
-      "spritePathForHighlightedMode": "InventoryIcons_Seaweed_Highlighted_01.png"
+      "spritePathForNormalMode": "InventoryIcon_Seaweed_01.png",
+      "spritePathForHighlightedMode": "InventoryIcon_Seaweed_Highlighted_01.png"
     },
     {
       "name": "Cleaning Stick",
       "description": "A stick used to sweep up leaves.",
       "startingStick": true,
-      "spritePathForNormalMode": "InventoryIcons_Broom_01.png",
-      "spritePathForHighlightedMode": "InventoryIcons_Broom_Highlighted_01.png"
+      "spritePathForNormalMode": "InventoryIcon_Broom_01.png",
+      "spritePathForHighlightedMode": "InventoryIcon_Broom_Highlighted_01.png"
     },
     {
       "name": "Elaborate Cutting Stick",
       "description": "It's very, very sharp.",
       "startingStick": false,
-      "spritePathForNormalMode": "InventoryIcons_Katana_01.png",
-      "spritePathForHighlightedMode": "InventoryIcons_Katana_Highlighted_01.png"
+      "spritePathForNormalMode": "InventoryIcon_Katana_01.png",
+      "spritePathForHighlightedMode": "InventoryIcon_Katana_Highlighted_01.png"
     },
     {
       "name": "Stinky Sticks",
       "description": "Gives off a funky scent.",
       "startingStick": false,
-      "spritePathForNormalMode": "InventoryIcons_Incense_01.png",
-      "spritePathForHighlightedMode": "InventoryIcons_Incense_Highlighted_01.png"
+      "spritePathForNormalMode": "InventoryIcon_Incense_01.png",
+      "spritePathForHighlightedMode": "InventoryIcon_Incense_Highlighted_01.png"
     },
     {
       "name": "Miniature Digging Stick",
       "description": "A stick used to dig up shrooms.",
       "startingStick": true,
-      "spritePathForNormalMode": "InventoryIcons_GardenTrowel_01.png",
-      "spritePathForHighlightedMode": "InventoryIcons_GardenTrowel_Highlighted_01.png"
+      "spritePathForNormalMode": "InventoryIcon_GardenTrowel_01.png",
+      "spritePathForHighlightedMode": "InventoryIcon_GardenTrowel_Highlighted_01.png"
     },
     {
       "name": "Luminous Cave Stick",
       "description": "Glows in the dark.",
       "startingStick": false,
-      "spritePathForNormalMode": "InventoryIcons_CrystalShard_01.png",
-      "spritePathForHighlightedMode": "InventoryIcons_CrystalShard_Highlighted_01.png"
+      "spritePathForNormalMode": "InventoryIcon_CrystalShard_01.png",
+      "spritePathForHighlightedMode": "InventoryIcon_CrystalShard_Highlighted_01.png"
     },
     {
       "name": "Cave Growing Stick",
       "description": "They grow from the cave floors.",
       "startingStick": false,
-      "spritePathForNormalMode": "InventoryIcons_Stalagmite_01.png",
-      "spritePathForHighlightedMode": "InventoryIcons_Stalagmite_Highlighted_01.png"
+      "spritePathForNormalMode": "InventoryIcon_Stalagmite_01.png",
+      "spritePathForHighlightedMode": "InventoryIcon_Stalagmite_Highlighted_01.png"
     },
     {
       "name": "Liquid Stirring Stick",
       "description": "A stick used for stirring liquids.",
       "startingStick": true,
-      "spritePathForNormalMode": "InventoryIcons_WoodenSpoon_01.png",
-      "spritePathForHighlightedMode": "InventoryIcons_WoodenSpoon_Highlighted_01.png"
+      "spritePathForNormalMode": "InventoryIcon_WoodenSpoon_01.png",
+      "spritePathForHighlightedMode": "InventoryIcon_WoodenSpoon_Highlighted_01.png"
     },
     {
       "name": "Strangely Glowing Walking Stick",
       "description": "Just a regular walking stick that glows.",
       "startingStick": false,
-      "spritePathForNormalMode": "InventoryIcons_WizardStaff_01.png",
-      "spritePathForHighlightedMode": "InventoryIcons_WizardStaff_Highlighted_01.png"
+      "spritePathForNormalMode": "InventoryIcon_WizardStaff_01.png",
+      "spritePathForHighlightedMode": "InventoryIcon_WizardStaff_Highlighted_01.png"
     },
     {
       "name": "Bunch of Flavour Sticks",
       "description": "Put these in your stew for extra flavour.",
       "startingStick": false,
-      "spritePathForNormalMode": "InventoryIcons_BouquetGarni_01.png",
-      "spritePathForHighlightedMode": "InventoryIcons_BouquetGarni_Highlighted_01.png"
+      "spritePathForNormalMode": "InventoryIcon_BouquetGarni_01.png",
+      "spritePathForHighlightedMode": "InventoryIcon_BouquetGarni_Highlighted_01.png"
     },
     {
       "name": "Chronicling Stick",
       "description": "Can be used to write important things.",
       "startingStick": true,
-      "spritePathForNormalMode": "InventoryIcons_QuillAndInk_01.png",
-      "spritePathForHighlightedMode": "InventoryIcons_QuillAndInk_Highlighted_01.png"
+      "spritePathForNormalMode": "InventoryIcon_QuillAndInk_01.png",
+      "spritePathForHighlightedMode": "InventoryIcon_QuillAndInk_Highlighted_01.png"
     },
     {
       "name": "Baggy of Infant Stick Mothers",
       "description": "All sticks must be born from somewhere...",
       "startingStick": false,
-      "spritePathForNormalMode": "InventoryIcons_SeedBag_01.png",
-      "spritePathForHighlightedMode": "InventoryIcons_SeedBag_Highlighted_01.png"
+      "spritePathForNormalMode": "InventoryIcon_SeedBag_01.png",
+      "spritePathForHighlightedMode": "InventoryIcon_SeedBag_Highlighted_01.png"
     },
     {
       "name": "Living Stick Cluster",
       "description": "An endless supply of sticks!",
       "startingStick": false,
-      "spritePathForNormalMode": "InventoryIcons_Shrub_01.png",
-      "spritePathForHighlightedMode": "InventoryIcons_Shrub_Highlighted_01.png"
+      "spritePathForNormalMode": "InventoryIcon_Shrub_01.png",
+      "spritePathForHighlightedMode": "InventoryIcon_Shrub_Highlighted_01.png"
     }
   ]
 }

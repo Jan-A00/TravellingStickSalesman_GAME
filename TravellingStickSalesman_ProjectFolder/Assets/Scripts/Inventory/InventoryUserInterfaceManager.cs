@@ -1,25 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using DataManagement;
 using DataManagement.ConfigTypes;
-using DataManagement.StateTypes;
-using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
-using Image = UnityEngine.UI.Image;
 
 namespace Inventory
 {
     public class InventoryUserInterfaceManager : MonoBehaviour
     {
         private Transform InventoryUIRoot => gameObject.transform.Find("Stick Inventory").GetComponent<Transform>();
-        public bool Visible => gameObject.activeSelf;
-        private string activeStick;
-        private bool tradeButtonActive;
+
+        private Transform NormalUIRoot => GameObject.FindGameObjectWithTag("Normal-UserInterface").GetComponent<Transform>();
         private GameObject inventoryOpenButton;
         public GameObject buttonPrefab;
+        public GameObject newStickPopup;
 
         // ReSharper disable once FieldCanBeMadeReadOnly.Local
         private List<InventoryButton> inventoryButtons = new List<InventoryButton>();
@@ -69,8 +65,8 @@ namespace Inventory
                 
                 // ReSharper disable once UseObjectOrCollectionInitializer
                 SpriteState spriteState = new SpriteState();
-                spriteState.pressedSprite = stickConfig.spriteForHighlighted;
-                spriteState.highlightedSprite = stickConfig.spriteForHighlighted;
+                //spriteState.pressedSprite = stickConfig.spriteForHighlighted;
+                //spriteState.highlightedSprite = stickConfig.spriteForHighlighted;
                 spriteState.selectedSprite = stickConfig.spriteForHighlighted;
                 
                 GameObject newButton = Instantiate(buttonPrefab, InventoryUIRoot, true);
@@ -89,51 +85,50 @@ namespace Inventory
                 newInventoryButton.inventoryUserInterfaceManager = this;
                 newInventoryButton.spriteState = spriteState;
                 newInventoryButton.stickName = stickName;
-                newInventoryButton.onClick.AddListener( () => { UpdateActiveInventoryButton(stickName); } );
+                // newInventoryButton.onClick.AddListener( () => { UpdateActiveInventoryButton(stickName); } );
                 inventoryButtons.Add(newInventoryButton);
             }
         }
 
-        private void UpdateTradeButtonState(bool tradeButtonState)
+        private void UpdateTradeButtonState()
         {
-            Debug.Log($"Marking the trade button as {(tradeButtonState ? "enabled" : "disabled")}");
-            gameObject.transform.Find("Trade Button").GetComponent<Button>().interactable = tradeButtonState;
-        }
-        
-        private void UpdateActiveInventoryButton(string stickName)
-        {
-            PerformInventoryUserInterfaceButtonUpdate();
-            Debug.Log($"Clicked on the \'{stickName}\' button...");
-            activeStick = activeStick != stickName ? stickName : null;
-            UpdateTradeButtonState(activeStick != null);
-            ;
-        }
-
-        private void PerformInventoryUserInterfaceButtonUpdate()
-        {
-            foreach (InventoryButton inventoryButton in inventoryButtons)
+            if (inventoryButtons.Any(button => button.Selected))
             {
-                Debug.Log(inventoryButton.Selected);
+                gameObject.transform.Find("Trade Button").GetComponent<TradeButton>().interactable = true;    
+            }
+            else
+            {
+                gameObject.transform.Find("Trade Button").GetComponent<TradeButton>().interactable = false;
             }
         }
 
         public bool AllowTrading()
         {
+            if (gameObject.scene.name == "Tutorial") return false;
             return !GameStateManager.Instance.AlreadyTradedWithThisTrader();
         }
-        
-        public void TradeSelectedStick()
+
+        private void ShowNewStickPopup(Sprite selectedStickIcon)
         {
-            ;
-            if (inventoryButtons.Where(ib => ib.Selected).Select(ib => ib.stickName).Count() != 1) return;
-            {
-                Debug.Log("Getting the selected stick's name...");
-                string selectedStickName = inventoryButtons.Where(ib => ib.Selected).Select(ib => ib.stickName).First();
-                Debug.Log("Performing the trade...");
-                GameStateManager.Instance.GiveStickToTrader(selectedStickName);
-                GameStateManager.Instance.MarkCurrentTraderAsDone();
-                HideInventoryScreen();
-            }
+            // GameObject newStickPopup = Instantiate(newStickPopupPrefab, NormalUIRoot, true);
+            newStickPopup.transform.Find("Stick Icon").GetComponent<SpriteRenderer>().sprite = selectedStickIcon;
+            newStickPopup.SetActive(true);
+        }
+
+        public void TradeStick(InventoryButton inventoryButton)
+        {
+            if (!AllowTrading()) { Debug.Log("Unable to trade sticks at this time."); return; }
+            string selectedStickName = inventoryButton.stickName;
+            Sprite selectedStickIcon = GameStateManager.Instance.GetSpriteForNewStickPopup(selectedStickName);
+            GameStateManager.Instance.GiveStickToTrader(selectedStickName);
+            GameStateManager.Instance.MarkCurrentTraderAsDone();
+            HideInventoryScreen();
+            ShowNewStickPopup(selectedStickIcon);
+        }
+
+        public void LateUpdate()
+        {
+            if (AllowTrading()) UpdateTradeButtonState();
         }
     }
 }
