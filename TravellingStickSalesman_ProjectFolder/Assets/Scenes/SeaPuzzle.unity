@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 92c467cb76dd43043aa97778568fd9e1,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,6 +119,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -269,6 +272,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 278570519}
+    - target: {fileID: 5137439209281312168, guid: cdb7ca72b570e7d46bfb5c085f170f14,
+        type: 3}
+      propertyPath: m_PlaneDistance
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 5137439209281312168, guid: cdb7ca72b570e7d46bfb5c085f170f14,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb7ca72b570e7d46bfb5c085f170f14, type: 3}
 --- !u!1 &39943908
@@ -566,7 +579,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b261ec6cef4d6064b8fc4b797565db5a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 41596cf3d78fbe2448fa3022d1e88713, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -915,6 +928,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8071770162310297112, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 278570519}
+    - target: {fileID: 8071770162310297112, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
+      propertyPath: m_PlaneDistance
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071770162310297112, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8649348000889659293, guid: 1b237529a95761c41bdc6f19b1a74679,
         type: 3}
       propertyPath: m_Name
@@ -968,7 +996,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 243bfe79c61168142a6d255a2d1f8ec4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b13e3201469475b49b053e6ec261e7b4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1250,6 +1278,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 558063194}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -1275,6 +1304,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1598,7 +1628,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b66b819f745bc7543905dc92ae22eabf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0b70a1c365b90264d88058d76b85d8c9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1848,17 +1878,17 @@ MonoBehaviour:
   textDisplay: {fileID: 261151561}
   sentences:
   - Oi! Oi there! Have you got a moment?
-  - Oh, hey! You actually came over. Phew.
+  - 'Oh, hey! You actually came over.  '
   - "What a relief\u2026 No one\u2019s actually stopped for me yet. Y\u2019know,
     bein\u2019 a shark\u2019n all."
-  - "I really hate to bother you like this, but I\u2019m actually in a bit of trouble."
+  - "I really hate to bother you like this, but I\u2019m actually in a bit of trouble. "
   - "See, my anniversary\u2019s coming up, and I want to get my husband something."
   - This beach is famous for its colorful pearls, so I thought I might try and make
     him a necklace from some of them, you know.
   - But, uh. The problem with that is these shells are real picky about giving away
     their pearls.
-  - "Well, for a start, you have to have a good memory! And, uh, color vision. I
-    don\u2019t have that, mate."
+  - "Well, for a start, you have to have a good memory! And, uh\u2026 color vision.
+    I don\u2019t have that, mate."
   - "So what I\u2019m asking is, could you do me a huge favor and help me gather
     up some pearls? l promise I'll make it worth your time!"
   - 
@@ -1876,8 +1906,8 @@ MonoBehaviour:
     currents, all that."
   - "But Kaede\u2019s a smart kid. She knows the roads like the back of her hand;
     just make sure she leads you and you\u2019ll be right, mate!"
-  - "Righto, I\u2019d better get to it. Thanks for your help! Cheers, mate!"
-  - "I wouldn\u2019t mind if ya wanted to talk more, though. I\u2019d love the company. "
+  - "Righto, I\u2019d better get to it. I wouldn\u2019t mind if you wanted to talk
+    more, though. I\u2019d love the company."
   - "And, hey, you\u2019re a merchant, right? Got anything a fish might like?"
   - 
   - 
@@ -1902,7 +1932,6 @@ MonoBehaviour:
   - {fileID: 1841381051}
   - {fileID: 908229084}
   - {fileID: 195366838}
-  - {fileID: 1260877441}
   - {fileID: 1062267539}
   - {fileID: 1306632208}
   - {fileID: 1306632208}
@@ -1942,7 +1971,6 @@ Transform:
   - {fileID: 1841381050}
   - {fileID: 908229083}
   - {fileID: 195366837}
-  - {fileID: 1260877440}
   - {fileID: 1062267538}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -2396,6 +2424,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2622,7 +2651,7 @@ GameObject:
   - component: {fileID: 1062267538}
   - component: {fileID: 1062267539}
   m_Layer: 0
-  m_Name: Line 20
+  m_Name: Line 19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2640,7 +2669,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 730521124}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1062267539
 AudioSource:
@@ -3341,133 +3370,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7b76545a1cfe964ebed73e10b4beb84, type: 3}
---- !u!1 &1260877439
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1260877440}
-  - component: {fileID: 1260877441}
-  m_Layer: 0
-  m_Name: Line 19
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1260877440
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260877439}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 730521124}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1260877441
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260877439}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 283ecf9b6d3fa1a4e9c3079601358d44, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1306632206
 GameObject:
   m_ObjectHideFlags: 0
@@ -3647,6 +3549,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4143,7 +4046,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 05fb3e053efe1ae4e90ff6e444d892bf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ce2c1a79a1abddd4cb3d4353511b7d97, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4560,6 +4463,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

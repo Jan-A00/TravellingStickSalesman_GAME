@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 4890085278179872738, guid: b46777a16c1e31848a21389091fd83bc,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,6 +119,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -396,6 +399,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 5137439209281312168, guid: cdb7ca72b570e7d46bfb5c085f170f14,
+        type: 3}
+      propertyPath: m_PlaneDistance
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 5137439209281312168, guid: cdb7ca72b570e7d46bfb5c085f170f14,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb7ca72b570e7d46bfb5c085f170f14, type: 3}
 --- !u!114 &14373068 stripped
@@ -688,11 +701,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7182761779367258218, guid: 1b237529a95761c41bdc6f19b1a74679,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7182761779367258218, guid: 1b237529a95761c41bdc6f19b1a74679,
-        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -765,6 +773,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 8071770162310297112, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
+      propertyPath: m_PlaneDistance
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071770162310297112, guid: 1b237529a95761c41bdc6f19b1a74679,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8441058445783257510, guid: 1b237529a95761c41bdc6f19b1a74679,
         type: 3}
@@ -1161,6 +1179,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1469,6 +1488,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2143,6 +2163,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2684,11 +2705,6 @@ PrefabInstance:
     - target: {fileID: 4624537028051317875, guid: a94316128b718b64b885ea1c1f21f474,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4624537028051317875, guid: a94316128b718b64b885ea1c1f21f474,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4624537028051317875, guid: a94316128b718b64b885ea1c1f21f474,
@@ -2837,6 +2853,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2925,8 +2942,8 @@ MonoBehaviour:
   - Greetings, traveler. Welcome to my shrine. You may rest here for as long as you
     need.
   - "\u2026Or perhaps you did not come here merely to rest?"
-  - In that case, follow me, dear wanderer, and allow me to show you the correct way
-    through these winding roads.
+  - In that case, follow me, dear wanderer, and allow me to show you the correct
+    way through these winding roads.
   - "Um... Please excuse me for a moment... I think I have to rotate it this way,
     and ah\u2026 the other way? Huh\u2026 That\u2019s wrong."
   - "I am so very sorry. It seems I have, um\u2026 forgotten the password."
@@ -3481,9 +3498,9 @@ RectTransform:
   - {fileID: 2052072241}
   - {fileID: 406521611}
   - {fileID: 1593277763}
+  - {fileID: 876638774}
   - {fileID: 1732561563}
   - {fileID: 2134816952}
-  - {fileID: 876638774}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4947,6 +4964,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1745828248}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -4972,6 +4990,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
