@@ -8,8 +8,8 @@ public class TutorialDialogueManager : MonoBehaviour
 {
     public GameObject popUp;
     public GameObject invArrow;
-    public InventoryManager invMngr;
-    public Button invBtn;
+    // public InventoryManager invMngr;
+    // public Button invBtn;
     public Button mapBtn;
     public Button backBtn;
     public bool hasPlayerDoneTutorial = false;
@@ -27,9 +27,10 @@ public class TutorialDialogueManager : MonoBehaviour
 
     void Start()
     {
-        invMngr.hasTraded = true;
+        // TODO: Hook up to GameStateManager and re-enable
+        // invMngr.hasTraded = true;
         mapBtn.interactable = false;
-        invBtn.interactable = false;
+        // invBtn.interactable = false;
         popUpAnim = popUp.GetComponent<Animator>();
         StickGameManager.Instance.SetTrader(Character.Genevieve);
         if(hasPlayerDoneTutorial == false)
@@ -50,16 +51,16 @@ public class TutorialDialogueManager : MonoBehaviour
         if(textDisplay.text == sentences[4])
         {
             continueButton.SetActive(false);
-            invBtn.interactable = true;
+            // invBtn.interactable = true;
             invArrow.SetActive(true);
             backBtn.onClick.AddListener(() => AfterInventory());
-            invBtn.onClick.AddListener(() => HideDialogueBox());
+            // invBtn.onClick.AddListener(() => HideDialogueBox());
         }
 
         if(textDisplay.text == sentences[5])
         {
             continueButton.SetActive(true);
-            invBtn.interactable = false;
+            // invBtn.interactable = false;
         }
 
         if(textDisplay.text == sentences[14])
@@ -109,8 +110,8 @@ public class TutorialDialogueManager : MonoBehaviour
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
             mapBtn.interactable = true;
-            invBtn.interactable = true;
-            invMngr.hasTraded = false;
+            // invBtn.interactable = true;
+            // invMngr.hasTraded = false;
             textIndex++;
             audioIndex++;
             StopAllCoroutines();
@@ -169,7 +170,7 @@ public class TutorialDialogueManager : MonoBehaviour
 
     public void GoToSeaPuzzle()
     {
-        invBtn.interactable = false;
+        // invBtn.interactable = false;
         SceneManager.LoadScene("SeaPuzzle");
     }
 }
