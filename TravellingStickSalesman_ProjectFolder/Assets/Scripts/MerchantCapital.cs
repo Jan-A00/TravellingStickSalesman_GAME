@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DataManagement;
+using DataManagement.StateTypes;
 
 public class MerchantCapital : MonoBehaviour
 {
     //if there are other things for this scene put them here
     public GameObject invBtn;
+    public EndingType endingType;
 
     [Header("Dialogue")]
     public Text textDisplay;
@@ -34,6 +37,21 @@ public class MerchantCapital : MonoBehaviour
         if(textDisplay.text == sentences[textIndex])
         {
             continueButton.SetActive(true);
+        }
+
+        if (endingType == EndingType.FirstEnding)
+        {
+            Debug.Log("one");
+        }
+
+        if (endingType == EndingType.SecondEnding)
+        {
+            Debug.Log("two");
+        }
+
+        if (endingType == EndingType.ThirdEnding)
+        {
+            Debug.Log("three");
         }
 
         if(textDisplay.text == sentences[24])
