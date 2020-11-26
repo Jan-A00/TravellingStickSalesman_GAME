@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UserInterface;
 
 public class TutorialDialogueManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class TutorialDialogueManager : MonoBehaviour
     public Button mapBtn;
     public Button backBtn;
     public bool hasPlayerDoneTutorial = false;
+    public HiddenDialogLauncher launcher;
     Animator popUpAnim;
 
     [Header("Dialogue")]
@@ -114,6 +116,7 @@ public class TutorialDialogueManager : MonoBehaviour
             // invMngr.hasTraded = false;
             textIndex++;
             audioIndex++;
+            launcher.sceneInteraction.SetActive(true);
             StopAllCoroutines();
         }
     }

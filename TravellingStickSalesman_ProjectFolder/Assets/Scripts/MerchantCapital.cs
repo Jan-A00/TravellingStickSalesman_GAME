@@ -17,7 +17,7 @@ public class MerchantCapital : MonoBehaviour
     public Text textDisplay;
     public string[] sentences;
     public AudioSource[] lines;
-    private int textIndex:
+    private int textIndex;
     private int audioIndex;
     public float typingSpeed;
     public GameObject continueButton;

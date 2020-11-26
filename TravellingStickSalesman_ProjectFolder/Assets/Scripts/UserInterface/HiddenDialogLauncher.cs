@@ -8,11 +8,13 @@ namespace UserInterface
         public DialogSequencer dialogSequencer;
         public string lineText;
         public AudioClip lineAudio;
+        public GameObject sceneInteraction;
         
         private void OnMouseDown()
         {
             Debug.Log("Clicked on some hidden dialog.");
             dialogSequencer.ShowDialogueBox(lineText, lineAudio);
+            sceneInteraction.SetActive(false);
         }
     }
 }

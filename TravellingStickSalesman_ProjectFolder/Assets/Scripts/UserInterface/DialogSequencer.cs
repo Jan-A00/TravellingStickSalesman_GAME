@@ -13,10 +13,9 @@ namespace UserInterface
         
         public void ShowDialogueBox(string lineText, AudioClip lineAudio)
         {
-            float boxWidth = 1071f;
-            float boxHeight = 166.5f;
-            float bottomPadding = 23.75f;
-            float boxCenterY = -Screen.height / 2 + boxHeight + bottomPadding;
+            float boxWidth = 1070f;
+            float boxHeight = 165f;
+            float boxCenterY = -262.5f;
             GameObject dialogBox = Instantiate(dialogBoxPrefab, NormalUIRoot, true);
             Vector3 position = new Vector3(0, boxCenterY, -1000.0f);
             dialogBox.transform.localPosition = position;

@@ -18,7 +18,7 @@ namespace UserInterface
 
         private void Start()
         {
-            typingSpeed = lineAudio.length / lineText.Length;
+            typingSpeed = 0.01f;
             audioSource.clip = lineAudio;
             StartCoroutine(Type());
             StartCoroutine(Speak());
