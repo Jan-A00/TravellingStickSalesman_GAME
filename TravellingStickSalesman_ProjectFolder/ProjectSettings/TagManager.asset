@@ -17,6 +17,7 @@ TagManager:
   - MainMenu-ContinueButton
   - Normal-UserInterface
   - Inventory-NewStickPopup
+  - StickPopUp
   layers:
   - Default
   - TransparentFX
