@@ -36,7 +36,7 @@ public class MerchantCapital : MonoBehaviour
             continueButton.SetActive(true);
         }
 
-        if(textDisplay.text == sentences[12])
+        if(textDisplay.text == sentences[24])
         {
             EndDialogue();
         }
@@ -61,7 +61,7 @@ public class MerchantCapital : MonoBehaviour
 
     public void EndDialogue()
     {
-        if(textIndex == 12)
+        if(textIndex == 24)
         {
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);

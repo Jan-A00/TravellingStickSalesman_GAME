@@ -56,15 +56,21 @@ public class ShrinePuzzleInstructions : MonoBehaviour
             continueButton.SetActive(false);
         }
 
-        if(textDisplay.text == sentences[18])
+        if(textDisplay.text == sentences[16]) 
         {
-            popUp.SetActive(true);
             dialogueBox.SetActive(false);
+            popUp.SetActive(true);
             if(popUpAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
             {
                 //Debug.Log("animation finish");
-                EndDialogue();
+                NextSentence();
+                dialogueBox.SetActive(true);
             }
+        }
+
+        if(textDisplay.text == sentences[19])
+        {
+            EndDialogue();
         }
     }
 
@@ -93,17 +99,20 @@ public class ShrinePuzzleInstructions : MonoBehaviour
 
     public void EndDialogue()
     {
-        if(textIndex == 18)
+        if(textIndex == 19)
         {
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
-            mapBtn.interactable = true;
-            invBtn.interactable = true;
             textIndex++;
             audioIndex++;
             StopAllCoroutines();
         }
-    }    
+        if (textIndex == 20)
+        {
+            mapBtn.interactable = true;
+            invBtn.interactable = true;
+        }
+    }
 
     public void NextSentence()
     {
@@ -143,12 +152,6 @@ public class ShrinePuzzleInstructions : MonoBehaviour
             StartCoroutine(Speak());
         }
     }
-
-    /*public void GoToPotionPuzzle()
-    {
-        invBtn.interactable = false;
-        SceneManager.LoadScene("PotionPuzzle");
-    }*/
 
     public void GoToMushroomPuzzle()
     {
