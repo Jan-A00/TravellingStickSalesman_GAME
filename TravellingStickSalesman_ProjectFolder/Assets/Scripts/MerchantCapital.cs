@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DataManagement;
+using DataManagement.StateTypes;
 using UnityEngine;
 using UnityEngine.UI;
 //using DataManagement;
@@ -24,6 +26,8 @@ public class MerchantCapital : MonoBehaviour
 
     void Start()
     {
+        EndingType endingType = GameStateManager.Instance.CurrentGameEndingType();
+        Debug.Log(endingType);
         invBtn = GameObject.FindGameObjectWithTag("Inventory-OpenButton");
         invBtn.SetActive(false);
         dialogueBox.SetActive(true);
