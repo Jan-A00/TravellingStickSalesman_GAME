@@ -2584,7 +2584,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82df771db7e781d47ba08f1ff296f28e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 21ebb6c350264324ca1bcc95baa43a8c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.04
   m_Pitch: 1
@@ -3053,9 +3053,10 @@ MonoBehaviour:
   - Yes, perfect! This is my chance to get a proper look and memorize it.
   - "Oh! Oh my goodness, I\u2019m so sorry. You wanted me to lead you, correct?"
   - Very well. Stay close to me, and I shall guide you to your destination.
+  - ' '
   - "Please let me know when you\u2019re ready to leave."
   - "Now, the first turn\u2026 Was it right, or left\u2026?"
-  - ' '
+  - 
   - ' '
   lines:
   - {fileID: 1323629360}
@@ -3074,6 +3075,7 @@ MonoBehaviour:
   - {fileID: 636716997}
   - {fileID: 2035383889}
   - {fileID: 146505743}
+  - {fileID: 1986993944}
   - {fileID: 572281897}
   - {fileID: 85325364}
   - {fileID: 1986993944}

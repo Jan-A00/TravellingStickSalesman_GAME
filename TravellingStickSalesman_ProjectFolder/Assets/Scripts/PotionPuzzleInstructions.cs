@@ -73,6 +73,8 @@ public class PotionPuzzleInstructions : MonoBehaviour
                 button[i].enabled = false;
                 cauldron.enabled = false;
             }
+            mapBtn.interactable = false;
+            invBtn.interactable = false;
         }
 
         if(textDisplay.text == sentences[19])
