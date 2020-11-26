@@ -4,6 +4,6 @@
     {
         FirstEnding,
         SecondEnding,
-        ThirdEnding,
+        ThirdEnding
     }
 }
