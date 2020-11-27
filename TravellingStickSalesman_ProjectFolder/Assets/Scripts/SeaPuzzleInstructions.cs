@@ -10,8 +10,6 @@ public class SeaPuzzleInstructions : MonoBehaviour
     public SeaPuzzleController controller;
     public bool hasPlayerSeenInstructions = false;
     public GameObject popUp;
-    public Button invBtn;
-    public Button mapBtn;
     Animator popUpAnim;
     
     [Header("Dialogue")]
@@ -115,11 +113,6 @@ public class SeaPuzzleInstructions : MonoBehaviour
             textIndex++;
             audioIndex++;
             StopAllCoroutines();
-        }
-        if (textIndex == 22)
-        {
-            mapBtn.interactable = true;
-            invBtn.interactable = true;
         }
     }
 

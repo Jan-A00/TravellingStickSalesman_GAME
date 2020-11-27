@@ -1,4 +1,5 @@
 ﻿using System;
+using DataManagement;
 using UnityEngine;
 
 namespace UserInterface
@@ -9,7 +10,18 @@ namespace UserInterface
         public string lineText;
         public AudioClip lineAudio;
         public GameObject sceneInteraction;
-        
+        private BoxCollider2D collider;
+
+        private void Start()
+        {
+            collider = gameObject.GetComponent<BoxCollider2D>();
+        }
+
+        private void Update()
+        {
+            collider.enabled = GameStateManager.Instance.ReadyToTrade();
+        }
+
         private void OnMouseDown()
         {
             Debug.Log("Clicked on some hidden dialog.");
