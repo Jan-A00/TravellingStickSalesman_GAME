@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -46,19 +46,19 @@ public class MushroomPuzzleInstructions : MonoBehaviour
             continueButton.SetActive(true);
         }
 
-        if(textDisplay.text == sentences[10])
+        if(textDisplay.text == sentences[11])
         {
             EndInstructions();
             settings.puzzleEnabled = true;
         }
 
-        if(textDisplay.text == sentences[10] && matcher.winCon == true)
+        if(textDisplay.text == sentences[11] && matcher.winCon == true)
         {
             WinText();
             continueButton.SetActive(false);
         }
 
-        if(textDisplay.text == sentences[15])
+        if(textDisplay.text == sentences[16])
         {
             popUp.SetActive(true);
             dialogueBox.SetActive(false);
@@ -70,7 +70,7 @@ public class MushroomPuzzleInstructions : MonoBehaviour
             }
         }
 
-        if(textDisplay.text == sentences[18])
+        if(textDisplay.text == sentences[19])
         {
             EndDialogue();
         }
@@ -101,7 +101,7 @@ public class MushroomPuzzleInstructions : MonoBehaviour
 
     public void EndDialogue()
     {
-        if(textIndex == 18)
+        if(textIndex == 19)
         {
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
@@ -109,7 +109,7 @@ public class MushroomPuzzleInstructions : MonoBehaviour
             audioIndex++;
             StopAllCoroutines();
         }
-        if (textIndex == 19)
+        if (textIndex == 20)
         {
             mapBtn.interactable = true;
             invBtn.interactable = true;
