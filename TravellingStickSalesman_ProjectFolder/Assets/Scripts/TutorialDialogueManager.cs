@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DataManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -53,16 +54,14 @@ public class TutorialDialogueManager : MonoBehaviour
         if(textDisplay.text == sentences[4])
         {
             continueButton.SetActive(false);
-            // invBtn.interactable = true;
             invArrow.SetActive(true);
+            GameStateManager.Instance.RecordReadyToTrade();
             backBtn.onClick.AddListener(() => AfterInventory());
-            // invBtn.onClick.AddListener(() => HideDialogueBox());
         }
 
         if(textDisplay.text == sentences[5])
         {
             continueButton.SetActive(true);
-            // invBtn.interactable = false;
         }
 
         if(textDisplay.text == sentences[14])
@@ -71,7 +70,6 @@ public class TutorialDialogueManager : MonoBehaviour
             popUp.SetActive(true);
             if(popUpAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
             {
-                //Debug.Log("animation finish");
                 NextSentence();
                 dialogueBox.SetActive(true);
             }
@@ -154,6 +152,8 @@ public class TutorialDialogueManager : MonoBehaviour
 
     public void AfterInventory()
     {
+        GameStateManager.Instance.RecordPuzzleComplete();
+        GameStateManager.Instance.RecordCurrentLevelTrade("");
         Character c = StickGameManager.Instance.GetTrader();
         if(textDisplay.text == sentences[4] && c == Character.Genevieve)
         {

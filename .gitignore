@@ -60,3 +60,4 @@ crashlytics-build.properties
 
 # JetBrains Rider Files
 /TravellingStickSalesman_ProjectFolder/.idea/**
+.DS_Store

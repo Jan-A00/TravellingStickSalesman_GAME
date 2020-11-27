@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DataManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -62,14 +63,25 @@ public class SeaPuzzleInstructions : MonoBehaviour
             popUp.SetActive(true);
             if(popUpAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
             {
-                //Debug.Log("animation finish");
                 NextSentence();
                 dialogueBox.SetActive(true);
             }
         }
+        
+        if(textDisplay.text == sentences[21]) 
+        {
+            dialogueBox.SetActive(false);
+            GameStateManager.Instance.RecordReadyToTrade();
+            if(GameStateManager.Instance.TradedWithCurrentTrader())
+            {
+                NextSentence();
+                dialogueBox.SetActive(true);
+            }
+        } 
 
         if(textDisplay.text == sentences[21])
         {
+            
             EndDialogue();
         }
     }

@@ -2002,11 +2002,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ShowInventoryUserInterface
       objectReference: {fileID: 0}
-    - target: {fileID: 5057038358206031290, guid: 64c4eaa2fd31d73468545f3cb028d310,
-        type: 3}
-      propertyPath: m_Interactable
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5057038358206031291, guid: 64c4eaa2fd31d73468545f3cb028d310,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2041,16 +2036,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5057038358206031291, guid: 64c4eaa2fd31d73468545f3cb028d310,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -472
-      objectReference: {fileID: 0}
-    - target: {fileID: 5057038358206031291, guid: 64c4eaa2fd31d73468545f3cb028d310,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 310.1
       objectReference: {fileID: 0}
     - target: {fileID: 5057038358206031291, guid: 64c4eaa2fd31d73468545f3cb028d310,
         type: 3}

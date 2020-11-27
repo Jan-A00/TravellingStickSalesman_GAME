@@ -1560,6 +1560,7 @@ MonoBehaviour:
   mapBtn: {fileID: 1250782892}
   backBtn: {fileID: 1083609939}
   hasPlayerDoneTutorial: 0
+  launcher: {fileID: 0}
   textDisplay: {fileID: 1808933755}
   sentences:
   - "Well, my little offshoot, it looks like a \u2018congratulations\u2019 is in
@@ -3719,6 +3720,7 @@ MonoBehaviour:
   lineText: "Charles, my fern! At least, I think he\u2019s a fern... He\u2019s not
     looking too good these days..."
   lineAudio: {fileID: 8300000, guid: 4668c11c7bfb8114f889b7bbe64db2cb, type: 3}
+  sceneInteraction: {fileID: 0}
 --- !u!1 &1769471155
 GameObject:
   m_ObjectHideFlags: 0
@@ -4309,7 +4311,7 @@ PrefabInstance:
     - target: {fileID: 5057038358206031290, guid: 64c4eaa2fd31d73468545f3cb028d310,
         type: 3}
       propertyPath: m_Interactable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5057038358206031290, guid: 64c4eaa2fd31d73468545f3cb028d310,
         type: 3}
@@ -4389,12 +4391,12 @@ PrefabInstance:
     - target: {fileID: 5057038358206031291, guid: 64c4eaa2fd31d73468545f3cb028d310,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -471
+      value: -501
       objectReference: {fileID: 0}
     - target: {fileID: 5057038358206031291, guid: 64c4eaa2fd31d73468545f3cb028d310,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 310.1
+      value: 287.55
       objectReference: {fileID: 0}
     - target: {fileID: 5057038358206031291, guid: 64c4eaa2fd31d73468545f3cb028d310,
         type: 3}
