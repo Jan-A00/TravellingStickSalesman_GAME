@@ -3160,25 +3160,6 @@ MonoBehaviour:
   - "Always keep an eye out! Check everything, talk to everyone! That\u2019s my advice,
     and I stick to it."
   - Anyway, fine work, young merchant! You did well!
-  - 
-  - "Whoa! Looks like you\u2019ve been busy! "
-  - "I\u2019m seeing some pretty valuable sticks here. I\u2019m impressed! "
-  - "It\u2019s not always easy to tell what kinds of sticks folks will be into. That\u2019s
-    one of the hardest parts of the job."
-  - "If you find something they\u2019ve been needing, you might get something really
-    special in return."
-  - "That\u2019s my advice, and I stick to it. "
-  - Anyway, an excellent job, young stickling! You seem to be getting the hang of
-    stick merchantry.
-  - 
-  - "Sticks above! I\u2019ve never seen a collection like this before! Sticks like
-    these don\u2019t grow on trees. "
-  - Gen taught you well, I see. One of these days you might even replace me as Master
-    Merchant!
-  - "Anyway, outstanding work, young merchant! Now make like a tree\u2026 and give
-    me some more sticks."
-  - "Right? Like a tree? It makes sticks\u2026 come on!"
-  - 
   lines:
   - {fileID: 2025810754}
   - {fileID: 1452088668}
@@ -3192,19 +3173,6 @@ MonoBehaviour:
   - {fileID: 61400325}
   - {fileID: 705465876}
   - {fileID: 2050900673}
-  - {fileID: 682159490}
-  - {fileID: 592552466}
-  - {fileID: 2120660451}
-  - {fileID: 65205105}
-  - {fileID: 495329451}
-  - {fileID: 1459511956}
-  - {fileID: 957165826}
-  - {fileID: 682159490}
-  - {fileID: 1180806148}
-  - {fileID: 2067829561}
-  - {fileID: 71030015}
-  - {fileID: 1923516650}
-  - {fileID: 682159490}
   typingSpeed: 0.01
   continueButton: {fileID: 470431567}
   dialogueBox: {fileID: 1963564655}
