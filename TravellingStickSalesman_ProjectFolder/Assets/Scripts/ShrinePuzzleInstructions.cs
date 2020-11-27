@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DataManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -68,6 +69,17 @@ public class ShrinePuzzleInstructions : MonoBehaviour
             }
         }
 
+        if(textDisplay.text == sentences[19])
+        {
+            dialogueBox.SetActive(false);
+            GameStateManager.Instance.RecordReadyToTrade();
+            // if(GameStateManager.Instance.TradedWithCurrentTrader())
+            // {
+            //     NextSentence();
+            //     dialogueBox.SetActive(true);
+            // }
+        }
+        
         if(textDisplay.text == sentences[19])
         {
             EndDialogue();

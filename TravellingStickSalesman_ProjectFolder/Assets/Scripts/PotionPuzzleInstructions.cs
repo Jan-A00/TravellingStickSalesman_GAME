@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DataManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -89,6 +90,17 @@ public class PotionPuzzleInstructions : MonoBehaviour
             }
         }
 
+        if(textDisplay.text == sentences[21]) 
+        {
+            dialogueBox.SetActive(false);
+            GameStateManager.Instance.RecordReadyToTrade();
+            // if(GameStateManager.Instance.TradedWithCurrentTrader())
+            // {
+            //     NextSentence();
+            //     dialogueBox.SetActive(true);
+            // }
+        } 
+        
         if(textDisplay.text == sentences[21])
         {
             EndDialogue();

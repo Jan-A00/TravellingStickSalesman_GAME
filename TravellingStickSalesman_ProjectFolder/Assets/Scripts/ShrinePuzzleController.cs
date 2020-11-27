@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DataManagement;
 using UnityEngine;
 
 public class ShrinePuzzleController : MonoBehaviour
@@ -26,6 +27,7 @@ public class ShrinePuzzleController : MonoBehaviour
             images[8].rotation.z == 0)
             //Uncomment for face puzzle. Don't forget to input the images in the controller.
         {
+            GameStateManager.Instance.RecordPuzzleComplete();
             winCon = true;
             //Debug.Log("You Win!");
         }

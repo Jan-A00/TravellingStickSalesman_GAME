@@ -72,11 +72,11 @@ public class SeaPuzzleInstructions : MonoBehaviour
         {
             dialogueBox.SetActive(false);
             GameStateManager.Instance.RecordReadyToTrade();
-            if(GameStateManager.Instance.TradedWithCurrentTrader())
-            {
-                NextSentence();
-                dialogueBox.SetActive(true);
-            }
+            // if(GameStateManager.Instance.TradedWithCurrentTrader())
+            // {
+            //     NextSentence();
+            //     dialogueBox.SetActive(true);
+            // }
         } 
 
         if(textDisplay.text == sentences[21])
