@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MerchantCapital.unity
     guid: 4489b5d1818ec344ea733c855706f094
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 4373e707c0935498a86258a427d316ac
   m_configObjects: {}
