@@ -106,6 +106,7 @@ public class SeaPuzzleInstructions : MonoBehaviour
     public void EndInstructions()
     {
         dialogueBox.SetActive(false);
+        continueButton.SetActive(false);
         hasPlayerSeenInstructions = true;
     }
 
