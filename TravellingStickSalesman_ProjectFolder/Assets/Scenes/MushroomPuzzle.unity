@@ -2689,7 +2689,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 60fc7b70077b0f642bf4a2c1e276cac5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: aa9ecd22f240e8440a01377c1b35db31, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4013,16 +4013,6 @@ MonoBehaviour:
   - "Well, you should be on your way, but if you ever need a friend, you can always
     rely on old Beardface \u2013 I mean Beardfac\xE9! "
   - 
-  - "Is that \u2013 Why, a Miniature Digging Stick! That\u2019ll be perfect for digging
-    up some mushrooms. Oh\u2026 oh, no! Not these mushrooms!  "
-  - "Well, I can hardly let you go on your way without thanking you! Here, why don\u2019t
-    you take this with you?"
-  - 
-  - "Luminous Cave Sticks are in abundant supply here, but you won\u2019t get them
-    quite like this anywhere else in the land. "
-  - 
-  - "Oh, what\u2019s that? Have you got something for me? "
-  - 'Ah, very generous of you, young merchant! How about this as payment? '
   lines:
   - {fileID: 341156364}
   - {fileID: 648493395}
@@ -4044,13 +4034,6 @@ MonoBehaviour:
   - {fileID: 961711021}
   - {fileID: 748932278}
   - {fileID: 148538394}
-  - {fileID: 1899806844}
-  - {fileID: 2039419527}
-  - {fileID: 148538394}
-  - {fileID: 1090631567}
-  - {fileID: 148538394}
-  - {fileID: 669389143}
-  - {fileID: 401882813}
   typingSpeed: 0.01
   continueButton: {fileID: 4624537028059923131}
   dialogueBox: {fileID: 4624537028059923125}

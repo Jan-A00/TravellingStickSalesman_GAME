@@ -2150,8 +2150,6 @@ MonoBehaviour:
   controller: {fileID: 1722577390}
   hasPlayerSeenInstructions: 0
   popUp: {fileID: 1809599452}
-  invBtn: {fileID: 766333784}
-  mapBtn: {fileID: 309569223}
   textDisplay: {fileID: 261151561}
   sentences:
   - Oi! Oi there! Have you got a moment?
@@ -2187,32 +2185,6 @@ MonoBehaviour:
     more, though. I\u2019d love the company."
   - "And, hey, you\u2019re a merchant, right? Got anything a fish might like?"
   - 
-  - "Whoa, whoa, whoa! Is that\u2026?! Is that a fishy thing? Fish-catchy thing?  "
-  - "Aw, man! I\u2019ve been looking for one of those for ages! "
-  - "Well, not for me, exactly\u2026 Did I tell you my husband\u2019s a fisherman?"
-  - "Anyway, he goes through these like you wouldn\u2019t believe. "
-  - "I wanted to surprise him with one for our anniversary\u2026 "
-  - "But it\u2019s like any time I ask about fish-catchy sticks, people get all weird
-    about it\u2026"
-  - "Like, hey! It\u2019s not weird for me to want to catch fish! I\u2019m a shark!
-    That\u2019s what we do!"
-  - "Ah, righto, anyway, reward time! Let me\u2026 What have I got here\u2026? Ah,
-    here!"
-  - "I know it\u2019s not much, but take this. I insist!"
-  - 
-  - "You like it, mate? I found it a while back in this huge sunken ship! Must\u2019ve
-    been centuries old."
-  - "I didn\u2019t really know where to put it, so it\u2019s been holding up in my
-    workbench for a few years."
-  - "I figure you\u2019d get some better use out of it!"
-  - 
-  - Oh, a stick for me? Thank you!
-  - "Hmm\u2026 I don\u2019t really know what this is for, so it\u2019ll probably
-    take me some time to find a place for it."
-  - "But I\u2019m always happy to help out a friend of Genevieve! Here, take this
-    as a little thank you gift. "
-  - 
-  - Hope you like it, mate!
   lines:
   - {fileID: 477381382}
   - {fileID: 227354631}
@@ -2236,25 +2208,6 @@ MonoBehaviour:
   - {fileID: 195366838}
   - {fileID: 1062267539}
   - {fileID: 1306632208}
-  - {fileID: 1474088947}
-  - {fileID: 1048745721}
-  - {fileID: 1536427647}
-  - {fileID: 1453362398}
-  - {fileID: 1648602572}
-  - {fileID: 1623969218}
-  - {fileID: 845468773}
-  - {fileID: 1495741864}
-  - {fileID: 668930430}
-  - {fileID: 1306632208}
-  - {fileID: 1901985116}
-  - {fileID: 929784575}
-  - {fileID: 978967425}
-  - {fileID: 1306632208}
-  - {fileID: 1549477510}
-  - {fileID: 1772986923}
-  - {fileID: 1525606634}
-  - {fileID: 1306632208}
-  - {fileID: 367058861}
   audioIndex: 0
   textIndex: 0
   typingSpeed: 0.01
@@ -2416,18 +2369,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 766333782}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &766333784 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5057038358206031290, guid: 64c4eaa2fd31d73468545f3cb028d310,
-    type: 3}
-  m_PrefabInstance: {fileID: 766333782}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &839846414 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6652629450074629703, guid: e7b76545a1cfe964ebed73e10b4beb84,

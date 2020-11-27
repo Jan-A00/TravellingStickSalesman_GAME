@@ -1560,7 +1560,6 @@ MonoBehaviour:
   mapBtn: {fileID: 1250782892}
   backBtn: {fileID: 1083609939}
   hasPlayerDoneTutorial: 0
-  launcher: {fileID: 0}
   textDisplay: {fileID: 1808933755}
   sentences:
   - "Well, my little offshoot, it looks like a \u2018congratulations\u2019 is in
@@ -2247,6 +2246,36 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 716563021}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1044786407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1044786408}
+  m_Layer: 0
+  m_Name: DummySceneInteraction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1044786408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044786407}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.7415682, y: 0.17037669, z: -52.10826}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1049864286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2723,7 +2752,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 460.5, y: 57.3}
+  m_AnchoredPosition: {x: 462, y: 110}
   m_SizeDelta: {x: 358.81396, y: 419.00323}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1201625675
@@ -2750,7 +2779,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 350, y: 400}
+  m_Size: {x: 350, y: 300}
   m_EdgeRadius: 0
 --- !u!114 &1201625676
 MonoBehaviour:
@@ -2768,7 +2797,7 @@ MonoBehaviour:
   lineText: "What do you think of my \u2018Not For Sale\u2019 collection? Amazing,
     I know. "
   lineAudio: {fileID: 8300000, guid: db2278126cd856249967a06863740a7e, type: 3}
-  sceneInteraction: {fileID: 0}
+  sceneInteraction: {fileID: 1044786407}
 --- !u!1001 &1214767847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3801,7 +3830,7 @@ MonoBehaviour:
   lineText: "Charles, my fern! At least, I think he\u2019s a fern... He\u2019s not
     looking too good these days..."
   lineAudio: {fileID: 8300000, guid: 4668c11c7bfb8114f889b7bbe64db2cb, type: 3}
-  sceneInteraction: {fileID: 0}
+  sceneInteraction: {fileID: 1044786407}
 --- !u!1 &1769471155
 GameObject:
   m_ObjectHideFlags: 0
@@ -4351,7 +4380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0dd7c6dab4d45369d55bb205296b248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogBoxPrefab: {fileID: 4624537028051317874, guid: 8a5b464b7c9e9fd4d8958a06bf159ac1,
+  dialogBoxPrefab: {fileID: 3585693081562924743, guid: 8a5b464b7c9e9fd4d8958a06bf159ac1,
     type: 3}
 --- !u!4 &2047133403
 Transform:

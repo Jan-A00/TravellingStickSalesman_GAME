@@ -15,7 +15,7 @@ public class TutorialDialogueManager : MonoBehaviour
     public Button mapBtn;
     public Button backBtn;
     public bool hasPlayerDoneTutorial = false;
-    public HiddenDialogLauncher launcher;
+    // pulic HiddenDialogLauncher launcher;
     Animator popUpAnim;
 
     [Header("Dialogue")]
@@ -114,7 +114,7 @@ public class TutorialDialogueManager : MonoBehaviour
             // invMngr.hasTraded = false;
             textIndex++;
             audioIndex++;
-            launcher.sceneInteraction.SetActive(true);
+            // launcher.sceneInteraction.SetActive(true);
             StopAllCoroutines();
         }
     }

@@ -7122,34 +7122,6 @@ MonoBehaviour:
   - ' '
   - "There! All set. So, ah, safe travels! Oh, but you\u2019re welcome to take a
     look around if you want! No trouble at all!"
-  - 
-  - "Whoa, hold on! Isn\u2019t that a Liquid Mixing Stick? And you\u2019re giving
-    it to me? No way! I\u2019ve been looking everywhere for a good one."
-  - "All the sticks I bought previously just melt as soon as they touch the potions.
-    I\u2019d almost given up hope, to be honest..."
-  - "But this! I can tell just by looking at it that this one\u2019s made of sturdier
-    stuff! Strong varnish and a high melting point!"
-  - "This will speed up my work for sure! I bet I\u2019ll be done with my apprenticeship
-    in half the time now."
-  - Here, take this as payment!
-  - 
-  - "My master\u2019s had this stick in storage for a while. I\u2019ve never seen
-    him use it though. Oh no, don\u2019t worry, I\u2019m sure he won\u2019t miss
-    it.  "
-  - "I used to just use it for a light when I was working late. But now my coffee
-    stimulant glows, I won\u2019t need it anymore!"
-  - "But hey, thanks for the Stick! I\u2019ll get to breaking it in right away!"
-  - 
-  - 'Oh, um, is this for me? Thank you! '
-  - Here, let me grab you something from the shelf. We have some really good Flavour
-    Sticks in stock at the moment!
-  - 
-  - "I must seem like a bit of a messy alchemist, but I\u2019m actually a really
-    good chef!"
-  - "So, here\u2019s some of my best Flavour Sticks! They\u2019ll make any soup taste
-    a thousand times better; just drop a bundle in, and voila!"
-  - "Just, um, don\u2019t knock it over like I did, okay? Although\u2026 five second
-    rule\u2026"
   lines:
   - {fileID: 183236727}
   - {fileID: 2109070145}
@@ -7172,23 +7144,6 @@ MonoBehaviour:
   - {fileID: 991275995}
   - {fileID: 1674612909}
   - {fileID: 1223185910}
-  - {fileID: 1674612909}
-  - {fileID: 246623545}
-  - {fileID: 1958059837}
-  - {fileID: 1220861663}
-  - {fileID: 1145141620}
-  - {fileID: 637619967}
-  - {fileID: 1674612909}
-  - {fileID: 520996010}
-  - {fileID: 1853201883}
-  - {fileID: 670393488}
-  - {fileID: 1674612909}
-  - {fileID: 1701761293}
-  - {fileID: 544192753}
-  - {fileID: 1674612909}
-  - {fileID: 411967050}
-  - {fileID: 331043427}
-  - {fileID: 206217742}
   typingSpeed: 0.01
   continueButton: {fileID: 1187700749}
   dialogueBox: {fileID: 885531346}

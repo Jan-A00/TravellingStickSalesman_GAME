@@ -3690,23 +3690,6 @@ MonoBehaviour:
   - "Please let me know when you\u2019re ready to leave."
   - "Now, the first turn\u2026 Was it right, or left\u2026?"
   - 
-  - Oh my, a Cleaning Stick! Is this for me?
-  - "Your timing really is impeccable. I\u2019ve needed a new one for months now."
-  - "My shrine has\u2026 so many stairs. So very many. Do you know how dangerous
-    they are when they\u2019re covered in leaves?"
-  - "And to present me with such a treasure, even after all the trouble I gave you\u2026
-    You are most kind. "
-  - I cannot let such kindness go unrewarded. Please, take this with you.
-  - ' '
-  - "I\u2019ve had this cutting stick for longer than I can remember. It\u2019s of
-    little use to me, but perhaps it will serve you well\u2026"
-  - ' '
-  - 'Oh, thank you. What a generous soul you are. '
-  - 'A humble guardian like me has little use for such things, but I do appreciate
-    the sentiment. '
-  - In return, may I offer you this gift from my shrine?
-  - ' '
-  - "I find lighting these can be very cleansing. May it bring you joy, dear traveler\u2026"
   lines:
   - {fileID: 1323629360}
   - {fileID: 633556392}
@@ -3728,19 +3711,6 @@ MonoBehaviour:
   - {fileID: 572281897}
   - {fileID: 85325364}
   - {fileID: 1986993944}
-  - {fileID: 1190161671}
-  - {fileID: 1844588480}
-  - {fileID: 1900540937}
-  - {fileID: 692550569}
-  - {fileID: 1686099560}
-  - {fileID: 1986993944}
-  - {fileID: 888431200}
-  - {fileID: 1986993944}
-  - {fileID: 753631026}
-  - {fileID: 1202632297}
-  - {fileID: 1797614824}
-  - {fileID: 1986993944}
-  - {fileID: 1048469813}
   typingSpeed: 0.01
   continueButton: {fileID: 88578539}
   dialogueBox: {fileID: 21212232}
