@@ -248,6 +248,7 @@ public class MusicalMushroomMatcher : MonoBehaviour
         Debug.Log("Puzzle Complete!");
         winCon = true;
         GameStateManager.Instance.RecordPuzzleComplete();
+        GameStateManager.Instance.RecordReadyToTrade();
         GameObject.FindGameObjectWithTag("Inventory-OpenButton").GetComponent<Button>().interactable = true;
         // TODO: Put what is supposed to happen when you get it right into this method. 
     }

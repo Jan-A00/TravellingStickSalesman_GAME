@@ -10,8 +10,6 @@ public class PotionPuzzleInstructions : MonoBehaviour
     public PotionPuzzleController controller;
     public bool hasPlayerSeenInstructions = false;
     public GameObject popUp;
-    public Button invBtn;
-    public Button mapBtn;
     Animator popUpAnim;
 
     public Button[] button;
@@ -29,9 +27,6 @@ public class PotionPuzzleInstructions : MonoBehaviour
 
     void Start()
     {
-        invBtn = GameObject.FindGameObjectWithTag("Inventory-OpenButton").GetComponent<Button>();
-        mapBtn.interactable = false;
-        invBtn.interactable = false;
         popUpAnim = popUp.GetComponent<Animator>();
         StickGameManager.Instance.SetTrader(Character.Quercus);
         for (int i = 0; i < 5; i++)
@@ -74,8 +69,6 @@ public class PotionPuzzleInstructions : MonoBehaviour
                 button[i].enabled = false;
                 cauldron.enabled = false;
             }
-            mapBtn.interactable = false;
-            invBtn.interactable = false;
         }
 
         if(textDisplay.text == sentences[19])
@@ -90,16 +83,15 @@ public class PotionPuzzleInstructions : MonoBehaviour
             }
         }
 
-        if(textDisplay.text == sentences[21]) 
-        {
-            dialogueBox.SetActive(false);
-            GameStateManager.Instance.RecordReadyToTrade();
-            // if(GameStateManager.Instance.TradedWithCurrentTrader())
-            // {
-            //     NextSentence();
-            //     dialogueBox.SetActive(true);
-            // }
-        } 
+        // if(textDisplay.text == sentences[21]) 
+        // {
+        //     dialogueBox.SetActive(false);
+        //     // if(GameStateManager.Instance.TradedWithCurrentTrader())
+        //     // {
+        //     //     NextSentence();
+        //     //     dialogueBox.SetActive(true);
+        //     // }
+        // } 
         
         if(textDisplay.text == sentences[21])
         {
@@ -139,11 +131,6 @@ public class PotionPuzzleInstructions : MonoBehaviour
             textIndex++;
             audioIndex++;
             StopAllCoroutines();
-        }
-        if (textIndex == 22)
-        {
-            mapBtn.interactable = true;
-            invBtn.interactable = true;
         }
     }
 

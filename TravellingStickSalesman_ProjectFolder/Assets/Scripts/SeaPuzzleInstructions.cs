@@ -26,9 +26,6 @@ public class SeaPuzzleInstructions : MonoBehaviour
 
     void Start()
     {
-        invBtn = GameObject.FindGameObjectWithTag("Inventory-OpenButton").GetComponent<Button>();
-        mapBtn.interactable = false;
-        invBtn.interactable = false;
         popUpAnim = popUp.GetComponent<Animator>();
         StickGameManager.Instance.SetTrader(Character.Baz);
         if(hasPlayerSeenInstructions == false)
@@ -68,16 +65,15 @@ public class SeaPuzzleInstructions : MonoBehaviour
             }
         }
         
-        if(textDisplay.text == sentences[21]) 
-        {
-            dialogueBox.SetActive(false);
-            GameStateManager.Instance.RecordReadyToTrade();
-            // if(GameStateManager.Instance.TradedWithCurrentTrader())
-            // {
-            //     NextSentence();
-            //     dialogueBox.SetActive(true);
-            // }
-        } 
+        // if(textDisplay.text == sentences[21])
+        // {
+        //     dialogueBox.SetActive(false);
+        //     // if(GameStateManager.Instance.TradedWithCurrentTrader())
+        //     // {
+        //     //     NextSentence();
+        //     //     dialogueBox.SetActive(true);
+        //     // }
+        // } 
 
         if(textDisplay.text == sentences[21])
         {
@@ -168,7 +164,6 @@ public class SeaPuzzleInstructions : MonoBehaviour
 
     public void GoToShrinePuzzle()
     {
-        invBtn.interactable = false;
         SceneManager.LoadScene("ShrinePuzzle");
     }
 }

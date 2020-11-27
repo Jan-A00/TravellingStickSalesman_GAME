@@ -11,8 +11,6 @@ public class MushroomPuzzleInstructions : MonoBehaviour
     public MusicalMushroomMatcher matcher;
     public bool hasPlayerSeenInstructions = false;
     public GameObject popUp;
-    public Button invBtn;
-    public Button mapBtn;
     Animator popUpAnim;
 
     [Header("Dialogue")]
@@ -27,9 +25,6 @@ public class MushroomPuzzleInstructions : MonoBehaviour
 
     void Start()
     {
-        invBtn = GameObject.FindGameObjectWithTag("Inventory-OpenButton").GetComponent<Button>();
-        mapBtn.interactable = false;
-        invBtn.interactable = false;
         popUpAnim = popUp.GetComponent<Animator>();
         StickGameManager.Instance.SetTrader(Character.Beardfacé);
         if(hasPlayerSeenInstructions == false)
@@ -71,16 +66,15 @@ public class MushroomPuzzleInstructions : MonoBehaviour
             }
         }
 
-        if(textDisplay.text == sentences[19])
-        {
-                dialogueBox.SetActive(false);
-                GameStateManager.Instance.RecordReadyToTrade();
-                // if(GameStateManager.Instance.TradedWithCurrentTrader())
-                // {
-                //     NextSentence();
-                //     dialogueBox.SetActive(true);
-                // }
-        }
+        // if(textDisplay.text == sentences[19])
+        // {
+        //         dialogueBox.SetActive(false);
+        //         // if(GameStateManager.Instance.TradedWithCurrentTrader())
+        //         // {
+        //         //     NextSentence();
+        //         //     dialogueBox.SetActive(true);
+        //         // }
+        // }
         
         if(textDisplay.text == sentences[19])
         {
@@ -120,11 +114,6 @@ public class MushroomPuzzleInstructions : MonoBehaviour
             textIndex++;
             audioIndex++;
             StopAllCoroutines();
-        }
-        if (textIndex == 20)
-        {
-            mapBtn.interactable = true;
-            invBtn.interactable = true;
         }
     }    
 
@@ -170,7 +159,6 @@ public class MushroomPuzzleInstructions : MonoBehaviour
 
     public void GoToPotionPuzzle()
     {
-        invBtn.interactable = false;
         SceneManager.LoadScene("PotionPuzzle");
     }
 }

@@ -3661,8 +3661,6 @@ MonoBehaviour:
   controller: {fileID: 1593277762}
   hasPlayerSeenInstructions: 0
   popUp: {fileID: 2134816951}
-  invBtn: {fileID: 1732561564}
-  mapBtn: {fileID: 2052072242}
   textDisplay: {fileID: 603617057}
   sentences:
   - Greetings, traveler. Welcome to my shrine. You may rest here for as long as you
@@ -4821,18 +4819,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1732561562}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1732561564 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5057038358206031290, guid: 64c4eaa2fd31d73468545f3cb028d310,
-    type: 3}
-  m_PrefabInstance: {fileID: 1732561562}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1745828248 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8649348000889659293, guid: 1b237529a95761c41bdc6f19b1a74679,
@@ -6265,6 +6251,7 @@ GameObject:
   - component: {fileID: 2052072244}
   - component: {fileID: 2052072243}
   - component: {fileID: 2052072242}
+  - component: {fileID: 2052072245}
   m_Layer: 5
   m_Name: Map Button
   m_TagString: Untagged
@@ -6330,7 +6317,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2052072243}
   m_OnClick:
     m_PersistentCalls:
@@ -6385,6 +6372,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052072240}
   m_CullTransparentMesh: 0
+--- !u!114 &2052072245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052072240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551f6853e8434805aeeb90fcfafe17fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2068083747
 GameObject:
   m_ObjectHideFlags: 0

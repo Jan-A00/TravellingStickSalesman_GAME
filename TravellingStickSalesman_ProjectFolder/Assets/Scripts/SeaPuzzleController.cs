@@ -150,6 +150,7 @@ public class SeaPuzzleController : MonoBehaviour
         {
             winCon = true;
             GameStateManager.Instance.RecordPuzzleComplete();
+            GameStateManager.Instance.RecordReadyToTrade();
         }
     }
 

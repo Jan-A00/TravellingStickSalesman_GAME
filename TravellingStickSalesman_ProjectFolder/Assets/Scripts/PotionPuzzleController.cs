@@ -223,6 +223,7 @@ public class PotionPuzzleController : MonoBehaviour
                 //cauldronCol.enabled = false;
                 winCon = true;
                 GameStateManager.Instance.RecordPuzzleComplete();
+                GameStateManager.Instance.RecordReadyToTrade();
                 Debug.Log("WIN!!");
                 GameObject.FindGameObjectWithTag("Inventory-OpenButton").GetComponent<Button>().interactable = true;
                 return true;

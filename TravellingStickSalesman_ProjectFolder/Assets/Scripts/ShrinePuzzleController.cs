@@ -28,6 +28,7 @@ public class ShrinePuzzleController : MonoBehaviour
             //Uncomment for face puzzle. Don't forget to input the images in the controller.
         {
             GameStateManager.Instance.RecordPuzzleComplete();
+            GameStateManager.Instance.RecordReadyToTrade();
             winCon = true;
             //Debug.Log("You Win!");
         }

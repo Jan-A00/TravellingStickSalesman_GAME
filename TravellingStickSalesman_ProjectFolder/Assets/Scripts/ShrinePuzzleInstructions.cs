@@ -10,8 +10,6 @@ public class ShrinePuzzleInstructions : MonoBehaviour
     public ShrinePuzzleController controller;
     public bool hasPlayerSeenInstructions = false;
     public GameObject popUp;
-    public Button invBtn;
-    public Button mapBtn;
     Animator popUpAnim;
 
     [Header("Dialogue")]
@@ -26,9 +24,6 @@ public class ShrinePuzzleInstructions : MonoBehaviour
 
     void Start()
     {
-        invBtn = GameObject.FindGameObjectWithTag("Inventory-OpenButton").GetComponent<Button>();
-        mapBtn.interactable = false;
-        invBtn.interactable = false;
         popUpAnim = popUp.GetComponent<Animator>();
         StickGameManager.Instance.SetTrader(Character.Kaede);
         if(hasPlayerSeenInstructions == false)
@@ -69,16 +64,16 @@ public class ShrinePuzzleInstructions : MonoBehaviour
             }
         }
 
-        if(textDisplay.text == sentences[19])
-        {
-            dialogueBox.SetActive(false);
-            GameStateManager.Instance.RecordReadyToTrade();
-            // if(GameStateManager.Instance.TradedWithCurrentTrader())
-            // {
-            //     NextSentence();
-            //     dialogueBox.SetActive(true);
-            // }
-        }
+        // if(textDisplay.text == sentences[19])
+        // {
+        //     dialogueBox.SetActive(false);
+        //     
+        //     // if(GameStateManager.Instance.TradedWithCurrentTrader())
+        //     // {
+        //     //     NextSentence();
+        //     //     dialogueBox.SetActive(true);
+        //     // }
+        // }
         
         if(textDisplay.text == sentences[19])
         {
@@ -118,11 +113,6 @@ public class ShrinePuzzleInstructions : MonoBehaviour
             textIndex++;
             audioIndex++;
             StopAllCoroutines();
-        }
-        if (textIndex == 20)
-        {
-            mapBtn.interactable = true;
-            invBtn.interactable = true;
         }
     }
 
@@ -167,7 +157,6 @@ public class ShrinePuzzleInstructions : MonoBehaviour
 
     public void GoToMushroomPuzzle()
     {
-        invBtn.interactable = false;
         SceneManager.LoadScene("MushroomPuzzle");
     }
 }

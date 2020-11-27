@@ -1587,6 +1587,7 @@ GameObject:
   - component: {fileID: 398862297}
   - component: {fileID: 398862296}
   - component: {fileID: 398862295}
+  - component: {fileID: 398862298}
   m_Layer: 5
   m_Name: Map Button
   m_TagString: Untagged
@@ -1707,6 +1708,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398862293}
   m_CullTransparentMesh: 0
+--- !u!114 &398862298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398862293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551f6853e8434805aeeb90fcfafe17fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &405913279 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4624537028051317885, guid: a94316128b718b64b885ea1c1f21f474,
