@@ -1,11 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Credits : MonoBehaviour
 {
     public GameObject[] credits;
     public int creditIndex;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            NextCredit();
+        }
+    }
 
     // Start is called before the first frame update
     public void NextCredit()
@@ -15,8 +24,7 @@ public class Credits : MonoBehaviour
         creditIndex++;
         if(creditIndex == 4)
         {
-            Application.Quit();
-            Debug.Log("quitting");
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }

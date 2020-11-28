@@ -4,8 +4,7 @@ using DataManagement;
 using DataManagement.StateTypes;
 using UnityEngine;
 using UnityEngine.UI;
-using DataManagement;
-using DataManagement.StateTypes;
+using UnityEngine.SceneManagement;
 
 public class MerchantCapital : MonoBehaviour
 {
@@ -43,7 +42,7 @@ public class MerchantCapital : MonoBehaviour
             continueButton.SetActive(true);
         }
 
-        if (endingType == EndingType.FirstEnding)
+        /*if (endingType == EndingType.FirstEnding)
         {
             Debug.Log("one");
         }
@@ -56,9 +55,9 @@ public class MerchantCapital : MonoBehaviour
         if (endingType == EndingType.ThirdEnding)
         {
             Debug.Log("three");
-        }
+        }*/
 
-        if(textDisplay.text == sentences[11])
+        if(textDisplay.text == sentences[12])
         {
             EndDialogue();
         }
@@ -83,11 +82,12 @@ public class MerchantCapital : MonoBehaviour
 
     public void EndDialogue()
     {
-        if(textIndex == 24)
+        if(textIndex == 12)
         {
             //Destroy(dialogueBox);
             dialogueBox.SetActive(false);
             StopAllCoroutines();
+            SceneManager.LoadScene("Credits");
         }
     }
 

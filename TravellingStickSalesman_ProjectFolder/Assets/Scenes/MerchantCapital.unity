@@ -3147,7 +3147,7 @@ MonoBehaviour:
   sentences:
   - "Oh\u2026 Merchan-TREE\u2026 How did I not make that connection?"
   - "Hey, how you doin\u2019? One moment, let me just put these things down."
-  - "There we go! Now, what can I help you w... Well, if it isn\u2019t Genevieve\u2019s
+  - "There we go! Now, what can I help you w\u2014well, if it isn\u2019t Genevieve\u2019s
     apprentice! Or should I say, former apprentice."
   - 'Wow, the last time I saw you, you were at least an average sized stick shorter! '
   - "Gen said you\u2019d be dropping off the new sticks. It\u2019s about time! "
@@ -3160,6 +3160,7 @@ MonoBehaviour:
   - "Always keep an eye out! Check everything, talk to everyone! That\u2019s my advice,
     and I stick to it."
   - Anyway, fine work, young merchant! You did well!
+  - 
   lines:
   - {fileID: 2025810754}
   - {fileID: 1452088668}
@@ -3173,6 +3174,7 @@ MonoBehaviour:
   - {fileID: 61400325}
   - {fileID: 705465876}
   - {fileID: 2050900673}
+  - {fileID: 682159490}
   typingSpeed: 0.01
   continueButton: {fileID: 470431567}
   dialogueBox: {fileID: 1963564655}

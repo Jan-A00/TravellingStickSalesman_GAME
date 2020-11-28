@@ -93,7 +93,7 @@ public class PotionPuzzleInstructions : MonoBehaviour
         //     // }
         // } 
         
-        if(textDisplay.text == sentences[20])
+        if(textDisplay.text == sentences[21])
         {
             EndDialogue();
         }

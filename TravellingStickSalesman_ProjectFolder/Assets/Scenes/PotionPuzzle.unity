@@ -1162,7 +1162,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: caa35fc4fbb0b994db60a86e9361a8ba, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.04
+  m_Volume: 0.06
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6006,7 +6006,7 @@ MonoBehaviour:
   emptyText: "Hey, that\u2019s empty!"
   incorrectText: "Hmm\u2026 Something isn\u2019t right. Let\u2019s try another combination.  "
   notEnoughText: "Ah\u2026 Something\u2019s missing here. We may need more ingredients\u2026"
-  tooManyText: Oh! That might actually be too many. You mind taking a few back?
+  tooManyText: Oh, haha! That might actually be too many. You mind taking a few back?
   typingSpeed: 0.01
   feedbackContinueButton: {fileID: 1813923240}
   feedbackDialogueBox: {fileID: 950561894}
@@ -7085,7 +7085,7 @@ MonoBehaviour:
   textDisplay: {fileID: 405913279}
   sentences:
   - "Yes?! Everything\u2019s fine! Oh geez, sorry. I thought you were someone else
-    for a moment..."
+    for a moment... Phew."
   - "No, no, it\u2019s\u2026 it\u2019s okay! I, uh, messed up earlier, so I\u2019m
     a little on edge right now. "
   - "Nothing too bad, really! Just knocked a valuable client\u2019s potion over...
@@ -7093,15 +7093,16 @@ MonoBehaviour:
   - "And my master\u2019s the only one who knows the recipe. He's not in right now
     and the client\u2019s due any moment."
   - "Alright, maybe it's a little bit bad. Um, but... Don\u2019t worry! I can handle
-    this, I think. Sorry to dump all of that on you!"
+    this, I\u2014I think. Sorry to dump all of that on you! Haha... Heh."
   - So, uh, welcome to the potion shop! My name is Quercus. Is there anything I can
     do for you?
   - "Oh, you\u2019re going to the Merchant Capital? No problem! I can show you the
-    way, no problem. It\u2019s, um\u2026 it\u2019s, uhh\u2026 Oh, darn it."
-  - "I\u2019m really sorry, but I\u2019m just so frazzled that I can\u2019t think
-    of anything but potions right now!"
+    way, no problem. It\u2019s, um\u2026 it\u2019s\u2014it's, uhh\u2026 Oh, darn
+    it."
+  - "I\u2019m really sorry, but I\u2019m\u2014I'm just so frazzled that I can\u2019t
+    think of anything but potions right now!"
   - Say, I have an idea. Do you think you could give me a hand with this recipe?
-  - "Oh... Once the potion\u2019s all fixed up I\u2019m sure I\u2019ll be able to
+  - "Oh... Once the potion\u2019s all fixed up, I\u2019m sure I\u2019ll be able to
     give you directions!"
   - "And I know we\u2019ll be able to figure this out in no time with the two of
     us working together. It\u2019s the perfect plan!"
@@ -7110,18 +7111,19 @@ MonoBehaviour:
   - "And don\u2019t worry about the order or anything; it\u2019s all about using
     the right stuff. So, all we have to do is figure out which ones to use!"
   - "Let\u2019s try some combinations and see how it looks, okay? I\u2019ll let you
-    know if it looks familiar"
+    know if it looks familiar."
   - 
   - "Eureka! That\u2019s it! That\u2019s exactly it!"
-  - "The viscosity, the smell, the colour\u2026 It\u2019s all perfect! This is the
-    perfect potion! "
+  - "Ah... The viscosity, the smell, the colour\u2026 It\u2019s all perfect! This
+    is the perfect potion! "
   - "Phew\u2026 That\u2019s a huge weight off my shoulders. Being an apprentice is
-    really stressful sometimes!"
+    really stressful sometimes! Haha!"
   - 'Well, with all that sorted, my head feels a lot clearer! Here, let me show you
     the way. '
   - ' '
   - "There! All set. So, ah, safe travels! Oh, but you\u2019re welcome to take a
     look around if you want! No trouble at all!"
+  - 
   lines:
   - {fileID: 183236727}
   - {fileID: 2109070145}
@@ -7144,6 +7146,7 @@ MonoBehaviour:
   - {fileID: 991275995}
   - {fileID: 1674612909}
   - {fileID: 1223185910}
+  - {fileID: 1674612909}
   typingSpeed: 0.01
   continueButton: {fileID: 1187700749}
   dialogueBox: {fileID: 885531346}

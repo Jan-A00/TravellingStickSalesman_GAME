@@ -1581,7 +1581,7 @@ MonoBehaviour:
   - "Ah, but listen to me ramble on! You\u2019ve got places to go, people to see,
     sticks to sell!  "
   - The Merchant Capital is far away, so you might have some trouble getting there
-    without me
+    without me.
   - But, no problem! I have a friend at the beach who can help you. His name is Baz.
   - "He has a lot of dealings with travelers, so I know he\u2019ll be happy to show
     you the way. "
@@ -1590,8 +1590,7 @@ MonoBehaviour:
   - "That\u2019s the place! "
   - "Just head there whenever you\u2019re ready. But you are more than welcome to
     \u2018stick\u2019 around for a while. "
-  - In the meantime, feel free to humor your old mentor and take a last look around
-    my shop!
+  - In the meantime, feel free to humor your old mentor and take a last look around!
   - 
   - 
   lines:
