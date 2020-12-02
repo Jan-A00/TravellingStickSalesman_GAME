@@ -22,7 +22,7 @@ public class Credits : MonoBehaviour
         credits[creditIndex].SetActive(false);
         credits[creditIndex + 1].SetActive(true);
         creditIndex++;
-        if(creditIndex == 4)
+        if(creditIndex == 5)
         {
             SceneManager.LoadScene("MainMenu");
         }

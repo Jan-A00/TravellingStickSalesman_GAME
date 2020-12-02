@@ -2564,7 +2564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogSequencer: {fileID: 783672926}
   lineText: "I get my stock from shipwrecks along the coast.\u201CPure profit for
-    my back pocket,\u201D is what my husband says.I don\u2019t actually know what
+    my back pocket,\u201D is what my husband says. I don\u2019t actually know what
     a \u201Cpocket\u201D is."
   lineAudio: {fileID: 8300000, guid: a80855b1c835e8d478d3d7b9b5af3fbd, type: 3}
   sceneInteraction: {fileID: 739242051}

@@ -75,7 +75,6 @@ public class SeaPuzzleInstructions : MonoBehaviour
 
         if(textDisplay.text == sentences[21])
         {
-            
             EndDialogue();
         }
     }
