@@ -15,6 +15,7 @@ namespace UserInterface
         private void Start()
         {
             collider = gameObject.GetComponent<BoxCollider2D>();
+            Debug.Log(collider.enabled);
         }
 
         private void Update()
