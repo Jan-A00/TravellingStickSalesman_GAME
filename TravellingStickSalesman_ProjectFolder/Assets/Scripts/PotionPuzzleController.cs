@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DataManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -221,6 +222,8 @@ public class PotionPuzzleController : MonoBehaviour
                 /* Calls and Coroutines can go here. */
                 //cauldronCol.enabled = false;
                 winCon = true;
+                GameStateManager.Instance.RecordPuzzleComplete();
+                GameStateManager.Instance.RecordReadyToTrade();
                 Debug.Log("WIN!!");
                 GameObject.FindGameObjectWithTag("Inventory-OpenButton").GetComponent<Button>().interactable = true;
                 return true;

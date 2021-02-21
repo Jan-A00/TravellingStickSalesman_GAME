@@ -9,14 +9,22 @@ namespace DataManagement.StateTypes
         public string name;
         public bool visited;
         public bool current;
-        public bool completed;
+        public bool readyToTrade;
+        public bool tradeComplete;
+        public string receivedStick;
+        public bool puzzleCompleted;
+        public bool dialogueComplete; 
 
-        public LevelState(string name, bool visited, bool current, bool completed)
+        public LevelState(string name, bool visited, bool current, bool readyToTrade, bool tradeComplete, string receivedStick, bool puzzleCompleted, bool dialogueComplete)
         {
             this.name = name;
             this.current = current;
             this.visited = visited;
-            this.completed = completed;
+            this.readyToTrade = readyToTrade;
+            this.tradeComplete = tradeComplete;
+            this.receivedStick = receivedStick;
+            this.puzzleCompleted = puzzleCompleted;
+            this.dialogueComplete = dialogueComplete;
         }
     }
 }

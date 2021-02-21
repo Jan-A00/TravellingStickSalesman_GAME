@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DataManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -9,8 +10,6 @@ public class SeaPuzzleInstructions : MonoBehaviour
     public SeaPuzzleController controller;
     public bool hasPlayerSeenInstructions = false;
     public GameObject popUp;
-    public Button invBtn;
-    public Button mapBtn;
     Animator popUpAnim;
     
     [Header("Dialogue")]
@@ -25,9 +24,6 @@ public class SeaPuzzleInstructions : MonoBehaviour
 
     void Start()
     {
-        invBtn = GameObject.FindGameObjectWithTag("Inventory-OpenButton").GetComponent<Button>();
-        mapBtn.interactable = false;
-        invBtn.interactable = false;
         popUpAnim = popUp.GetComponent<Animator>();
         StickGameManager.Instance.SetTrader(Character.Baz);
         if(hasPlayerSeenInstructions == false)
@@ -62,14 +58,24 @@ public class SeaPuzzleInstructions : MonoBehaviour
             popUp.SetActive(true);
             if(popUpAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
             {
-                //Debug.Log("animation finish");
                 NextSentence();
                 dialogueBox.SetActive(true);
             }
         }
+        
+        // if(textDisplay.text == sentences[21])
+        // {
+        //     dialogueBox.SetActive(false);
+        //     // if(GameStateManager.Instance.TradedWithCurrentTrader())
+        //     // {
+        //     //     NextSentence();
+        //     //     dialogueBox.SetActive(true);
+        //     // }
+        // } 
 
         if(textDisplay.text == sentences[21])
         {
+            
             EndDialogue();
         }
     }
@@ -94,6 +100,7 @@ public class SeaPuzzleInstructions : MonoBehaviour
     public void EndInstructions()
     {
         dialogueBox.SetActive(false);
+        continueButton.SetActive(false);
         hasPlayerSeenInstructions = true;
     }
 
@@ -106,11 +113,6 @@ public class SeaPuzzleInstructions : MonoBehaviour
             textIndex++;
             audioIndex++;
             StopAllCoroutines();
-        }
-        if (textIndex == 22)
-        {
-            mapBtn.interactable = true;
-            invBtn.interactable = true;
         }
     }
 
@@ -155,7 +157,6 @@ public class SeaPuzzleInstructions : MonoBehaviour
 
     public void GoToShrinePuzzle()
     {
-        invBtn.interactable = false;
         SceneManager.LoadScene("ShrinePuzzle");
     }
 }

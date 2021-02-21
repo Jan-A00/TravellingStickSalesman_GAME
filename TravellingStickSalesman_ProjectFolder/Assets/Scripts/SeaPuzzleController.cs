@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DataManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -147,8 +148,9 @@ public class SeaPuzzleController : MonoBehaviour
 
         if(countCorrectGuesses == gameGuesses)
         {
-            //Debug.Log("Game Finished in " + countGuesses + " moves.");
             winCon = true;
+            GameStateManager.Instance.RecordPuzzleComplete();
+            GameStateManager.Instance.RecordReadyToTrade();
         }
     }
 

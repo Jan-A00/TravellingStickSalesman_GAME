@@ -85,7 +85,7 @@ namespace DataManagement
             }
             else
             {
-                levelStates = LevelNames.Select(levelName => new LevelState(levelName, false, false, false)).ToArray();
+                levelStates = LevelNames.Select(levelName => new LevelState(levelName, false, false, false, false, "", false, false)).ToArray();
                 UpdateLevelStateOnDisk();
             }
             levelStateInitialized = true;
@@ -120,8 +120,8 @@ namespace DataManagement
         public void MarkLevelAsCompleted(string levelName)
         {
             if (!ValidLevel(levelName)) throw new ArgumentException("Tried to mark a level as complete when it doesn't exist.");
-            if (!levelStates.Where(level => level.name == levelName).Select(level => level.completed).First()) throw new ArgumentException("Level already complete!");
-            levelStates.Where(level => level.name == levelName).ToList().ForEach(level => level.completed = true);
+            if (!levelStates.Where(level => level.name == levelName).Select(level => level.puzzleCompleted).First()) throw new ArgumentException("Level already complete!");
+            levelStates.Where(level => level.name == levelName).ToList().ForEach(level => level.puzzleCompleted = true);
             UpdateLevelStateOnDisk();
         }
 
@@ -374,6 +374,77 @@ namespace DataManagement
             return newStickPopUpSprite;
         }
 
+        
+        public void RecordReadyToTrade()
+        {
+            if (Instance.levelStates.Where(level => level.name == CurrentLevel()).Select(level => level.readyToTrade)
+                .First()) return;
+            levelStates.Where(level => level.name == CurrentLevel()).ToList().ForEach(level =>
+            {
+                level.readyToTrade = true;
+            });
+            UpdateLevelStateOnDisk();
+        }
+
+        public bool ReadyToTrade()
+        {
+            return Instance.levelStates.Where(level => level.name == CurrentLevel()).Select(level => level.readyToTrade).First();
+        }
+        
+        public void RecordDialogueComplete()
+        {
+            if (Instance.levelStates.Where(level => level.name == CurrentLevel())
+                .Select(level => level.dialogueComplete).First()) return;
+            levelStates.Where(level => level.name == CurrentLevel()).ToList().ForEach(level =>
+            {
+                level.dialogueComplete = true;
+            });
+            UpdateLevelStateOnDisk();
+        }
+
+        public bool DialogueComplete()
+        {
+            return Instance.levelStates.Where(level => level.name == CurrentLevel()).Select(level => level.dialogueComplete).First();
+        }
+        
+        public void RecordPuzzleComplete()
+        {
+            if (Instance.levelStates.Where(level => level.name == CurrentLevel()).Select(level => level.puzzleCompleted)
+                .First()) return;
+            levelStates.Where(level => level.name == CurrentLevel()).ToList().ForEach(level =>
+            {
+                level.puzzleCompleted = true;
+            });
+            UpdateLevelStateOnDisk();
+        }
+
+        public bool PuzzleComplete()
+        {
+            string currentLevel = CurrentLevel();
+            return Instance.levelStates.Where(level => level.name == currentLevel).Select(level => level.puzzleCompleted).First();
+        }
+
+        public void RecordCurrentLevelTrade(string receivedStick)
+        {
+            bool alreadyTraded = levelStates.Where(level => level.name == CurrentLevel())
+                .Select(level => level.tradeComplete).First();
+            bool writeNeeded = !alreadyTraded;
+            if (!writeNeeded) return;
+            levelStates.Where(level => level.name == CurrentLevel()).ToList()
+                .ForEach(level =>
+                {
+                    level.tradeComplete = true;
+                    level.receivedStick = receivedStick;
+                });
+            UpdateLevelStateOnDisk();
+        }
+        
+        public bool TradedWithCurrentTrader()
+        {
+            string currentLevel = CurrentLevel();
+            return Instance.levelStates.Where(level => level.name == currentLevel).Select(level => level.tradeComplete).First();
+        }
+        
         public EndingType CurrentGameEndingType()
         {
             IEnumerable<string> startingSticks = StickConfigs.Where(config => config.startingStick).Select(config => config.name).ToArray();

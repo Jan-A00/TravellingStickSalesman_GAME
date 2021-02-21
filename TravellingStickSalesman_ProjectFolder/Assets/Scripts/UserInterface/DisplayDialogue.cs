@@ -15,7 +15,6 @@ namespace UserInterface
         private bool textComplete;
         private bool audioComplete;
 
-
         private void Start()
         {
             typingSpeed = 0.01f;

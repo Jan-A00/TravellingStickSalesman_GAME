@@ -27,6 +27,11 @@ public class MainMenu : MonoBehaviour
         GameStateManager.Instance.InitializeGameState();
         GameStateManager.Instance.ReturnToLevel();
     }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
     
     public void QuitGame()
     {

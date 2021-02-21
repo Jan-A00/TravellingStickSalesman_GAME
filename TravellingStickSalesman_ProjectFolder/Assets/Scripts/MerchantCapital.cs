@@ -58,7 +58,7 @@ public class MerchantCapital : MonoBehaviour
             Debug.Log("three");
         }
 
-        if(textDisplay.text == sentences[24])
+        if(textDisplay.text == sentences[11])
         {
             EndDialogue();
         }
